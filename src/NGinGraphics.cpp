@@ -1,6 +1,6 @@
 /* 
  * File:   NGinGraphics.cpp
- * Author: bcochrane
+ * Author: Ben Cochrane
  * 
  * Created on December 14, 2012, 11:12 AM
  */
@@ -22,7 +22,6 @@ void NGinGraphics::drawImage(std::string name, int x, int y) {
     offset.x = x;
     offset.y = y;
     SDL_BlitSurface(img, NULL, m_window->getScreen(), &offset);
-    SDL_Flip(m_window->getScreen());
 }
 
 void NGinGraphics::linkNGinWindow(NGinWindow *window) {
