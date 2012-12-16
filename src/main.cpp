@@ -7,6 +7,7 @@
 
 #include <SDL/SDL.h>
 #include "NGin.h"
+#include <stdio.h>
 
 NGinWindow window;
 NGinGraphics graphics;

@@ -23,7 +23,7 @@ AS=as
 # Macros
 CND_PLATFORM=GNU-Linux-x86
 CND_DLIB_EXT=so
-CND_CONF=Release
+CND_CONF=Debug_Linux
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 
@@ -55,11 +55,19 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=lib/linux/v8/libv8_base.a lib/linux/v8/libv8_snapshot.a lib/linux/SDL/libSDL_image.a lib/linux/SDL/libSDL_ttf.a -lpthread -lSDL
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/v8/libv8_base.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/v8/libv8_snapshot.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/SDL/libSDL_image.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/SDL/libSDL_ttf.a
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -68,22 +76,22 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: ${OBJECTFILES}
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
 
 ${OBJECTDIR}/src/NGinGraphics.o: src/NGinGraphics.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinGraphics.o src/NGinGraphics.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinGraphics.o src/NGinGraphics.cpp
 
 ${OBJECTDIR}/src/NGinWindow.o: src/NGinWindow.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinWindow.o src/NGinWindow.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinWindow.o src/NGinWindow.cpp
 
 ${OBJECTDIR}/src/NGinResourceManager.o: src/NGinResourceManager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinResourceManager.o src/NGinResourceManager.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinResourceManager.o src/NGinResourceManager.cpp
 
 # Subprojects
 .build-subprojects:

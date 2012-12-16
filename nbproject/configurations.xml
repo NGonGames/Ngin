@@ -35,7 +35,7 @@
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="Debug" type="1">
+    <conf name="Debug_Windows" type="1">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
@@ -78,6 +78,29 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+      </compileType>
+    </conf>
+    <conf name="Debug_Linux" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>lib/linux/v8/libv8_base.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/linux/v8/libv8_snapshot.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/linux/SDL/libSDL_image.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/linux/SDL/libSDL_ttf.a</linkerLibFileItem>
+            <linkerOptionItem>-lpthread</linkerOptionItem>
+            <linkerOptionItem>-lSDL</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
     </conf>
   </confs>
