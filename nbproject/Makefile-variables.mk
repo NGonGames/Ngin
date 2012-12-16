@@ -7,13 +7,13 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug_Windows configuration
-CND_PLATFORM_Debug_Windows=GNU-Linux-x86
-CND_ARTIFACT_DIR_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86
+CND_PLATFORM_Debug_Windows=MinGW-Windows
+CND_ARTIFACT_DIR_Debug_Windows=dist/Debug_Windows/MinGW-Windows
 CND_ARTIFACT_NAME_Debug_Windows=ngin
-CND_ARTIFACT_PATH_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86/ngin
-CND_PACKAGE_DIR_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86/package
+CND_ARTIFACT_PATH_Debug_Windows=dist/Debug_Windows/MinGW-Windows/ngin
+CND_PACKAGE_DIR_Debug_Windows=dist/Debug_Windows/MinGW-Windows/package
 CND_PACKAGE_NAME_Debug_Windows=ngin.tar
-CND_PACKAGE_PATH_Debug_Windows=dist/Debug_Windows/GNU-Linux-x86/package/ngin.tar
+CND_PACKAGE_PATH_Debug_Windows=dist/Debug_Windows/MinGW-Windows/package/ngin.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
