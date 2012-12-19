@@ -11,20 +11,21 @@
 #include <SDL/SDL.h>
 #include "NGin.h"
 
-class NGinWindow {
+class NGin::Window {
 public:
-    NGinWindow();
-    NGinWindow(const NGinWindow& orig);
-    virtual ~NGinWindow();
+    Window();
+    virtual ~Window();
     
     SDL_Surface* getScreen();
     
-    void linkNGinGraphics(NGinGraphics *graphics);
-    void linkNGinResourceManager(NGinResourceManager *resources);
+    static const NGin::Window* Get() { return m_window; };
+    
 private:
+    Window(const NGin::Window& orig);
+    
     SDL_Surface *m_screen;
-    NGinGraphics *m_graphics;
-    NGinResourceManager *m_resource;
+    
+    static NGin::Window *m_window = NULL;
 };
 
 #endif	/* NGINWINDOW_H */
