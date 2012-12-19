@@ -5,8 +5,8 @@
  * Created on December 14, 2012, 10:34 AM
  */
 
-#ifndef RESOURCEMANAGER_H
-#define	RESOURCEMANAGER_H
+#ifndef NGINRESOURCEMANAGER_H
+#define	NGINRESOURCEMANAGER_H
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
@@ -16,22 +16,23 @@
 #include <utility>
 #include "NGin.h"
 
-class NGinResourceManager {
+class NGin::ResourceManager {
 public:
-    NGinResourceManager();
-    NGinResourceManager(const NGinResourceManager& orig);
-    virtual ~NGinResourceManager();
+    ResourceManager();
+    virtual ~ResourceManager();
     
     void addImage(std::string name, std::string path);
     SDL_Surface* getImage(std::string name);
     
-    void linkNGinWindow(NGinWindow *window);
-    void linkNGinGraphics(NGinGraphics *graphics);
+    static const NGin::ResourceManager* Get() { return m_resources; };
+    
 private:
+    ResourceManager(const NGin::ResourceManager& orig);
+    
     std::map<std::string, SDL_Surface*> m_images;
-    NGinWindow *m_window;
-    NGinGraphics *m_graphics;
+    
+    static NGin::ResourceManager *m_resources = NULL;
 };
 
-#endif	/* RESOURCEMANAGER_H */
+#endif	/* NGINRESOURCEMANAGER_H */
 

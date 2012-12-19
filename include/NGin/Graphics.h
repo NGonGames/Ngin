@@ -13,19 +13,19 @@
 #include <string>
 #include "NGin.h" 
 
-class NGinGraphics {
+class NGin::Graphics {
 public:
-    NGinGraphics();
-    NGinGraphics(const NGinGraphics& orig);
-    virtual ~NGinGraphics();
+    Graphics();
+    virtual ~Graphics();
     
     void drawImage(std::string, int x, int y);
     
-    void linkNGinWindow(NGinWindow *window);
-    void linkNGinResourceManager(NGinResourceManager *resources);
+    static const NGin::Graphics* Get() { return m_graphics; };
+    
 private:
-    NGinWindow *m_window;
-    NGinResourceManager *m_resource;
+    Graphics(const NGin::Graphics& orig);
+    
+    static NGin::Graphics *m_graphics = NULL;
 };
 
 #endif	/* NGINGRAPHICS_H */
