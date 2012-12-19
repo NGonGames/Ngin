@@ -24,14 +24,14 @@ public:
     void addImage(std::string name, std::string path);
     SDL_Surface* getImage(std::string name);
     
-    static const NGin::ResourceManager* Get() { return m_resources; };
+    static NGin::ResourceManager* Get() { return m_resources; };
     
 private:
     ResourceManager(const NGin::ResourceManager& orig);
     
     std::map<std::string, SDL_Surface*> m_images;
     
-    static NGin::ResourceManager *m_resources = NULL;
+    static NGin::ResourceManager *m_resources;
 };
 
 #endif	/* NGINRESOURCEMANAGER_H */

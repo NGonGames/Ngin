@@ -18,14 +18,14 @@ public:
     
     SDL_Surface* getScreen();
     
-    static const NGin::Window* Get() { return m_window; };
+    static NGin::Window* Get() { return m_window; };
     
 private:
     Window(const NGin::Window& orig);
     
     SDL_Surface *m_screen;
     
-    static NGin::Window *m_window = NULL;
+    static NGin::Window *m_window;
 };
 
 #endif	/* NGINWINDOW_H */

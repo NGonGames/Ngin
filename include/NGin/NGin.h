@@ -14,7 +14,7 @@ namespace NGin {
     class Graphics;
     
     bool Init();
-    void Execute();
+    int Execute();
     void Update();
     void Quit();
 }
