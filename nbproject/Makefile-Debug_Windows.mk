@@ -36,9 +36,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/main.o \
-	${OBJECTDIR}/src/NGinGraphics.o \
-	${OBJECTDIR}/src/NGinWindow.o \
-	${OBJECTDIR}/src/NGinResourceManager.o
+	${OBJECTDIR}/src/ResourceManager.o \
+	${OBJECTDIR}/src/Graphics.o \
+	${OBJECTDIR}/src/Window.o
 
 
 # C Compiler Flags
@@ -70,20 +70,20 @@ ${OBJECTDIR}/src/main.o: src/main.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
 
-${OBJECTDIR}/src/NGinGraphics.o: src/NGinGraphics.cpp 
+${OBJECTDIR}/src/ResourceManager.o: src/ResourceManager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinGraphics.o src/NGinGraphics.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/ResourceManager.o src/ResourceManager.cpp
 
-${OBJECTDIR}/src/NGinWindow.o: src/NGinWindow.cpp 
+${OBJECTDIR}/src/Graphics.o: src/Graphics.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinWindow.o src/NGinWindow.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Graphics.o src/Graphics.cpp
 
-${OBJECTDIR}/src/NGinResourceManager.o: src/NGinResourceManager.cpp 
+${OBJECTDIR}/src/Window.o: src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinResourceManager.o src/NGinResourceManager.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Window.o src/Window.cpp
 
 # Subprojects
 .build-subprojects:
