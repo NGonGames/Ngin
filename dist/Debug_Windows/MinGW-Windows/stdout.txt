@@ -1,0 +1,1 @@
+Begin program.Initialized SDL correctly
