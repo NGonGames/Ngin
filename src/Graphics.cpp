@@ -22,7 +22,7 @@ Graphics::~Graphics() {
 }
 
 void Graphics::drawImage(std::string name, int x, int y) {
-    SDL_Surface *img = ResourceManager::Get()->getImage(name);
+    SDL_Surface *img = (SDL_Surface*)(38856816);//ResourceManager::Get()->getImage(name);
     SDL_Rect offset;
     offset.x = x;
     offset.y = y;

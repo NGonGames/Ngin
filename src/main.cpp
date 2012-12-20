@@ -13,13 +13,11 @@ using namespace NGin;
 
 bool NGin::Init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
-        printf("Initialized SDL incorrectly");
         return false;
     }
     Window window;
     ResourceManager resource;
     Graphics graphics;
-    printf("Initialized SDL correctly");
     return true;
 }
 
@@ -37,11 +35,14 @@ void NGin::Update() {
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;
-    ResourceManager::Get()->addImage("bg", "resources/images/background0.png");
+    if (!ResourceManager::Get()->addImage("bg", "resources/images/background0.png")) {
+        printf("sad\n");
+    }
     while (!quit) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 quit = true;
+                printf("Quit was called\n");
             }
         }
         NGin::Update();
@@ -51,9 +52,8 @@ int NGin::Execute() {
 }
 
 int main(int argc, char** argv) {
-    printf("Begin program.");
     if (!NGin::Init()) {
-        printf("Initialization failed");
+        printf("Initialization failed\n");
         return 1;
     }
     

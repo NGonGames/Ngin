@@ -21,7 +21,7 @@ public:
     ResourceManager();
     virtual ~ResourceManager();
     
-    void addImage(std::string name, std::string path);
+    bool addImage(std::string name, std::string path);
     SDL_Surface* getImage(std::string name);
     
     static NGin::ResourceManager* Get() { return m_resources; };
@@ -30,6 +30,7 @@ private:
     ResourceManager(const NGin::ResourceManager& orig);
     
     std::map<std::string, SDL_Surface*> m_images;
+
     
     static NGin::ResourceManager *m_resources;
 };
