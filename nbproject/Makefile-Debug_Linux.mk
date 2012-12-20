@@ -14,15 +14,15 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
+CC=gcc.exe
+CCC=g++.exe
+CXX=g++.exe
 FC=gfortran
-AS=as
+AS=as.exe
 
 # Macros
-CND_PLATFORM=GNU-Linux-x86
-CND_DLIB_EXT=so
+CND_PLATFORM=MinGW-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Debug_Linux
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -36,9 +36,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/src/main.o \
-	${OBJECTDIR}/src/NGinGraphics.o \
-	${OBJECTDIR}/src/NGinWindow.o \
-	${OBJECTDIR}/src/NGinResourceManager.o
+	${OBJECTDIR}/src/ResourceManager.o \
+	${OBJECTDIR}/src/Graphics.o \
+	${OBJECTDIR}/src/Window.o
 
 
 # C Compiler Flags
@@ -59,39 +59,39 @@ LDLIBSOPTIONS=lib/linux/v8/libv8_base.a lib/linux/v8/libv8_snapshot.a lib/linux/
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/v8/libv8_base.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: lib/linux/v8/libv8_base.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/v8/libv8_snapshot.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: lib/linux/v8/libv8_snapshot.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/SDL/libSDL_image.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: lib/linux/SDL/libSDL_image.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: lib/linux/SDL/libSDL_ttf.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: lib/linux/SDL/libSDL_ttf.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
 
-${OBJECTDIR}/src/NGinGraphics.o: src/NGinGraphics.cpp 
+${OBJECTDIR}/src/ResourceManager.o: src/ResourceManager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinGraphics.o src/NGinGraphics.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/ResourceManager.o src/ResourceManager.cpp
 
-${OBJECTDIR}/src/NGinWindow.o: src/NGinWindow.cpp 
+${OBJECTDIR}/src/Graphics.o: src/Graphics.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinWindow.o src/NGinWindow.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Graphics.o src/Graphics.cpp
 
-${OBJECTDIR}/src/NGinResourceManager.o: src/NGinResourceManager.cpp 
+${OBJECTDIR}/src/Window.o: src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/NGinResourceManager.o src/NGinResourceManager.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Window.o src/Window.cpp
 
 # Subprojects
 .build-subprojects:
@@ -99,7 +99,7 @@ ${OBJECTDIR}/src/NGinResourceManager.o: src/NGinResourceManager.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe
 
 # Subprojects
 .clean-subprojects:

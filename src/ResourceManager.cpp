@@ -9,6 +9,8 @@
 
 using namespace NGin;
 
+NGin::ResourceManager *NGin::ResourceManager::m_resources = 0;
+
 ResourceManager::ResourceManager() {
     ResourceManager::m_resources = this;
 }

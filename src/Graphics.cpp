@@ -9,6 +9,8 @@
 
 using namespace NGin;
 
+NGin::Graphics *NGin::Graphics::m_graphics = 0;
+
 Graphics::Graphics() {
     Graphics::m_graphics = this;
 }
@@ -24,5 +26,5 @@ void Graphics::drawImage(std::string name, int x, int y) {
     SDL_Rect offset;
     offset.x = x;
     offset.y = y;
-    SDL_BlitSurface(img, NULL, m_window->getScreen(), &offset);
+    SDL_BlitSurface(img, NULL, Window::Get()->getScreen(), &offset);
 }

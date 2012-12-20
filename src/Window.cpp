@@ -9,6 +9,8 @@
 
 using namespace NGin;
 
+NGin::Window *NGin::Window::m_window = 0;
+
 Window::Window() {
     Window::m_window = this;
     m_screen = SDL_SetVideoMode(640, 480, 32, SDL_SWSURFACE);

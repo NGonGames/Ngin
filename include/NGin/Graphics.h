@@ -20,7 +20,7 @@ public:
     
     void drawImage(std::string, int x, int y);
     
-    static NGin::Graphics* Get() { return m_graphics; };
+    static NGin::Graphics* Get() { return NGin::Graphics::m_graphics; };
     
 private:
     Graphics(const NGin::Graphics& orig);

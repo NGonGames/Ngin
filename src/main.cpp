@@ -13,11 +13,13 @@ using namespace NGin;
 
 bool NGin::Init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
+        printf("Initialized SDL incorrectly");
         return false;
     }
     Window window;
     ResourceManager resource;
     Graphics graphics;
+    printf("Initialized SDL correctly");
     return true;
 }
 
@@ -49,7 +51,7 @@ int NGin::Execute() {
 }
 
 int main(int argc, char** argv) {
-    
+    printf("Begin program.");
     if (!NGin::Init()) {
         printf("Initialization failed");
         return 1;
