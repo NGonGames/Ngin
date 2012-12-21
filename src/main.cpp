@@ -35,14 +35,13 @@ void NGin::Update() {
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;
-    if (!ResourceManager::Get()->addImage("bg", "resources/images/background0.png")) {
+    if (!ResourceManager::Get()->addImage("bg", "resources/images/bg.png")) {
         printf("sad\n");
     }
     while (!quit) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 quit = true;
-                printf("Quit was called\n");
             }
         }
         NGin::Update();

@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/ResourceManager.o \
 	${OBJECTDIR}/src/Graphics.o \
+	${OBJECTDIR}/src/Sprite.o \
 	${OBJECTDIR}/src/Window.o
 
 
@@ -79,6 +80,11 @@ ${OBJECTDIR}/src/Graphics.o: src/Graphics.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Graphics.o src/Graphics.cpp
+
+${OBJECTDIR}/src/Sprite.o: src/Sprite.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Sprite.o src/Sprite.cpp
 
 ${OBJECTDIR}/src/Window.o: src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

@@ -20,12 +20,12 @@ public:
     
     void drawImage(std::string, int x, int y);
     
-    static NGin::Graphics* Get() { return NGin::Graphics::m_graphics; };
+    static NGin::Graphics* Get() { return NGin::Graphics::mGraphics; };
     
 private:
     Graphics(const NGin::Graphics& orig);
     
-    static NGin::Graphics *m_graphics;
+    static NGin::Graphics *mGraphics;
 };
 
 #endif	/* NGINGRAPHICS_H */

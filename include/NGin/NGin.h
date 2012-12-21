@@ -12,6 +12,7 @@ namespace NGin {
     class Window;
     class ResourceManager;
     class Graphics;
+    class Sprite;
     
     bool Init();
     int Execute();
@@ -22,6 +23,7 @@ namespace NGin {
 #include "NGin/Graphics.h"
 #include "NGin/ResourceManager.h"
 #include "NGin/Window.h"
+#include "NGin/Sprite.h"
 
 #endif	/* NGIN_H */
 

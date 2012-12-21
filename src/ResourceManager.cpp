@@ -9,10 +9,10 @@
 
 using namespace NGin;
 
-NGin::ResourceManager *NGin::ResourceManager::m_resources = 0;
+NGin::ResourceManager *NGin::ResourceManager::mResources = 0;
 
 ResourceManager::ResourceManager() {
-    ResourceManager::m_resources = this;
+    ResourceManager::mResources = this;
 }
 
 ResourceManager::ResourceManager(const ResourceManager& orig) {
@@ -29,11 +29,10 @@ bool ResourceManager::addImage(std::string name, std::string path) {
         return false;
     }
     img = SDL_DisplayFormat(img);
-    m_images[name] = img;
-    printf("%d\n", img);
+    //mSprites[name] = img;
     return true;
 }
 
 SDL_Surface* ResourceManager::getImage(std::string name) {
-    return m_images[name];
+    return new SDL_Surface;//mSprites[name];
 }

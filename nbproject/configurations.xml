@@ -8,6 +8,7 @@
         <itemPath>include/NGin/Graphics.h</itemPath>
         <itemPath>include/NGin/NGin.h</itemPath>
         <itemPath>include/NGin/ResourceManager.h</itemPath>
+        <itemPath>include/NGin/Sprite.h</itemPath>
         <itemPath>include/NGin/Window.h</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -18,10 +19,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="src" displayName="src" projectFiles="true">
-      </logicalFolder>
       <itemPath>src/Graphics.cpp</itemPath>
       <itemPath>src/ResourceManager.cpp</itemPath>
+      <itemPath>src/Sprite.cpp</itemPath>
       <itemPath>src/Window.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
     </logicalFolder>
