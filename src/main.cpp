@@ -27,8 +27,7 @@ void NGin::Quit() {
 
 void NGin::Update() {
     // call JavaScript code here
-    Graphics::Get()->drawImage("bg", 0, 0); // this line should go, and be called from JS
-    Graphics::Get()->drawImage("bg", 320, 240);
+    Graphics::Get()->drawImage("bg", rand() % 320, rand() % 240);
     SDL_Flip(Window::Get()->getScreen()); // this line should stay. this finalizes gfx
 }
 

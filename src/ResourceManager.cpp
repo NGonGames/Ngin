@@ -29,7 +29,7 @@ bool ResourceManager::addImage(std::string name, std::string path) {
         return false;
     }
     img = SDL_DisplayFormat(img);
-    mSprites.push_front(new Sprite(name, img));
+    mSprites.push_back(new Sprite(name, img));
     return true;
 }
 
