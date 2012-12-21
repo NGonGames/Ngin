@@ -38,3 +38,6 @@ ehthumbs.db
 Thumbs.db
 
 nbproject/private/configurations.xml
+
+build/
+dist/
