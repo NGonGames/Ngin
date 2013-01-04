@@ -9,10 +9,7 @@
 
 using namespace NGin;
 
-NGin::Graphics *NGin::Graphics::mGraphics = 0;
-
 Graphics::Graphics() {
-    Graphics::mGraphics = this;
 }
 
 Graphics::Graphics(const Graphics& orig) {
@@ -21,8 +18,8 @@ Graphics::Graphics(const Graphics& orig) {
 Graphics::~Graphics() {
 }
 
-void Graphics::drawImage(std::string name, int x, int y) {
-    SDL_Surface *img = ResourceManager::Get()->getImage(name);
+void Graphics::DrawImage(std::string name, int x, int y) {
+    SDL_Surface *img = ResourceManager::GetImage(name);
     SDL_Rect offset;
     offset.x = x;
     offset.y = y;

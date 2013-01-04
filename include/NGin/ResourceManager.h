@@ -18,19 +18,16 @@
 
 class NGin::ResourceManager {
 public:
-    ResourceManager();
-    virtual ~ResourceManager();
     
-    bool addImage(std::string name, std::string path);
-    SDL_Surface* getImage(std::string name);
-    
-    static NGin::ResourceManager* Get() { return mResources; };
+    static bool AddImage(std::string name, std::string path);
+    static SDL_Surface* GetImage(std::string name);
     
 private:
+    ResourceManager();
+    virtual ~ResourceManager();
     ResourceManager(const NGin::ResourceManager& orig);
-    std::vector<NGin::Sprite*> mSprites;
+    static std::vector<NGin::Sprite*> mSprites;
 
-    static NGin::ResourceManager *mResources;
 };
 
 #endif	/* NGINRESOURCEMANAGER_H */

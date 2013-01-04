@@ -9,10 +9,9 @@
 
 using namespace NGin;
 
-NGin::ResourceManager *NGin::ResourceManager::mResources = 0;
+std::vector<Sprite*> ResourceManager::mSprites;
 
 ResourceManager::ResourceManager() {
-    ResourceManager::mResources = this;
 }
 
 ResourceManager::ResourceManager(const ResourceManager& orig) {
@@ -21,7 +20,7 @@ ResourceManager::ResourceManager(const ResourceManager& orig) {
 ResourceManager::~ResourceManager() {
 }
 
-bool ResourceManager::addImage(std::string name, std::string path) {
+bool ResourceManager::AddImage(std::string name, std::string path) {
     SDL_Surface *img = NULL;
     img = IMG_Load(path.c_str());
     
@@ -30,12 +29,12 @@ bool ResourceManager::addImage(std::string name, std::string path) {
     }
     img = SDL_DisplayFormat(img);
     Sprite* s = new Sprite(name, img);
-    mSprites.push_back(s);
+    ResourceManager::mSprites.push_back(s);
     return true;
 }
 
-SDL_Surface* ResourceManager::getImage(std::string spriteName) {
-    for (std::vector<Sprite*>::const_iterator iterator = mSprites.begin(), end = mSprites.end(); iterator != end; ++iterator) {
+SDL_Surface* ResourceManager::GetImage(std::string spriteName) {
+    for (std::vector<Sprite*>::const_iterator iterator = ResourceManager::mSprites.begin(), end = ResourceManager::mSprites.end(); iterator != end; ++iterator) {
         if (dynamic_cast<Sprite*>(*iterator)->name() == spriteName) {
             return dynamic_cast<Sprite*>(*iterator)->surface();
         }
