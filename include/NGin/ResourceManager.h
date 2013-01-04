@@ -12,7 +12,7 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 #include <string>
-#include <list>
+#include <vector>
 #include <utility>
 #include "NGin.h"
 
@@ -28,7 +28,7 @@ public:
     
 private:
     ResourceManager(const NGin::ResourceManager& orig);
-    std::list<NGin::Sprite*> mSprites;
+    std::vector<NGin::Sprite*> mSprites;
 
     static NGin::ResourceManager *mResources;
 };

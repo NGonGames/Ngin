@@ -27,15 +27,19 @@ void NGin::Quit() {
 
 void NGin::Update() {
     // call JavaScript code here
-    Graphics::Get()->drawImage("bg", rand() % 320, rand() % 240);
+    Graphics::Get()->drawImage("bg01", rand() % 160, rand() % 120);
+    Graphics::Get()->drawImage("bg02", 320 + rand() % 160, 240 + rand() % 120);
     SDL_Flip(Window::Get()->getScreen()); // this line should stay. this finalizes gfx
 }
 
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;
-    if (!ResourceManager::Get()->addImage("bg", "resources/images/bg.png")) {
-        printf("sad\n");
+    if (!ResourceManager::Get()->addImage("bg01", "resources/images/bg1.png")) {
+        printf("Unable to load image!\n");
+    }
+    if (!ResourceManager::Get()->addImage("bg02", "resources/images/background0.png")) {
+        printf("Unable to load image!\n");
     }
     while (!quit) {
         while (SDL_PollEvent(&event)) {

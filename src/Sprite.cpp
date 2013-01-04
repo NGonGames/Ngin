@@ -13,7 +13,10 @@ Sprite::Sprite(std::string name, SDL_Surface* surface)
         : mName(name), mSurf(surface) {
 }
 
-Sprite::Sprite(const Sprite& orig) {
+Sprite::Sprite(const Sprite& orig)
+        : mName(orig.mName) {
+    mSurf = orig.mSurf;
+    mSurf->refcount++;
 }
 
 Sprite::~Sprite() {

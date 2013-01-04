@@ -30,12 +30,13 @@ bool ResourceManager::addImage(std::string name, std::string path) {
     }
     img = SDL_DisplayFormat(img);
     mSprites.push_back(new Sprite(name, img));
+    mSprites.push_back(new Sprite(name, img));
     return true;
 }
 
-SDL_Surface* ResourceManager::getImage(std::string name) {
-    for (std::list<Sprite*>::const_iterator iterator = mSprites.begin(), end = mSprites.end(); iterator != end; ++iterator) {
-        if ((*iterator)->name() == name) {
+SDL_Surface* ResourceManager::getImage(std::string spriteName) {
+    for (std::vector<Sprite*>::const_iterator iterator = mSprites.begin(), end = mSprites.end(); iterator != end; ++iterator) {
+        if ((*iterator)->name() == spriteName) {
             return (*iterator)->surface();
         }
     }
