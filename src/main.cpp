@@ -35,12 +35,9 @@ void NGin::Update() {
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;
-    if (!ResourceManager::Get()->addImage("bg01", "resources/images/bg1.png")) {
-        printf("Unable to load image!\n");
-    }
-    if (!ResourceManager::Get()->addImage("bg02", "resources/images/background0.png")) {
-        printf("Unable to load image!\n");
-    }
+    ResourceManager::Get()->addImage("bg01", "resources/images/bg1.png");
+    ResourceManager::Get()->addImage("bg02", "resources/images/background0.png");
+    
     while (!quit) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {

@@ -29,15 +29,15 @@ bool ResourceManager::addImage(std::string name, std::string path) {
         return false;
     }
     img = SDL_DisplayFormat(img);
-    mSprites.push_back(new Sprite(name, img));
-    mSprites.push_back(new Sprite(name, img));
+    Sprite* s = new Sprite(name, img);
+    mSprites.push_back(s);
     return true;
 }
 
 SDL_Surface* ResourceManager::getImage(std::string spriteName) {
     for (std::vector<Sprite*>::const_iterator iterator = mSprites.begin(), end = mSprites.end(); iterator != end; ++iterator) {
-        if ((*iterator)->name() == spriteName) {
-            return (*iterator)->surface();
+        if (dynamic_cast<Sprite*>(*iterator)->name() == spriteName) {
+            return dynamic_cast<Sprite*>(*iterator)->surface();
         }
     }
     return NULL;
