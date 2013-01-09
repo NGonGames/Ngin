@@ -13,7 +13,7 @@ namespace NGin {
     class ResourceManager;
     class Graphics;
     class Sprite;
-    class ScriptEngine;
+    class IScriptEngine;
     class JavaScriptEngine;
     
     bool Init();
@@ -26,7 +26,7 @@ namespace NGin {
 #include "NGin/ResourceManager.h"
 #include "NGin/Window.h"
 #include "NGin/Sprite.h"
-#include "NGin/ScriptEngine.h"
+#include "NGin/IScriptEngine.h"
 #include "NGin/JavaScriptEngine.h"
 
 #endif	/* NGIN_H */

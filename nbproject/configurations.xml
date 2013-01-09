@@ -6,10 +6,10 @@
                    projectFiles="true">
       <logicalFolder name="NGin" displayName="NGin" projectFiles="true">
         <itemPath>include/NGin/Graphics.h</itemPath>
+        <itemPath>include/NGin/IScriptEngine.h</itemPath>
         <itemPath>include/NGin/JavaScriptEngine.h</itemPath>
         <itemPath>include/NGin/NGin.h</itemPath>
         <itemPath>include/NGin/ResourceManager.h</itemPath>
-        <itemPath>include/NGin/ScriptEngine.h</itemPath>
         <itemPath>include/NGin/Sprite.h</itemPath>
         <itemPath>include/NGin/Window.h</itemPath>
       </logicalFolder>

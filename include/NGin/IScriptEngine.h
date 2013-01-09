@@ -10,20 +10,13 @@
 
 #include "NGin/NGin.h"
 
-class NGin::ScriptEngine {
+class NGin::IScriptEngine {
     
 public:
-    ScriptEngine() {};
-    virtual ~ScriptEngine() {};
     void ExposeScriptInterface();
     
 protected:
-    NGin::Graphics *gfx;
-    NGin::ResourceManager *rmgr;
-    NGin::Window *wind;
     
-private:
-    ScriptEngine(const NGin::ScriptEngine& orig);
 };
 
 #endif	/* NGINSCRIPTENGINE_H */
