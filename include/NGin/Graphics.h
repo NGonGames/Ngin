@@ -1,6 +1,6 @@
 /* 
  * File:   NGinGraphics.h
- * Author: bcochrane
+ * Author: Ben Cochrane
  *
  * Created on December 14, 2012, 11:12 AM
  */

@@ -1,6 +1,6 @@
 /* 
  * File:   NGin.h
- * Author: bcochrane
+ * Author: Ben Cochrane
  *
  * Created on December 14, 2012, 11:36 AM
  */
@@ -13,6 +13,8 @@ namespace NGin {
     class ResourceManager;
     class Graphics;
     class Sprite;
+    class ScriptEngine;
+    class JavaScriptEngine;
     
     bool Init();
     int Execute();
@@ -24,6 +26,8 @@ namespace NGin {
 #include "NGin/ResourceManager.h"
 #include "NGin/Window.h"
 #include "NGin/Sprite.h"
+#include "NGin/ScriptEngine.h"
+#include "NGin/JavaScriptEngine.h"
 
 #endif	/* NGIN_H */
 

@@ -6,8 +6,10 @@
                    projectFiles="true">
       <logicalFolder name="NGin" displayName="NGin" projectFiles="true">
         <itemPath>include/NGin/Graphics.h</itemPath>
+        <itemPath>include/NGin/JavaScriptEngine.h</itemPath>
         <itemPath>include/NGin/NGin.h</itemPath>
         <itemPath>include/NGin/ResourceManager.h</itemPath>
+        <itemPath>include/NGin/ScriptEngine.h</itemPath>
         <itemPath>include/NGin/Sprite.h</itemPath>
         <itemPath>include/NGin/Window.h</itemPath>
       </logicalFolder>
@@ -20,6 +22,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/Graphics.cpp</itemPath>
+      <itemPath>src/JavaScriptEngine.cpp</itemPath>
       <itemPath>src/ResourceManager.cpp</itemPath>
       <itemPath>src/Sprite.cpp</itemPath>
       <itemPath>src/Window.cpp</itemPath>
@@ -64,6 +67,8 @@
             <linkerLibLibItem>SDL_image</linkerLibLibItem>
             <linkerLibLibItem>SDL_ttf</linkerLibLibItem>
             <linkerLibLibItem>SDL.dll</linkerLibLibItem>
+            <linkerLibLibItem>v8_base</linkerLibLibItem>
+            <linkerLibLibItem>v8_snapshot</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

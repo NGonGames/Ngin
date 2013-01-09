@@ -39,7 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/ResourceManager.o \
 	${OBJECTDIR}/src/Graphics.o \
 	${OBJECTDIR}/src/Sprite.o \
-	${OBJECTDIR}/src/Window.o
+	${OBJECTDIR}/src/Window.o \
+	${OBJECTDIR}/src/JavaScriptEngine.o
 
 
 # C Compiler Flags
@@ -56,7 +57,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Llib/win -lmingw32 -lSDLmain -lSDL_image -lSDL_ttf -lSDL.dll
+LDLIBSOPTIONS=-Llib/win -lmingw32 -lSDLmain -lSDL_image -lSDL_ttf -lSDL.dll -lv8_base -lv8_snapshot
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -90,6 +91,11 @@ ${OBJECTDIR}/src/Window.o: src/Window.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Window.o src/Window.cpp
+
+${OBJECTDIR}/src/JavaScriptEngine.o: src/JavaScriptEngine.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/JavaScriptEngine.o src/JavaScriptEngine.cpp
 
 # Subprojects
 .build-subprojects:

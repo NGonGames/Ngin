@@ -1,6 +1,6 @@
 /* 
  * File:   ResourceManager.h
- * Author: bcochrane
+ * Author: Ben Cochrane
  *
  * Created on December 14, 2012, 10:34 AM
  */

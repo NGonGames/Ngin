@@ -1,6 +1,6 @@
 /* 
  * File:   NGinWindow.h
- * Author: bcochrane
+ * Author: Ben Cochrane
  *
  * Created on December 13, 2012, 2:12 PM
  */
