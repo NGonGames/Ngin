@@ -65,7 +65,7 @@ LDLIBSOPTIONS=-Llib/win -lmingw32 -lSDLmain -lSDL_image -lSDL_ttf -lSDL.dll -lv8
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

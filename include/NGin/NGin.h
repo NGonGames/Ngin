@@ -15,6 +15,7 @@ namespace NGin {
     class Sprite;
     class IScriptEngine;
     class JavaScriptEngine;
+    class GameFactory;
     
     bool Init();
     int Execute();
@@ -28,6 +29,7 @@ namespace NGin {
 #include "NGin/Sprite.h"
 #include "NGin/IScriptEngine.h"
 #include "NGin/JavaScriptEngine.h"
+#include "NGin/GameFactory.h"
 
 #endif	/* NGIN_H */
 
