@@ -15,17 +15,11 @@ class NGin::Window {
 public:
     Window();
     virtual ~Window();
-    
     SDL_Surface* getScreen();
-    
-    static NGin::Window* Get() { return mWindow; };
     
 private:
     Window(const NGin::Window& orig);
-    
     SDL_Surface *mScreen;
-    
-    static NGin::Window *mWindow;
 };
 
 #endif	/* NGINWINDOW_H */

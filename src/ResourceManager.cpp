@@ -9,8 +9,6 @@
 
 using namespace NGin;
 
-std::vector<Sprite*> ResourceManager::mSprites;
-
 ResourceManager::ResourceManager() {
 }
 

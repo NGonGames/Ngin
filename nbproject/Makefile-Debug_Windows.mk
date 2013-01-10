@@ -38,7 +38,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/ResourceManager.o \
 	${OBJECTDIR}/src/Graphics.o \
+	${OBJECTDIR}/src/GameFactory.o \
 	${OBJECTDIR}/src/Sprite.o \
+	${OBJECTDIR}/Game.o \
 	${OBJECTDIR}/src/Window.o \
 	${OBJECTDIR}/src/JavaScriptEngine.o
 
@@ -65,7 +67,7 @@ LDLIBSOPTIONS=-Llib/win -lmingw32 -lSDLmain -lSDL_image -lSDL_ttf -lSDL.dll -lv8
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -82,10 +84,20 @@ ${OBJECTDIR}/src/Graphics.o: src/Graphics.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Graphics.o src/Graphics.cpp
 
+${OBJECTDIR}/src/GameFactory.o: src/GameFactory.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GameFactory.o src/GameFactory.cpp
+
 ${OBJECTDIR}/src/Sprite.o: src/Sprite.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Sprite.o src/Sprite.cpp
+
+${OBJECTDIR}/Game.o: Game.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/Game.o Game.cpp
 
 ${OBJECTDIR}/src/Window.o: src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

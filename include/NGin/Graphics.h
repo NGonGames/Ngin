@@ -15,13 +15,17 @@
 
 class NGin::Graphics {
 public:
-    static void DrawImage(std::string, int x, int y);
+    
+    Graphics(NGin::ResourceManager *resources, NGin::Window *window);
+    virtual ~Graphics();
+    
+    void DrawImage(std::string, int x, int y);
     
 private:
-    Graphics();
-    virtual ~Graphics();
     Graphics(const NGin::Graphics& orig);
     
+    NGin::ResourceManager* rmgr;
+    NGin::Window* wind;
 };
 
 #endif	/* NGINGRAPHICS_H */

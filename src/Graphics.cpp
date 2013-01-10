@@ -9,7 +9,9 @@
 
 using namespace NGin;
 
-Graphics::Graphics() {
+Graphics::Graphics(ResourceManager *resources, Window *window) {
+    rmgr = resources;
+    wind = window;
 }
 
 Graphics::Graphics(const Graphics& orig) {
@@ -19,9 +21,9 @@ Graphics::~Graphics() {
 }
 
 void Graphics::DrawImage(std::string name, int x, int y) {
-    SDL_Surface *img = ResourceManager::GetImage(name);
+    SDL_Surface *img = rmgr->GetImage(name);
     SDL_Rect offset;
     offset.x = x;
     offset.y = y;
-    SDL_BlitSurface(img, NULL, Window::Get()->getScreen(), &offset);
+    SDL_BlitSurface(img, NULL, wind->getScreen(), &offset);
 }

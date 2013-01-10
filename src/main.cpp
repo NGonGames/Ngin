@@ -15,7 +15,7 @@ bool NGin::Init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
         return false;
     }
-    Window window;
+    
     return true;
 }
 
@@ -25,24 +25,28 @@ void NGin::Quit() {
 
 void NGin::Update() {
     // call JavaScript code here
-    Graphics::DrawImage("bg01", rand() % 160, rand() % 120);
-    Graphics::DrawImage("bg02", 320 + rand() % 160, 240 + rand() % 120);
-    SDL_Flip(Window::Get()->getScreen()); // this line should stay. this finalizes gfx
+    //Graphics::DrawImage("bg01", rand() % 160, rand() % 120);
+    //Graphics::DrawImage("bg02", 320 + rand() % 160, 240 + rand() % 120);
+    //SDL_Flip(Window::Get()->getScreen()); // this line should stay. this finalizes gfx
 }
 
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;
-    ResourceManager::AddImage("bg01", "resources/images/bg1.png");
-    ResourceManager::AddImage("bg02", "resources/images/background0.png");
+    //ResourceManager::AddImage("bg01", "resources/images/bg1.png");
+    //ResourceManager::AddImage("bg02", "resources/images/background0.png");
     
+    Game* game = GameFactory::MakeGame();
+    game->Init();
     while (!quit) {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 quit = true;
             }
         }
-        NGin::Update();
+        game->Update();
+        game->Render();
+        
     }
     NGin::Quit();
     return 0;
