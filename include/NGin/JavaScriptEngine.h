@@ -13,14 +13,11 @@
 
 class NGin::JavaScriptEngine : public NGin::IScriptEngine {
 public:
-    JavaScriptEngine(NGin::Graphics &graphics, NGin::ResourceManager &resources, NGin::Window &window);
+
     virtual ~JavaScriptEngine();
     void ExposeScriptInterface();
     
 private:
-    NGin::Graphics *gfx;
-    NGin::ResourceManager *rmgr;
-    NGin::Window *wind;
 
 };
 
