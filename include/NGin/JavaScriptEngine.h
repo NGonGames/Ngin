@@ -1,6 +1,6 @@
 /* 
  * File:   JavaScriptEngine.h
- * Author: bcochrane
+ * Author: Ben Cochrane
  *
  * Created on January 9, 2013, 10:06 AM
  */
