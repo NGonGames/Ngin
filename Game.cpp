@@ -9,9 +9,10 @@
 
 using namespace NGin;
 
-Game::Game(Graphics *graphics, ResourceManager *resources, Window *window) {
+Game::Game(Graphics *graphics, ResourceManager *resources, IScriptEngine *scriptEngine, Window *window) {
     gfx = graphics;
     rmgr = resources;
+    script = scriptEngine;
     wind = window;
 }
 

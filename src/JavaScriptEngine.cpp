@@ -10,6 +10,12 @@
 using namespace NGin;
 using namespace v8;
 
+JavaScriptEngine::JavaScriptEngine(NGin::Graphics *graphics, NGin::ResourceManager *resources, NGin::Window *window) {
+    gfx = graphics;
+    rmgr = resources;
+    wind = window;
+}
+
 JavaScriptEngine::~JavaScriptEngine() {
 }
 

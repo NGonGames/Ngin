@@ -22,5 +22,6 @@ Game* GameFactory::MakeGame() {
     Window *window = new Window;
     ResourceManager *resource = new ResourceManager();
     Graphics *graphics = new Graphics(resource, window);
-    return new Game(graphics, resource, window);
+    IScriptEngine *jscript = new JavaScriptEngine(graphics, resource, window);
+    return new Game(graphics, resource, jscript, window);
 }

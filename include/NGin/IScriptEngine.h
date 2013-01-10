@@ -13,11 +13,6 @@
 class NGin::IScriptEngine {
     
 public:
-    IScriptEngine(NGin::Graphics &graphics, NGin::ResourceManager &resources, NGin::Window &window) {
-        gfx = &graphics;
-        rmgr = &resources;
-        wind = &window;
-    };
     void ExposeScriptInterface();
     
 protected:
