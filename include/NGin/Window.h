@@ -16,6 +16,7 @@ public:
     Window();
     virtual ~Window();
     SDL_Surface* getScreen();
+    void setWindowTitle(std::string);
     
 private:
     Window(const NGin::Window& orig);

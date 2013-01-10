@@ -19,7 +19,6 @@ public:
     void ExposeScriptInterface();
     
 private:
-
 };
 
 #endif	/* JAVASCRIPTENGINE_H */

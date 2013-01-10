@@ -5,7 +5,7 @@
  * Created on December 13, 2012, 2:12 PM
  */
 
-#include "NGin/Window.h"
+#include "NGin/NGin.h"
 
 using namespace NGin;
 
@@ -21,4 +21,8 @@ Window::~Window() {
 
 SDL_Surface* Window::getScreen() {
     return mScreen;
+}
+
+void Window::setWindowTitle(const std::string title) {
+    SDL_WM_SetCaption(title.c_str(), NULL);
 }

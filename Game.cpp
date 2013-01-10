@@ -14,6 +14,11 @@ Game::Game(Graphics *graphics, ResourceManager *resources, IScriptEngine *script
     rmgr = resources;
     script = scriptEngine;
     wind = window;
+    
+    x = 0.0;
+    y = 0.0;
+    xdir = 1;
+    ydir = 1;
 }
 
 Game::Game(const Game& orig) {
@@ -24,16 +29,31 @@ Game::~Game() {
 
 void Game::Init() {
     rmgr->AddImage("bg01", "resources/images/bg1.png");
-    rmgr->AddImage("bg02", "resources/images/background0.png");
+    
+    wind->setWindowTitle("NGin v0.1");
 }
 
 void Game::Update() {
-    
+    // -----
+    x += xdir;
+    y += ydir;
+    if (x > 320) {
+        xdir = -.5;
+    }
+    if (y > 240) {
+        ydir = -.5;
+    }
+    if (x < 0) {
+        xdir = .5;
+    }
+    if (y < 0) {
+        ydir = .5;
+    }
+    // -----
 }
 
 void Game::Render() {
-    gfx->DrawImage("bg01", 0, 0);
-    gfx->DrawImage("bg02", 320, 240);
+    gfx->DrawImage("bg01", x, y);
     
     SDL_Flip(wind->getScreen());
 }

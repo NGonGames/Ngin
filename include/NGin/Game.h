@@ -31,6 +31,10 @@ protected:
     NGin::Graphics* gfx;
     NGin::IScriptEngine *script;
 
+    float x;
+    float y;
+    float xdir;
+    float ydir;
 };
 
 #endif	/* NGINGAME_H */

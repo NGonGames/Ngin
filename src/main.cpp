@@ -42,6 +42,8 @@ int NGin::Execute() {
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 quit = true;
+            } else {
+                break;
             }
         }
         game->Update();
