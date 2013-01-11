@@ -59,7 +59,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Llib/win -lmingw32 -lSDLmain -lSDL_image -lSDL_ttf -lSDL.dll -lv8_base -lv8_snapshot
+LDLIBSOPTIONS=-Llib/win -lmingw32 -lSDLmain -lSDL_image -lSDL_ttf -lSDL.dll -lv8_base -lv8_snapshot -lWs2_32 -lWINMM
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
