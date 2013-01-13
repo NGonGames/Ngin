@@ -11,12 +11,12 @@
 namespace NGin {
     class Window;
     class ResourceManager;
+    class Resource;
     class Graphics;
-    class Sprite;
-    class IScriptEngine;
-    class JavaScriptEngine;
+    class Texture;
     class GameFactory;
     class Game;
+    class GameWorld;
     
     bool Init();
     int Execute();
@@ -27,9 +27,11 @@ namespace NGin {
 #include "NGin/Graphics.h"
 #include "NGin/ResourceManager.h"
 #include "NGin/Window.h"
-#include "NGin/Sprite.h"
+#include "NGin/Resource.h"
+#include "NGin/Texture.h"
 #include "NGin/GameFactory.h"
 #include "NGin/Game.h"
+#include "NGin/GameWorld.h"
 
 #endif	/* NGIN_H */
 

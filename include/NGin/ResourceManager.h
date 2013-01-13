@@ -23,12 +23,13 @@ public:
     virtual ~ResourceManager();
     
     bool AddImage(std::string name, std::string path);
-    SDL_Surface* GetImage(std::string name);
+    NGin::Texture* GetImage(std::string name);
     
+        
 private:
     
     ResourceManager(const NGin::ResourceManager& orig);
-    std::vector<NGin::Sprite*> mSprites;
+    std::vector<NGin::Texture*> mSprites;
 
 };
 

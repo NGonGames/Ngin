@@ -21,7 +21,7 @@ Graphics::~Graphics() {
 }
 
 void Graphics::DrawImage(std::string name, int x, int y) {
-    SDL_Surface *img = rmgr->GetImage(name);
+    SDL_Surface *img = rmgr->GetImage(name)->surface();
     SDL_Rect offset;
     offset.x = x;
     offset.y = y;

@@ -39,9 +39,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/ResourceManager.o \
 	${OBJECTDIR}/src/Graphics.o \
+	${OBJECTDIR}/src/GameWorld.o \
 	${OBJECTDIR}/src/GameFactory.o \
-	${OBJECTDIR}/src/Sprite.o \
-	${OBJECTDIR}/src/Window.o
+	${OBJECTDIR}/src/Resource.o \
+	${OBJECTDIR}/src/Window.o \
+	${OBJECTDIR}/src/Texture.o
 
 
 # C Compiler Flags
@@ -96,20 +98,30 @@ ${OBJECTDIR}/src/Graphics.o: src/Graphics.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Graphics.o src/Graphics.cpp
 
+${OBJECTDIR}/src/GameWorld.o: src/GameWorld.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GameWorld.o src/GameWorld.cpp
+
 ${OBJECTDIR}/src/GameFactory.o: src/GameFactory.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GameFactory.o src/GameFactory.cpp
 
-${OBJECTDIR}/src/Sprite.o: src/Sprite.cpp 
+${OBJECTDIR}/src/Resource.o: src/Resource.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Sprite.o src/Sprite.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Resource.o src/Resource.cpp
 
 ${OBJECTDIR}/src/Window.o: src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Window.o src/Window.cpp
+
+${OBJECTDIR}/src/Texture.o: src/Texture.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Texture.o src/Texture.cpp
 
 # Subprojects
 .build-subprojects:
