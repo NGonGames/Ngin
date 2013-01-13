@@ -35,14 +35,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/src/Game.o \
 	${OBJECTDIR}/src/main.o \
 	${OBJECTDIR}/src/ResourceManager.o \
 	${OBJECTDIR}/src/Graphics.o \
 	${OBJECTDIR}/src/GameFactory.o \
 	${OBJECTDIR}/src/Sprite.o \
-	${OBJECTDIR}/Game.o \
-	${OBJECTDIR}/src/Window.o \
-	${OBJECTDIR}/src/JavaScriptEngine.o
+	${OBJECTDIR}/src/Window.o
 
 
 # C Compiler Flags
@@ -63,11 +62,16 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/src/Game.o: src/Game.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Game.o src/Game.cpp
 
 ${OBJECTDIR}/src/main.o: src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -94,20 +98,10 @@ ${OBJECTDIR}/src/Sprite.o: src/Sprite.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Sprite.o src/Sprite.cpp
 
-${OBJECTDIR}/Game.o: Game.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Game.o Game.cpp
-
 ${OBJECTDIR}/src/Window.o: src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Window.o src/Window.cpp
-
-${OBJECTDIR}/src/JavaScriptEngine.o: src/JavaScriptEngine.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/JavaScriptEngine.o src/JavaScriptEngine.cpp
 
 # Subprojects
 .build-subprojects:
@@ -115,7 +109,7 @@ ${OBJECTDIR}/src/JavaScriptEngine.o: src/JavaScriptEngine.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ngin.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited.exe
 
 # Subprojects
 .clean-subprojects:

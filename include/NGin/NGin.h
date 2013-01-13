@@ -28,8 +28,6 @@ namespace NGin {
 #include "NGin/ResourceManager.h"
 #include "NGin/Window.h"
 #include "NGin/Sprite.h"
-#include "NGin/IScriptEngine.h"
-#include "NGin/JavaScriptEngine.h"
 #include "NGin/GameFactory.h"
 #include "NGin/Game.h"
 

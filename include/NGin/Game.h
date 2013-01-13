@@ -14,7 +14,6 @@ class NGin::Game {
 public:
     Game(NGin::Graphics *graphics,
          NGin::ResourceManager *resources,
-         NGin::IScriptEngine *scriptEngine,
          NGin::Window *window);
     
     virtual ~Game();
@@ -29,7 +28,6 @@ protected:
     NGin::Window* wind;
     NGin::ResourceManager* rmgr;
     NGin::Graphics* gfx;
-    NGin::IScriptEngine *script;
 
     float x;
     float y;

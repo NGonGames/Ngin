@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="84">
+<configurationDescriptor version="88">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -8,8 +8,6 @@
         <itemPath>include/NGin/Game.h</itemPath>
         <itemPath>include/NGin/GameFactory.h</itemPath>
         <itemPath>include/NGin/Graphics.h</itemPath>
-        <itemPath>include/NGin/IScriptEngine.h</itemPath>
-        <itemPath>include/NGin/JavaScriptEngine.h</itemPath>
         <itemPath>include/NGin/NGin.h</itemPath>
         <itemPath>include/NGin/ResourceManager.h</itemPath>
         <itemPath>include/NGin/Sprite.h</itemPath>
@@ -23,10 +21,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Game.cpp</itemPath>
+      <itemPath>src/Game.cpp</itemPath>
       <itemPath>src/GameFactory.cpp</itemPath>
       <itemPath>src/Graphics.cpp</itemPath>
-      <itemPath>src/JavaScriptEngine.cpp</itemPath>
       <itemPath>src/ResourceManager.cpp</itemPath>
       <itemPath>src/Sprite.cpp</itemPath>
       <itemPath>src/Window.cpp</itemPath>
@@ -78,6 +75,34 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="include/NGin/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/GameFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/NGin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/ResourceManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Sprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Window.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Sprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Window.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
@@ -98,6 +123,34 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="include/NGin/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/GameFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/NGin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/ResourceManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Sprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Window.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Sprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Window.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
     </conf>
     <conf name="Debug_Linux" type="1">
       <toolsSet>
@@ -121,6 +174,34 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="include/NGin/Game.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/GameFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/NGin.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/ResourceManager.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Sprite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/Window.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Sprite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Window.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

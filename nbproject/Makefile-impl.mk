@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Ngin
+PROJECTNAME=NGinUnlimited
 
 # Active Configuration
 DEFAULTCONF=Debug_Windows
