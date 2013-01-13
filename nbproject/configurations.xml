@@ -8,6 +8,8 @@
         <itemPath>include/NGin/Game.h</itemPath>
         <itemPath>include/NGin/GameFactory.h</itemPath>
         <itemPath>include/NGin/Graphics.h</itemPath>
+        <itemPath>include/NGin/IScriptEngine.h</itemPath>
+        <itemPath>include/NGin/JavaScriptEngine.h</itemPath>
         <itemPath>include/NGin/NGin.h</itemPath>
         <itemPath>include/NGin/ResourceManager.h</itemPath>
         <itemPath>include/NGin/Sprite.h</itemPath>
@@ -21,9 +23,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>src/Game.cpp</itemPath>
+      <itemPath>Game.cpp</itemPath>
       <itemPath>src/GameFactory.cpp</itemPath>
       <itemPath>src/Graphics.cpp</itemPath>
+      <itemPath>src/JavaScriptEngine.cpp</itemPath>
       <itemPath>src/ResourceManager.cpp</itemPath>
       <itemPath>src/Sprite.cpp</itemPath>
       <itemPath>src/Window.cpp</itemPath>
@@ -75,11 +78,17 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="include/NGin/Game.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/GameFactory.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/Graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/IScriptEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/JavaScriptEngine.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/NGin.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -89,11 +98,11 @@
       </item>
       <item path="include/NGin/Window.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/JavaScriptEngine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -123,11 +132,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="include/NGin/Game.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/GameFactory.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/Graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/IScriptEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/JavaScriptEngine.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/NGin.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -137,11 +152,11 @@
       </item>
       <item path="include/NGin/Window.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/JavaScriptEngine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -174,11 +189,17 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="Game.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="include/NGin/Game.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/GameFactory.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/Graphics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/IScriptEngine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/NGin/JavaScriptEngine.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/NGin/NGin.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -188,11 +209,11 @@
       </item>
       <item path="include/NGin/Window.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="src/Game.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/JavaScriptEngine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
