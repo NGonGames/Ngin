@@ -23,13 +23,6 @@ void NGin::Quit() {
     SDL_Quit();
 }
 
-void NGin::Update() {
-    // call JavaScript code here
-    //Graphics::DrawImage("bg01", rand() % 160, rand() % 120);
-    //Graphics::DrawImage("bg02", 320 + rand() % 160, 240 + rand() % 120);
-    //SDL_Flip(Window::Get()->getScreen()); // this line should stay. this finalizes gfx
-}
-
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;

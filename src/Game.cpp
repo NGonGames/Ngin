@@ -13,11 +13,6 @@ Game::Game(Graphics *graphics, ResourceManager *resources, Window *window) {
     gfx = graphics;
     rmgr = resources;
     wind = window;
-    
-    x = 0.0;
-    y = 0.0;
-    xdir = 1;
-    ydir = 1;
 }
 
 Game::Game(const Game& orig) {
@@ -33,26 +28,25 @@ void Game::Init() {
 }
 
 void Game::Update() {
-    // -----
-    x += xdir;
-    y += ydir;
-    if (x > 320) {
-        xdir = -.5;
-    }
-    if (y > 240) {
-        ydir = -.5;
-    }
-    if (x < 0) {
-        xdir = .5;
-    }
-    if (y < 0) {
-        ydir = .5;
-    }
-    // -----
+    GetActiveLevel()->Update();
+    /**/
+    
 }
 
 void Game::Render() {
-    gfx->DrawImage("bg01", x, y);
-    
-    SDL_Flip(wind->getScreen());
+    gfx->Clear();
+    GetActiveLevel()->Render();
+    gfx->Finalize();
+}
+
+void Game::AddLevel(GameLevel *gameLevel) {
+    mAllLevels.push_back(gameLevel);
+}
+
+GameLevel* Game::GetActiveLevel() {
+    if (!mAllLevels.empty()) {
+        return dynamic_cast<GameLevel*>((mAllLevels.back()));
+    } else {
+        return NULL;
+    }
 }

@@ -37,9 +37,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/src/Game.o \
 	${OBJECTDIR}/src/main.o \
+	${OBJECTDIR}/src/GameLevel.o \
 	${OBJECTDIR}/src/ResourceManager.o \
 	${OBJECTDIR}/src/Graphics.o \
-	${OBJECTDIR}/src/GameWorld.o \
+	${OBJECTDIR}/src/GameObject.o \
 	${OBJECTDIR}/src/GameFactory.o \
 	${OBJECTDIR}/src/Resource.o \
 	${OBJECTDIR}/src/Window.o \
@@ -80,6 +81,11 @@ ${OBJECTDIR}/src/main.o: src/main.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/main.o src/main.cpp
 
+${OBJECTDIR}/src/GameLevel.o: src/GameLevel.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GameLevel.o src/GameLevel.cpp
+
 ${OBJECTDIR}/src/ResourceManager.o: src/ResourceManager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
@@ -90,10 +96,10 @@ ${OBJECTDIR}/src/Graphics.o: src/Graphics.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Graphics.o src/Graphics.cpp
 
-${OBJECTDIR}/src/GameWorld.o: src/GameWorld.cpp 
+${OBJECTDIR}/src/GameObject.o: src/GameObject.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GameWorld.o src/GameWorld.cpp
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GameObject.o src/GameObject.cpp
 
 ${OBJECTDIR}/src/GameFactory.o: src/GameFactory.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

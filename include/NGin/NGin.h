@@ -16,11 +16,11 @@ namespace NGin {
     class Texture;
     class GameFactory;
     class Game;
-    class GameWorld;
+    class GameLevel;
+    class GameObject;
     
     bool Init();
     int Execute();
-    void Update();
     void Quit();
 }
 
@@ -29,9 +29,10 @@ namespace NGin {
 #include "NGin/Window.h"
 #include "NGin/Resource.h"
 #include "NGin/Texture.h"
-#include "NGin/GameFactory.h"
+#include "NGin/GameObject.h"
+#include "NGin/GameLevel.h"
 #include "NGin/Game.h"
-#include "NGin/GameWorld.h"
+#include "NGin/GameFactory.h"
 
 #endif	/* NGIN_H */
 

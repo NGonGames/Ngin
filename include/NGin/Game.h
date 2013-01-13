@@ -9,6 +9,8 @@
 #define	NGINGAME_H
 
 #include "NGin/NGin.h"
+#include <vector>
+#include <stack>
 
 class NGin::Game {
 public:
@@ -21,18 +23,20 @@ public:
     void Init();
     void Update();
     void Render();
+    
+    void AddLevel(NGin::GameLevel*);
 private:
     Game(const NGin::Game& orig);
     
 protected:
+    NGin::GameLevel* GetActiveLevel();
+    
+    NGin::Graphics* gfx;
     NGin::Window* wind;
     NGin::ResourceManager* rmgr;
-    NGin::Graphics* gfx;
-
-    float x;
-    float y;
-    float xdir;
-    float ydir;
+    
+    std::vector<NGin::GameLevel*> mAllLevels;
+    std::stack<NGin::GameLevel*> mLoadedLevels;
 };
 
 #endif	/* NGINGAME_H */

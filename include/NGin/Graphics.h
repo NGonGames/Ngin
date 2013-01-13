@@ -19,7 +19,10 @@ public:
     Graphics(NGin::ResourceManager *resources, NGin::Window *window);
     virtual ~Graphics();
     
+    void Clear();
+    void Clear(int r, int g, int b);
     void DrawImage(std::string, int x, int y);
+    void Finalize();
     
 private:
     Graphics(const NGin::Graphics& orig);
