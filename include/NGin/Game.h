@@ -5,8 +5,7 @@
  * Created on January 10, 2013, 11:09 AM
  */
 
-#ifndef NGINGAME_H
-#define	NGINGAME_H
+#pragma once
 
 #include "NGin/NGin.h"
 #include <vector>
@@ -38,6 +37,4 @@ protected:
     std::vector<NGin::GameLevel*> mAllLevels;
     std::stack<NGin::GameLevel*> mLoadedLevels;
 };
-
-#endif	/* NGINGAME_H */
 

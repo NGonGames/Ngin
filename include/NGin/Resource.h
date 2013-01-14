@@ -5,8 +5,7 @@
  * Created on January 13, 2013, 1:10 PM
  */
 
-#ifndef NGINRESOURCE_H
-#define	NGINRESOURCE_H
+#pragma once
 
 #include "NGin/NGin.h"
 
@@ -17,6 +16,4 @@ public:
 private:
     Resource(const NGin::Resource& orig);
 };
-
-#endif	/* NGINRESOURCE_H */
 

@@ -5,8 +5,7 @@
  * Created on December 14, 2012, 11:12 AM
  */
 
-#ifndef NGINGRAPHICS_H
-#define	NGINGRAPHICS_H
+#pragma once
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
@@ -31,4 +30,3 @@ private:
     NGin::Window* wind;
 };
 
-#endif	/* NGINGRAPHICS_H */

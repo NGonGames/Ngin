@@ -5,8 +5,7 @@
  * Created on January 13, 2013, 2:10 PM
  */
 
-#ifndef NGINGAMELEVEL_H
-#define	NGINGAMELEVEL_H
+#pragma once
 
 #include "NGin/NGin.h"
 
@@ -25,6 +24,4 @@ private:
     
     float x, y, xs, ys;
 };
-
-#endif	/* NGINGAMELEVEL_H */
 

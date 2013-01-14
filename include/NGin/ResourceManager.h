@@ -5,8 +5,7 @@
  * Created on December 14, 2012, 10:34 AM
  */
 
-#ifndef NGINRESOURCEMANAGER_H
-#define	NGINRESOURCEMANAGER_H
+#pragma once
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
@@ -32,6 +31,4 @@ private:
     std::vector<NGin::Texture*> mSprites;
 
 };
-
-#endif	/* NGINRESOURCEMANAGER_H */
 

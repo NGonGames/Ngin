@@ -77,7 +77,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited.exe: lib/linux/SDL/libS
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nginunlimited ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/src/Game.o: src/Game.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src

@@ -5,8 +5,7 @@
  * Created on January 9, 2013, 4:53 PM
  */
 
-#ifndef NGINGAMEFACTORY_H
-#define	NGINGAMEFACTORY_H
+#pragma once
 
 class NGin::GameFactory {
 public:
@@ -17,6 +16,4 @@ private:
     GameFactory(const NGin::GameFactory& orig);
     virtual ~GameFactory();
 };
-
-#endif	/* NGINGAMEFACTORY_H */
 

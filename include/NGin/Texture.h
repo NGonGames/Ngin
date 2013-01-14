@@ -5,8 +5,7 @@
  * Created on December 21, 2012, 10:31 AM
  */
 
-#ifndef NGINSPRITE_H
-#define	NGINSPRITE_H
+#pragma once
 
 #include "NGin/NGin.h"
 #include "SDL/SDL.h"
@@ -26,6 +25,4 @@ private:
     SDL_Surface *mSurf;
     std::string mName;
 };
-
-#endif	/* NGINSPRITE_H */
 

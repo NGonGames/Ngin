@@ -5,8 +5,7 @@
  * Created on December 14, 2012, 11:36 AM
  */
 
-#ifndef NGIN_H
-#define	NGIN_H
+#pragma once
 
 namespace NGin {
     class Window;
@@ -33,6 +32,4 @@ namespace NGin {
 #include "NGin/GameLevel.h"
 #include "NGin/Game.h"
 #include "NGin/GameFactory.h"
-
-#endif	/* NGIN_H */
 
