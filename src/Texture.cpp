@@ -5,7 +5,7 @@
  * Created on December 21, 2012, 10:31 AM
  */
 
-#include "NGin/Texture.h"
+#include "NGin/Texture.hpp"
 
 using namespace NGin;
 

@@ -5,11 +5,12 @@
  * Created on December 14, 2012, 10:34 AM
  */
 
-#include "NGin/ResourceManager.h"
+#include "NGin/ResourceManager.hpp"
 
 using namespace NGin;
 
 ResourceManager::ResourceManager() {
+	//TODO load all images in assets/
 }
 
 ResourceManager::ResourceManager(const ResourceManager& orig) {

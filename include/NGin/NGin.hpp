@@ -24,14 +24,14 @@ namespace NGin {
     void Quit();
 }
 
-#include "NGin/Graphics.h"
-#include "NGin/ResourceManager.h"
-#include "NGin/Window.h"
-#include "NGin/Resource.h"
-#include "NGin/Texture.h"
-#include "NGin/Scene.h"
-#include "NGin/GameObject.h"
-#include "NGin/GameLevel.h"
-#include "NGin/Game.h"
-#include "NGin/GameFactory.h"
+#include "NGin/Graphics.hpp"
+#include "NGin/ResourceManager.hpp"
+#include "NGin/Window.hpp"
+#include "NGin/Resource.hpp"
+#include "NGin/Texture.hpp"
+#include "NGin/Scene.hpp"
+#include "NGin/GameObject.hpp"
+#include "NGin/GameLevel.hpp"
+#include "NGin/Game.hpp"
+#include "NGin/GameFactory.hpp"
 

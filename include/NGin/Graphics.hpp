@@ -10,7 +10,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <string>
-#include "NGin.h" 
+#include "NGin.hpp" 
 
 class NGin::Graphics {
 public:

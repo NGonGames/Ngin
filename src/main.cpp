@@ -6,7 +6,7 @@
  */
 
 #include <SDL/SDL.h>
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 #include <stdio.h>
 
 using namespace NGin;

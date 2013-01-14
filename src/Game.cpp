@@ -5,7 +5,7 @@
  * Created on January 10, 2013, 11:09 AM
  */
 
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 
 using namespace NGin;
 
@@ -28,9 +28,7 @@ void Game::Init() {
 }
 
 void Game::Update() {
-    GetActiveLevel()->Update();
-    /**/
-    
+    GetActiveLevel()->Update();    
 }
 
 void Game::Render() {

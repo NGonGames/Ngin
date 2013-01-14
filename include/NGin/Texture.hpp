@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 #include "SDL/SDL.h"
 #include <string>
 

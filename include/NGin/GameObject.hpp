@@ -5,10 +5,9 @@
  * Created on January 13, 2013, 3:05 PM
  */
 
-#ifndef NGINGAMEOBJECT_H
-#define	NGINGAMEOBJECT_H
+#pragma once
 
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 
 class NGin::GameObject {
 public:
@@ -24,6 +23,4 @@ private:
     float x, y, xspeed, yspeed;
 
 };
-
-#endif	/* NGINGAMEOBJECT_H */
 

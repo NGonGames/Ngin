@@ -36,37 +36,37 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\NGin\Game.h">
+    <ClInclude Include="..\..\..\..\include\NGin\Game.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\GameFactory.h">
+    <ClInclude Include="..\..\..\..\include\NGin\GameFactory.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\GameLevel.h">
+    <ClInclude Include="..\..\..\..\include\NGin\GameLevel.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\GameObject.h">
+    <ClInclude Include="..\..\..\..\include\NGin\GameObject.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\Graphics.h">
+    <ClInclude Include="..\..\..\..\include\NGin\Graphics.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\NGin.h">
+    <ClInclude Include="..\..\..\..\include\NGin\NGin.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\Resource.h">
+    <ClInclude Include="..\..\..\..\include\NGin\Resource.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\ResourceManager.h">
+    <ClInclude Include="..\..\..\..\include\NGin\ResourceManager.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\Scene.h">
+    <ClInclude Include="..\..\..\..\include\NGin\Scene.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\Texture.h">
+    <ClInclude Include="..\..\..\..\include\NGin\Texture.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\NGin\Window.h">
+    <ClInclude Include="..\..\..\..\include\NGin\Window.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

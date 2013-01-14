@@ -5,7 +5,7 @@
  * Created on December 14, 2012, 11:12 AM
  */
 
-#include "NGin/Graphics.h"
+#include "NGin/Graphics.hpp"
 
 using namespace NGin;
 

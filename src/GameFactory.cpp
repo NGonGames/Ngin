@@ -5,7 +5,7 @@
  * Created on January 9, 2013, 4:53 PM
  */
 
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 
 using namespace NGin;
 

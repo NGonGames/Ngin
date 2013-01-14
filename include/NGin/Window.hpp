@@ -8,7 +8,7 @@
 #pragma once
 
 #include <SDL/SDL.h>
-#include "NGin.h"
+#include "NGin.hpp"
 
 class NGin::Window {
 public:

@@ -5,7 +5,7 @@
  * Created on January 13, 2013, 2:10 PM
  */
 
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 #include "rapidxml/rapidxml.hpp"
 
 using namespace NGin;

@@ -13,7 +13,7 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "NGin.h"
+#include "NGin.hpp"
 
 class NGin::ResourceManager {
 public:
