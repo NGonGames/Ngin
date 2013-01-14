@@ -13,6 +13,7 @@ namespace NGin {
     class Resource;
     class Graphics;
     class Texture;
+    class Scene;
     class GameFactory;
     class Game;
     class GameLevel;
@@ -28,6 +29,7 @@ namespace NGin {
 #include "NGin/Window.h"
 #include "NGin/Resource.h"
 #include "NGin/Texture.h"
+#include "NGin/Scene.h"
 #include "NGin/GameObject.h"
 #include "NGin/GameLevel.h"
 #include "NGin/Game.h"

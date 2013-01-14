@@ -6,6 +6,7 @@
  */
 
 #include "NGin/NGin.h"
+#include "rapidxml/rapidxml.hpp"
 
 using namespace NGin;
 

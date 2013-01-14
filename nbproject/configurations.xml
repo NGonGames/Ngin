@@ -8,12 +8,20 @@
         <itemPath>include/NGin/Game.h</itemPath>
         <itemPath>include/NGin/GameFactory.h</itemPath>
         <itemPath>include/NGin/GameLevel.h</itemPath>
+        <itemPath>include/NGin/GameObject.h</itemPath>
         <itemPath>include/NGin/Graphics.h</itemPath>
         <itemPath>include/NGin/NGin.h</itemPath>
         <itemPath>include/NGin/Resource.h</itemPath>
         <itemPath>include/NGin/ResourceManager.h</itemPath>
+        <itemPath>include/NGin/Scene.h</itemPath>
         <itemPath>include/NGin/Texture.h</itemPath>
         <itemPath>include/NGin/Window.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="rapidxml" projectFiles="true">
+        <itemPath>include/rapidxml/rapidxml.hpp</itemPath>
+        <itemPath>include/rapidxml/rapidxml_iterators.hpp</itemPath>
+        <itemPath>include/rapidxml/rapidxml_print.hpp</itemPath>
+        <itemPath>include/rapidxml/rapidxml_utils.hpp</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -32,9 +40,11 @@
       <itemPath>src/Game.cpp</itemPath>
       <itemPath>src/GameFactory.cpp</itemPath>
       <itemPath>src/GameLevel.cpp</itemPath>
+      <itemPath>src/GameObject.cpp</itemPath>
       <itemPath>src/Graphics.cpp</itemPath>
       <itemPath>src/Resource.cpp</itemPath>
       <itemPath>src/ResourceManager.cpp</itemPath>
+      <itemPath>src/Scene.cpp</itemPath>
       <itemPath>src/Texture.cpp</itemPath>
       <itemPath>src/Window.cpp</itemPath>
       <itemPath>src/main.cpp</itemPath>
@@ -50,8 +60,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>src/GameObject.cpp</itemPath>
-    <itemPath>include/NGin/GameObject.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>include/NGin</Elem>
