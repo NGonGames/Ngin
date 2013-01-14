@@ -14,13 +14,18 @@
 #include <vector>
 #include <utility>
 #include "NGin.hpp"
+#include "boost/filesystem.hpp"
+
+namespace fs = boost::filesystem;
 
 class NGin::ResourceManager {
 public:
     
     ResourceManager();
+	ResourceManager(std::string path);
     virtual ~ResourceManager();
     
+	bool AddPath(std::string path);
     bool AddImage(std::string name, std::string path);
     NGin::Texture* GetImage(std::string name);
     

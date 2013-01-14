@@ -22,7 +22,7 @@ Game::~Game() {
 }
 
 void Game::Init() {
-    rmgr->AddImage("bg01", "resources/images/bg1.png");
+    rmgr->AddPath("resources/images/");
     
     wind->setWindowTitle("NGin v0.1");
 }

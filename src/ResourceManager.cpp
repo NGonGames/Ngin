@@ -10,13 +10,34 @@
 using namespace NGin;
 
 ResourceManager::ResourceManager() {
-	//TODO load all images in assets/
+	//Use the default path assets/
+}
+
+ResourceManager::ResourceManager(std::string path) {
+	
 }
 
 ResourceManager::ResourceManager(const ResourceManager& orig) {
 }
 
 ResourceManager::~ResourceManager() {
+}
+
+bool ResourceManager::AddPath(std::string path) {
+	if(!fs::is_directory(path)) {
+		return false;
+	}
+	for ( fs::recursive_directory_iterator end, dir(path); dir != end; ++dir ) {
+
+		if(fs::is_regular_file(dir->path())) {
+			if(fs::extension(dir->path().string()) == ".png")
+			{				
+				std::cout << fs::path(*dir).filename().string() << std::endl;   
+				AddImage(dir->path().stem().string(), dir->path().string());
+			}
+		}                                 
+	}
+	return true;
 }
 
 bool ResourceManager::AddImage(std::string name, std::string path) {

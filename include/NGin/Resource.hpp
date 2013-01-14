@@ -13,6 +13,7 @@ class NGin::Resource {
 public:
     Resource();
     virtual ~Resource();
+	Texture* text;
 private:
     Resource(const NGin::Resource& orig);
 };
