@@ -35,12 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/1445274692/Vector2.o \
 	${OBJECTDIR}/_ext/1445274692/ResourceManager.o \
 	${OBJECTDIR}/_ext/1445274692/main.o \
 	${OBJECTDIR}/_ext/1445274692/GameLevel.o \
 	${OBJECTDIR}/_ext/1445274692/GameFactory.o \
 	${OBJECTDIR}/_ext/1445274692/Game.o \
 	${OBJECTDIR}/_ext/1445274692/Graphics.o \
+	${OBJECTDIR}/_ext/1445274692/Image.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
 	${OBJECTDIR}/_ext/1445274692/Window.o \
 	${OBJECTDIR}/_ext/1445274692/Resource.o \
@@ -80,6 +82,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
+${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector2.o ../../src/Vector2.cpp
+
 ${OBJECTDIR}/_ext/1445274692/ResourceManager.o: ../../src/ResourceManager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -109,6 +116,11 @@ ${OBJECTDIR}/_ext/1445274692/Graphics.o: ../../src/Graphics.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Graphics.o ../../src/Graphics.cpp
+
+${OBJECTDIR}/_ext/1445274692/Image.o: ../../src/Image.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Image.o ../../src/Image.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

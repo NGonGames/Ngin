@@ -8,12 +8,20 @@
 #pragma once
 
 #include "NGin/NGin.hpp"
+#include "NGin/Resource.hpp"
+#include <string>
 
-class NGin::Scene : public NGin::Resource {
-public:
-    Scene();
-    virtual ~Scene();
-private:
-    Scene(const NGin::Scene& orig);
+namespace NGin {
+
+    class Scene : public Resource {
+    public:
+        Scene(std::string nameID, std::string sceneData);
+        virtual ~Scene();
+        std::string data() { return mData; };
+    private:
+        Scene(const Scene& orig);
+
+        std::string mData;
+    };
+
 };
-

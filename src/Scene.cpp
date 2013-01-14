@@ -9,7 +9,9 @@
 
 using namespace NGin;
 
-Scene::Scene() {
+Scene::Scene(std::string nameID, std::string sceneData) {
+    mName = nameID;
+    mData = sceneData;
 }
 
 Scene::Scene(const Scene& orig) {

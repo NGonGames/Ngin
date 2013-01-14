@@ -10,11 +10,13 @@
         <itemPath>../../include/NGin/GameLevel.hpp</itemPath>
         <itemPath>../../include/NGin/GameObject.hpp</itemPath>
         <itemPath>../../include/NGin/Graphics.hpp</itemPath>
+        <itemPath>../../include/NGin/Image.hpp</itemPath>
         <itemPath>../../include/NGin/NGin.hpp</itemPath>
         <itemPath>../../include/NGin/Resource.hpp</itemPath>
         <itemPath>../../include/NGin/ResourceManager.hpp</itemPath>
         <itemPath>../../include/NGin/Scene.hpp</itemPath>
         <itemPath>../../include/NGin/Texture.hpp</itemPath>
+        <itemPath>../../include/NGin/Vector2.hpp</itemPath>
         <itemPath>../../include/NGin/Window.hpp</itemPath>
       </logicalFolder>
       <logicalFolder name="Header/rapidxml"
@@ -38,10 +40,12 @@
       <itemPath>../../src/GameLevel.cpp</itemPath>
       <itemPath>../../src/GameObject.cpp</itemPath>
       <itemPath>../../src/Graphics.cpp</itemPath>
+      <itemPath>../../src/Image.cpp</itemPath>
       <itemPath>../../src/Resource.cpp</itemPath>
       <itemPath>../../src/ResourceManager.cpp</itemPath>
       <itemPath>../../src/Scene.cpp</itemPath>
       <itemPath>../../src/Texture.cpp</itemPath>
+      <itemPath>../../src/Vector2.cpp</itemPath>
       <itemPath>../../src/Window.cpp</itemPath>
       <itemPath>../../src/main.cpp</itemPath>
     </logicalFolder>
