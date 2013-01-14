@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="Header/NGin" displayName="NGin" projectFiles="true">
+        <itemPath>../../include/NGin/Game.h</itemPath>
+        <itemPath>../../include/NGin/GameFactory.h</itemPath>
+        <itemPath>../../include/NGin/GameLevel.h</itemPath>
+        <itemPath>../../include/NGin/GameObject.h</itemPath>
+        <itemPath>../../include/NGin/Graphics.h</itemPath>
+        <itemPath>../../include/NGin/NGin.h</itemPath>
+        <itemPath>../../include/NGin/Resource.h</itemPath>
+        <itemPath>../../include/NGin/ResourceManager.h</itemPath>
+        <itemPath>../../include/NGin/Scene.h</itemPath>
+        <itemPath>../../include/NGin/Texture.h</itemPath>
+        <itemPath>../../include/NGin/Window.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Header/rapidxml"
+                     displayName="rapidxml"
+                     projectFiles="true">
+        <itemPath>../../include/rapidxml/rapidxml.hpp</itemPath>
+        <itemPath>../../include/rapidxml/rapidxml_iterators.hpp</itemPath>
+        <itemPath>../../include/rapidxml/rapidxml_print.hpp</itemPath>
+        <itemPath>../../include/rapidxml/rapidxml_utils.hpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>../../src/Game.cpp</itemPath>
+      <itemPath>../../src/GameFactory.cpp</itemPath>
+      <itemPath>../../src/GameLevel.cpp</itemPath>
+      <itemPath>../../src/GameObject.cpp</itemPath>
+      <itemPath>../../src/Graphics.cpp</itemPath>
+      <itemPath>../../src/Resource.cpp</itemPath>
+      <itemPath>../../src/ResourceManager.cpp</itemPath>
+      <itemPath>../../src/Scene.cpp</itemPath>
+      <itemPath>../../src/Texture.cpp</itemPath>
+      <itemPath>../../src/Window.cpp</itemPath>
+      <itemPath>../../src/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../../include/NGin</Elem>
+    <Elem>../../src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug_Windows" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../../include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../lib/win/static</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mingw32</linkerLibLibItem>
+            <linkerLibLibItem>SDLmain</linkerLibLibItem>
+            <linkerLibLibItem>SDL_image</linkerLibLibItem>
+            <linkerLibLibItem>SDL_ttf</linkerLibLibItem>
+            <linkerLibLibItem>SDL.dll</linkerLibLibItem>
+            <linkerLibLibItem>v8_base</linkerLibLibItem>
+            <linkerLibLibItem>v8_snapshot</linkerLibLibItem>
+            <linkerOptionItem>-lWs2_32</linkerOptionItem>
+            <linkerOptionItem>-lWINMM</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+    <conf name="Debug_Linux" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>lib/linux/v8/libv8_base.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/linux/v8/libv8_snapshot.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/linux/SDL/libSDL_image.a</linkerLibFileItem>
+            <linkerLibFileItem>lib/linux/SDL/libSDL_ttf.a</linkerLibFileItem>
+            <linkerOptionItem>-lpthread</linkerOptionItem>
+            <linkerOptionItem>-lSDL</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
