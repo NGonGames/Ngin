@@ -23,6 +23,19 @@
     <ClCompile Include="..\..\..\..\src\Texture.cpp" />
     <ClCompile Include="..\..\..\..\src\Window.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\NGin\Game.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\GameFactory.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\GameLevel.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\GameObject.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\Graphics.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\NGin.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\Resource.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\ResourceManager.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\Scene.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\Texture.h" />
+    <ClInclude Include="..\..\..\..\include\NGin\Window.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{60DE3680-1D57-45B4-91A5-30A079317409}</ProjectGuid>
     <RootNamespace>NginUnlimited</RootNamespace>
