@@ -29,7 +29,12 @@ void Graphics::Clear(int r, int g, int b) {
 }
 
 void Graphics::DrawImage(std::string name, int x, int y) {
-    SDL_Surface *img = rmgr->GetImage(name)->surface();
+    Texture *tex = rmgr->GetImage(name);
+    if (tex == NULL) {
+        printf("Unable to draw image %s!\n", name.c_str());
+        return;
+    }
+    SDL_Surface *img = tex->surface();
     SDL_Rect offset;
     offset.x = x;
     offset.y = y;

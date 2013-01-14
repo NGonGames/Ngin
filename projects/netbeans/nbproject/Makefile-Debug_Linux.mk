@@ -42,9 +42,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Game.o \
 	${OBJECTDIR}/_ext/1445274692/Graphics.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
-	${OBJECTDIR}/_ext/1445274692/Scene.o \
 	${OBJECTDIR}/_ext/1445274692/Window.o \
 	${OBJECTDIR}/_ext/1445274692/Resource.o \
+	${OBJECTDIR}/_ext/1445274692/Scene.o \
 	${OBJECTDIR}/_ext/1445274692/GameObject.o
 
 
@@ -115,11 +115,6 @@ ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Texture.o ../../src/Texture.cpp
 
-${OBJECTDIR}/_ext/1445274692/Scene.o: ../../src/Scene.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
-	${RM} $@.d
-	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
-
 ${OBJECTDIR}/_ext/1445274692/Window.o: ../../src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -129,6 +124,11 @@ ${OBJECTDIR}/_ext/1445274692/Resource.o: ../../src/Resource.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Resource.o ../../src/Resource.cpp
+
+${OBJECTDIR}/_ext/1445274692/Scene.o: ../../src/Scene.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
 
 ${OBJECTDIR}/_ext/1445274692/GameObject.o: ../../src/GameObject.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

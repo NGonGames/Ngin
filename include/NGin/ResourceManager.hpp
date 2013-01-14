@@ -16,8 +16,6 @@
 #include "NGin.hpp"
 #include "boost/filesystem.hpp"
 
-namespace fs = boost::filesystem;
-
 class NGin::ResourceManager {
 public:
     
