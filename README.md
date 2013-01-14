@@ -1,4 +1,1 @@
-
-# Linux 
-	You must install the SDL libraries using command
-	-sudo apt-get install libsdl1.2-dev-
+If you wish to contribute you will find a Visual Studio 2012 Project and a Netbeans project in the projects/ directory that will let you build and add to the source.
