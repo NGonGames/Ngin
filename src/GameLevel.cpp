@@ -12,8 +12,8 @@ using namespace NGin;
 
 GameLevel::GameLevel(NGin::Graphics *graphics) {
     gfx = graphics;
-    x = y = 0.f;
-    xs = ys = 0.5f;
+    gObjects.push_back(new GameObject(gfx));
+    gObjects.push_back(new GameObject(gfx));
 }
 
 GameLevel::GameLevel(const GameLevel& orig) {
@@ -23,12 +23,13 @@ GameLevel::~GameLevel() {
 }
 
 void GameLevel::Update() {
-    x += xs;
-    y += ys;
-    xs = x < 0 ? 0.5f : x > 320 ? -0.5f : xs;
-    ys = y < 0 ? 0.5f : y > 240 ? -0.5f : ys;
+    for (std::vector<GameObject*>::iterator i = gObjects.begin(), e = gObjects.end(); i != e; i++) {
+        (*i)->Update();
+    }
 }
 
 void GameLevel::Render() {
-    gfx->DrawImage("bg01", x, y);
+    for (std::vector<GameObject*>::iterator i = gObjects.begin(), e = gObjects.end(); i != e; i++) {
+        (*i)->Render();
+    }
 }

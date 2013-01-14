@@ -12,13 +12,16 @@
 
 class NGin::GameObject {
 public:
-    GameObject();
+    GameObject(NGin::Graphics *graphics);
     GameObject(const NGin::GameObject& orig);
     virtual ~GameObject();
     
     void Update();
     void Render();
 private:
+    NGin::Graphics* gfx;
+    
+    float x, y, xspeed, yspeed;
 
 };
 
