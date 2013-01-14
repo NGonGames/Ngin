@@ -22,9 +22,11 @@ Game::~Game() {
 }
 
 void Game::Init() {
+    wind->setWindowTitle("NGin v0.1");
     rmgr->AddPath("resources/images/");
     
-    wind->setWindowTitle("NGin v0.1");
+    GameLevel *level0 = new GameLevel(gfx, rmgr->GetScene("test0"));
+    AddLevel(level0);
 }
 
 void Game::Update() {
