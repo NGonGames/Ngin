@@ -31,5 +31,5 @@ void GameObject::Update() {
 }
 
 void GameObject::Render() {
-    gfx->DrawImage("bg01", x, y);
+    gfx->DrawImage("background0", x, y);
 }

@@ -10,11 +10,10 @@
 using namespace NGin;
 
 ResourceManager::ResourceManager() {
-	//Use the default path assets/
 }
 
 ResourceManager::ResourceManager(std::string path) {
-	
+	AddPath(path);
 }
 
 ResourceManager::ResourceManager(const ResourceManager& orig) {
@@ -31,7 +30,7 @@ bool ResourceManager::AddPath(std::string path) {
 
 		if(fs::is_regular_file(dir->path())) {
 			if(fs::extension(dir->path().string()) == ".png")
-			{				
+			{
 				std::cout << fs::path(*dir).filename().string() << std::endl;   
 				AddImage(dir->path().stem().string(), dir->path().string());
 			}

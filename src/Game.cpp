@@ -22,8 +22,7 @@ Game::~Game() {
 }
 
 void Game::Init() {
-    rmgr->AddPath("resources/images/");
-    
+    rmgr->AddPath("resources/images");    
     wind->setWindowTitle("NGin v0.1");
 }
 
