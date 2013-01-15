@@ -8,13 +8,19 @@
 #pragma once
 
 #include "NGin/NGin.hpp"
+#include <string>
 
-class NGin::Resource {
-public:
-    Resource();
-    virtual ~Resource();
-	Texture* text;
-private:
-    Resource(const NGin::Resource& orig);
+namespace NGin {
+
+    class Resource {
+    public:
+        Resource();
+        virtual ~Resource();
+        std::string name() { return mName; };
+    protected:
+        std::string mName;
+    private:
+        Resource(const Resource& orig);
+    };
+
 };
-

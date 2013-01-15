@@ -6,6 +6,8 @@
  */
 
 #pragma once
+#ifndef NGIN_HPP
+#define NGIN_HPP
 
 namespace NGin {
     class Window;
@@ -18,20 +20,25 @@ namespace NGin {
     class Game;
     class GameLevel;
     class GameObject;
+    class Image;
+    class Vector2;
     
     bool Init();
     int Execute();
     void Quit();
 }
 
+#include "NGin/Vector2.hpp"
+#include "NGin/Resource.hpp"
+#include "NGin/Texture.hpp"
+#include "NGin/Image.hpp"
+#include "NGin/Scene.hpp"
 #include "NGin/Graphics.hpp"
 #include "NGin/ResourceManager.hpp"
 #include "NGin/Window.hpp"
-#include "NGin/Resource.hpp"
-#include "NGin/Texture.hpp"
-#include "NGin/Scene.hpp"
 #include "NGin/GameObject.hpp"
 #include "NGin/GameLevel.hpp"
 #include "NGin/Game.hpp"
 #include "NGin/GameFactory.hpp"
 
+#endif

@@ -26,8 +26,6 @@ void NGin::Quit() {
 int NGin::Execute() {
     bool quit = false;
     SDL_Event event;
-    //ResourceManager::AddImage("bg01", "resources/images/bg1.png");
-    //ResourceManager::AddImage("bg02", "resources/images/background0.png");
     
     Game* game = GameFactory::MakeGame();
     game->Init();

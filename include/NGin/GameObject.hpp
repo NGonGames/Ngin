@@ -7,20 +7,23 @@
 
 #pragma once
 
-#include "NGin/NGin.hpp"
+namespace NGin {
 
-class NGin::GameObject {
-public:
-    GameObject(NGin::Graphics *graphics);
-    GameObject(const NGin::GameObject& orig);
-    virtual ~GameObject();
-    
-    void Update();
-    void Render();
-private:
-    NGin::Graphics* gfx;
-    
-    float x, y, xspeed, yspeed;
+    class GameLevel;
 
+    class GameObject {
+    public:
+        GameObject(NGin::GameLevel* gameLevel);
+        GameObject(const GameObject& orig);
+        virtual ~GameObject();
+
+        void Update();
+        void Render();
+    private:
+        NGin::Graphics* gfx;
+        NGin::GameLevel* gl;
+
+        float x, y, xspeed, yspeed;
+    };
 };
 

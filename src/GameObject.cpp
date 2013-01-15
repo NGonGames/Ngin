@@ -9,8 +9,9 @@
 
 using namespace NGin;
 
-GameObject::GameObject(Graphics *graphics) {
-    gfx = graphics;
+GameObject::GameObject(GameLevel *gameLevel) {
+    gl = gameLevel;
+    gfx = gl->gfx;
     x = rand() % 320;
     y = rand() % 240;
     xspeed = 0.1f;
@@ -31,5 +32,5 @@ void GameObject::Update() {
 }
 
 void GameObject::Render() {
-    gfx->DrawImage("background0", x, y);
+    gfx->DrawImage("bg1", x, y);
 }

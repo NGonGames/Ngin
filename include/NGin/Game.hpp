@@ -7,7 +7,11 @@
 
 #pragma once
 
-#include "NGin/NGin.hpp"
+#include "NGin/Graphics.hpp"
+#include "NGin/ResourceManager.hpp"
+#include "NGin/Window.hpp"
+#include "NGin/GameLevel.hpp"
+
 #include <vector>
 #include <stack>
 

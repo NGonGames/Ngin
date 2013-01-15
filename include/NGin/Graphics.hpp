@@ -7,10 +7,12 @@
 
 #pragma once
 
+#include "NGin/ResourceManager.hpp"
+#include "NGin/Window.hpp"
+
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <string>
-#include "NGin.hpp" 
 
 class NGin::Graphics {
 public:

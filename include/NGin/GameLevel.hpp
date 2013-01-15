@@ -7,21 +7,24 @@
 
 #pragma once
 
-#include "NGin/NGin.hpp"
+#include "NGin/Graphics.hpp"
+#include "NGin/GameObject.hpp"
+#include <vector>
 
 class NGin::GameLevel {
 public:
-    GameLevel(NGin::Graphics* graphics);
+    GameLevel(NGin::Graphics* graphics, NGin::Scene *scene);
     GameLevel(const NGin::GameLevel& orig);
     virtual ~GameLevel();
     
     void Update();
     void Render();
+    void Add(NGin::GameObject *g);
 private:
-    
+    NGin::Scene* data;
     NGin::Graphics* gfx;
     std::vector<NGin::GameObject*> gObjects;
     
-    float x, y, xs, ys;
+    friend class NGin::GameObject;
 };
 

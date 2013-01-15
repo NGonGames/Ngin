@@ -10,10 +10,12 @@
 
 using namespace NGin;
 
-GameLevel::GameLevel(NGin::Graphics *graphics) {
+GameLevel::GameLevel(NGin::Graphics *graphics, NGin::Scene *scene) {
     gfx = graphics;
-    gObjects.push_back(new GameObject(gfx));
-    gObjects.push_back(new GameObject(gfx));
+    data = scene;
+    
+    this->Add(new GameObject(this));
+    this->Add(new GameObject(this));
 }
 
 GameLevel::GameLevel(const GameLevel& orig) {
@@ -22,14 +24,18 @@ GameLevel::GameLevel(const GameLevel& orig) {
 GameLevel::~GameLevel() {
 }
 
+void GameLevel::Add(GameObject *g) {
+    gObjects.push_back(g);
+}
+
 void GameLevel::Update() {
     for (std::vector<GameObject*>::iterator i = gObjects.begin(), e = gObjects.end(); i != e; i++) {
-        (*i)->Update();
+        dynamic_cast<GameObject*>(*i)->Update();
     }
 }
 
 void GameLevel::Render() {
     for (std::vector<GameObject*>::iterator i = gObjects.begin(), e = gObjects.end(); i != e; i++) {
-        (*i)->Render();
+        dynamic_cast<GameObject*>(*i)->Render();
     }
 }

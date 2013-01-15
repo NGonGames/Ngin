@@ -23,7 +23,5 @@ Game* GameFactory::MakeGame() {
     ResourceManager *resource = new ResourceManager();
     Graphics *graphics = new Graphics(resource, window);
     Game *game = new Game(graphics, resource, window);
-    GameLevel *level0 = new GameLevel(graphics);
-    game->AddLevel(level0);
     return game;
 }
