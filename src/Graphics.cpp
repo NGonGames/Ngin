@@ -21,7 +21,7 @@ Graphics::~Graphics() {
 }
 
 void Graphics::Clear() {
-    SDL_FillRect(wind->getScreen(), &wind->getScreen()->clip_rect, SDL_MapRGB(wind->getScreen()->format, 0x0, 0x0, 0x0));
+    SDL_FillRect(wind->getScreen(), &(wind->getScreen()->clip_rect), SDL_MapRGB(wind->getScreen()->format, 0x0, 0x0, 0x0));
 }
 
 void Graphics::Clear(int r, int g, int b) {

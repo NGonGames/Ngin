@@ -1,0 +1,73 @@
+/* 
+ * File:   Animation.cpp
+ * Author: Ben Cochrane
+ * 
+ * Created on January 14, 2013, 5:44 PM
+ */
+
+#include "NGin/NGin.hpp"
+
+using namespace NGin;
+using namespace std;
+
+Animation::Animation() {
+    mCurFrame = 0;
+    mAnimSpeed = 1;
+}
+
+Animation::Animation(Image* img) {
+    mFrames.push_back(img);
+}
+
+Animation::Animation(vector<Image*> imgs) {
+    for (vector<Image*>::iterator i = imgs.begin(), e = imgs.end(); i != e; ++i) {
+        if (dynamic_cast<Image*>(*i) != NULL) {
+            mFrames.push_back((*i));
+        }
+    }
+}
+
+Animation::Animation(const NGin::Animation& orig) {
+    //@TODO: Add Copy Constructor for Image class
+}
+
+Animation::~Animation() {
+}
+
+void Animation::AddFrame(Image* img) {
+    mFrames.push_back(img);
+}
+
+Image* Animation::GetFrame() {
+    if (!mFrames.empty()) {
+        return mFrames.at(mCurFrame);
+    }
+    return NULL;
+}
+
+Image* Animation::RemoveFrame(int n) {
+    int c = 0;
+    for (vector<Image*>::iterator i = mFrames.begin(), e = mFrames.end(); i != e; ++i) {
+        if (c == n) {
+            Image* img = mFrames.at(c);
+            mFrames.erase(i);
+            return img;
+        }
+        c++;
+    }
+    return NULL;
+}
+
+void Animation::Update() {
+    mCurFrame += mAnimSpeed;
+    if (mCurFrame > mFrames.size()) {
+        mCurFrame -= mFrames.size();
+    }
+    if (mCurFrame < 0) {
+        mCurFrame += mFrames.size();
+    }
+}
+
+void Animation::Render(int x, int y) {
+    mFrames.at(mCurFrame)->Render(x, y);
+}

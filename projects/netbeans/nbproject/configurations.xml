@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="Header/NGin" displayName="NGin" projectFiles="true">
+        <itemPath>../../include/NGin/Animation.hpp</itemPath>
         <itemPath>../../include/NGin/Game.hpp</itemPath>
         <itemPath>../../include/NGin/GameFactory.hpp</itemPath>
         <itemPath>../../include/NGin/GameLevel.hpp</itemPath>
@@ -35,6 +36,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>../../src/Animation.cpp</itemPath>
       <itemPath>../../src/Game.cpp</itemPath>
       <itemPath>../../src/GameFactory.cpp</itemPath>
       <itemPath>../../src/GameLevel.cpp</itemPath>
@@ -77,6 +79,7 @@
           <incDir>
             <pElem>../../include</pElem>
           </incDir>
+          <commandLine>-static-libgcc -static-libstdc++</commandLine>
         </ccTool>
         <linkerTool>
           <linkerAddLib>

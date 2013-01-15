@@ -9,12 +9,14 @@
 
 using namespace NGin;
 
-Image::Image() {
+Image::Image(Texture* texture) {
+    mTex = texture;
     mOrigin = new Vector2(0.f, 0.f);
     mSize = new Vector2(0.f, 0.f);
 }
 
-Image::Image(Vector2 origin, Vector2 size) {
+Image::Image(Texture *texture, Vector2 *origin, Vector2 *size) {
+    mTex = texture;
     mOrigin = origin;
     mSize = size;
 }
@@ -25,3 +27,6 @@ Image::Image(const Image& orig) {
 Image::~Image() {
 }
 
+void Image::Render(int x, int y) {
+    
+}

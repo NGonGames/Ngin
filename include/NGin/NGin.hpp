@@ -21,6 +21,7 @@ namespace NGin {
     class GameLevel;
     class GameObject;
     class Image;
+    class Animation;
     class Vector2;
     
     bool Init();
@@ -32,6 +33,7 @@ namespace NGin {
 #include "NGin/Resource.hpp"
 #include "NGin/Texture.hpp"
 #include "NGin/Image.hpp"
+#include "NGin/Animation.hpp"
 #include "NGin/Scene.hpp"
 #include "NGin/Graphics.hpp"
 #include "NGin/ResourceManager.hpp"
