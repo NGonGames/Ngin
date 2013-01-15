@@ -15,11 +15,11 @@ public:
     Image(NGin::Texture* texture, NGin::Vector2 *origin, NGin::Vector2 *size);
     Image(const NGin::Image& orig);
     virtual ~Image();
-    void Render(int x, int y);
+    void Render(NGin::Graphics *g, NGin::Vector2 *position);
     std::string Name() { return mName; };
 private:
-    NGin::Vector2 *mOrigin;
-    NGin::Vector2 *mSize;
+    NGin::Vector2 *mClipPos;
+    NGin::Vector2 *mClipSize;
     NGin::Texture *mTex;
     std::string mName;
 };

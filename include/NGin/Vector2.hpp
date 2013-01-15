@@ -17,6 +17,7 @@ public:
     Vector2(float x, float y);
     ~Vector2();
     NGin::Vector2 operator+(const NGin::Vector2& param) const;
+    NGin::Vector2 operator+=(const NGin::Vector2& param);
     NGin::Vector2 operator=(const NGin::Vector2& param);
     NGin::Vector2 operator*(const int param) const;
     NGin::Vector2 operator*(const float param) const;

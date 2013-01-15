@@ -17,9 +17,13 @@ Animation::Animation() {
 
 Animation::Animation(Image* img) {
     mFrames.push_back(img);
+    mCurFrame = 0;
+    mAnimSpeed = 1;
 }
 
 Animation::Animation(vector<Image*> imgs) {
+    mCurFrame = 0;
+    mAnimSpeed = 1;
     for (vector<Image*>::iterator i = imgs.begin(), e = imgs.end(); i != e; ++i) {
         if (dynamic_cast<Image*>(*i) != NULL) {
             mFrames.push_back((*i));
@@ -40,7 +44,7 @@ void Animation::AddFrame(Image* img) {
 
 Image* Animation::GetFrame() {
     if (!mFrames.empty()) {
-        return mFrames.at(mCurFrame);
+        return mFrames.at(static_cast<int>(mCurFrame));
     }
     return NULL;
 }
@@ -59,15 +63,17 @@ Image* Animation::RemoveFrame(int n) {
 }
 
 void Animation::Update() {
-    mCurFrame += mAnimSpeed;
-    if (mCurFrame > mFrames.size()) {
-        mCurFrame -= mFrames.size();
-    }
-    if (mCurFrame < 0) {
-        mCurFrame += mFrames.size();
+    if (mFrames.size() > 1) {
+        mCurFrame += mAnimSpeed;
+        if (mCurFrame > mFrames.size()) {
+            mCurFrame -= mFrames.size();
+        }
+        if (mCurFrame < 0) {
+            mCurFrame += mFrames.size();
+        }
     }
 }
 
-void Animation::Render(int x, int y) {
-    mFrames.at(mCurFrame)->Render(x, y);
+void Animation::Render(Graphics *g, Vector2 *position) {
+    mFrames.at(static_cast<int>(mCurFrame))->Render(g, position);
 }

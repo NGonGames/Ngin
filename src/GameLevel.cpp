@@ -10,9 +10,10 @@
 
 using namespace NGin;
 
-GameLevel::GameLevel(NGin::Graphics *graphics, NGin::Scene *scene) {
+GameLevel::GameLevel(NGin::Graphics *graphics, NGin::ResourceManager *resources, std::string level) {
     gfx = graphics;
-    data = scene;
+    rmgr = resources;
+    data = rmgr->GetScene(level);
     
     this->Add(new GameObject(this));
     this->Add(new GameObject(this));

@@ -7,6 +7,10 @@
 
 #pragma once
 
+#include <vector>
+
+#include "Animation.hpp"
+
 namespace NGin {
 
     class GameLevel;
@@ -22,8 +26,11 @@ namespace NGin {
     private:
         NGin::Graphics* gfx;
         NGin::GameLevel* gl;
-
-        float x, y, xspeed, yspeed;
+        
+        NGin::Vector2* mPos;
+        NGin::Vector2* mVel;
+        
+        std::vector<NGin::Animation*> mAnims;
     };
 };
 

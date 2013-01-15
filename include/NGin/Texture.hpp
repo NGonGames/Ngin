@@ -17,6 +17,7 @@ public:
     virtual ~Texture();
     
     SDL_Surface * surface() { return mSurf; };
+    NGin::Vector2 Size() { return Vector2(mSurf->w, mSurf->h); };
     
 private:
     Texture(const NGin::Texture& orig);

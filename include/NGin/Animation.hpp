@@ -23,7 +23,7 @@ public:
     NGin::Image* RemoveFrame(int n);
     
     void Update();
-    void Render(int x, int y);
+    void Render(NGin::Graphics *g, NGin::Vector2 *position);
     
     int Length();
     int Speed();

@@ -12,10 +12,9 @@ using namespace NGin;
 GameObject::GameObject(GameLevel *gameLevel) {
     gl = gameLevel;
     gfx = gl->gfx;
-    x = rand() % 320;
-    y = rand() % 240;
-    xspeed = 0.1f;
-    yspeed = 0.1f;
+    mPos = new Vector2(rand() % 320, rand() % 240);
+    mVel = new Vector2(.1f, .1f);
+    mAnims.push_back(new Animation(new Image(gl->rmgr->GetImage("bg1"))));
 }
 
 GameObject::GameObject(const GameObject& orig) {
@@ -25,12 +24,13 @@ GameObject::~GameObject() {
 }
 
 void GameObject::Update() {
-    x += xspeed;
-    y += yspeed;
-    xspeed = x < 0 ? 0.1f : x > 320 ? -0.1f : xspeed;
-    yspeed = y < 0 ? 0.1f : y > 240 ? -0.1f : yspeed;
+    mAnims.at(0)->Update();
+    mPos->x += mVel->x;
+    mPos->y += mVel->y;
+    mVel->x = mPos->x < 0 ? .1f : mPos->x > 320 ? -.1f : mVel->x;
+    mVel->y = mPos->y < 0 ? .1f : mPos->y > 240 ? -.1f : mVel->y;
 }
 
 void GameObject::Render() {
-    gfx->DrawImage("bg1", x, y);
+    mAnims.at(0)->Render(gl->gfx, mPos);
 }

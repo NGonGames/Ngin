@@ -19,9 +19,9 @@ GameFactory::~GameFactory() {
 }
 
 Game* GameFactory::MakeGame() {
+    ResourceManager *resource = new ResourceManager;
     Window *window = new Window;
-    ResourceManager *resource = new ResourceManager();
-    Graphics *graphics = new Graphics(resource, window);
+    Graphics *graphics = new Graphics(window);
     Game *game = new Game(graphics, resource, window);
     return game;
 }

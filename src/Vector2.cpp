@@ -31,6 +31,13 @@ Vector2 Vector2::operator+ (const Vector2& param) const {
     return v2;
 }
 
+Vector2 Vector2::operator+= (const Vector2& param) {
+    Vector2 v2;
+    v2.x = x + param.x;
+    v2.y = y + param.y;
+    return v2;
+}
+
 Vector2 Vector2::operator= (const Vector2& param) {
     x = param.x;
     y = param.y;
