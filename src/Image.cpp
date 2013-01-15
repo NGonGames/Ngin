@@ -28,7 +28,7 @@ Image::~Image() {
 }
 
 void Image::Render(Graphics *g, Vector2 *position) {
-    if (mClipSize->magnitude() == 0) {
+    if (mClipSize->magnitude() < 1) {
         g->DrawTexture(mTex, position);
     } else {
         g->DrawTexture(mTex, position, mClipPos, mClipSize);

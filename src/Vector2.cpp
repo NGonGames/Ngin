@@ -14,14 +14,14 @@ Vector2::Vector2(const Vector2& orig) {
     y = orig.y;
 }
 
-Vector2::Vector2(int x, int y) {
-    x = x;
-    y = y;
+Vector2::Vector2(int xval, int yval) {
+    x = xval;
+    y = yval;
 }
 
-Vector2::Vector2(float x, float y) {
-    x = x;
-    y = y;
+Vector2::Vector2(float xval, float yval) {
+    x = xval;
+    y = yval;
 }
 
 Vector2 Vector2::operator+ (const Vector2& param) const {
@@ -36,11 +36,6 @@ Vector2 Vector2::operator+= (const Vector2& param) {
     v2.x = x + param.x;
     v2.y = y + param.y;
     return v2;
-}
-
-Vector2 Vector2::operator= (const Vector2& param) {
-    x = param.x;
-    y = param.y;
 }
 
 Vector2 Vector2::operator* (const int param) const {

@@ -33,7 +33,7 @@ void Game::Update() {
 }
 
 void Game::Render() {
-    gfx->Clear();
+    //gfx->Clear();
     GetActiveLevel()->Render();
     gfx->Finalize();
 }
