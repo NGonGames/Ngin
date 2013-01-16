@@ -14,9 +14,7 @@ GameLevel::GameLevel(NGin::Graphics *graphics, NGin::ResourceManager *resources,
     gfx = graphics;
     rmgr = resources;
     data = rmgr->GetScene(level);
-    
-    this->Add(new GameObject(this));
-    this->Add(new GameObject(this));
+    Add(new TiledMap(this));
 }
 
 GameLevel::GameLevel(const GameLevel& orig) {

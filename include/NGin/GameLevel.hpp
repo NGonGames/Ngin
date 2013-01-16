@@ -27,5 +27,6 @@ private:
     std::vector<NGin::GameObject*> gObjects;
     
     friend class NGin::GameObject;
+    friend class NGin::TiledMap;
 };
 
