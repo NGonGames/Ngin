@@ -6,8 +6,6 @@
  */
 
 #pragma once
-#ifndef NGIN_HPP
-#define NGIN_HPP
 
 namespace NGin {
     class Window;
@@ -22,6 +20,7 @@ namespace NGin {
     class GameObject;
     class Image;
     class Vector2;
+    class Input;
     
     bool Init();
     int Execute();
@@ -40,5 +39,4 @@ namespace NGin {
 #include "NGin/GameLevel.hpp"
 #include "NGin/Game.hpp"
 #include "NGin/GameFactory.hpp"
-
-#endif
+#include "NGin/Input.hpp"

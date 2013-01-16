@@ -16,6 +16,7 @@
     <ClCompile Include="..\..\..\..\src\GameLevel.cpp" />
     <ClCompile Include="..\..\..\..\src\GameObject.cpp" />
     <ClCompile Include="..\..\..\..\src\Graphics.cpp" />
+    <ClCompile Include="..\..\..\..\src\Input.cpp" />
     <ClCompile Include="..\..\..\..\src\main.cpp" />
     <ClCompile Include="..\..\..\..\src\Resource.cpp" />
     <ClCompile Include="..\..\..\..\src\ResourceManager.cpp" />
@@ -29,6 +30,7 @@
     <ClInclude Include="..\..\..\..\include\NGin\GameLevel.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\GameObject.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Graphics.hpp" />
+    <ClInclude Include="..\..\..\..\include\NGin\Input.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\NGin.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Resource.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\ResourceManager.hpp" />
@@ -73,7 +75,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;libboost_system-vc110-mt-gd-1_52.lib;libboost_system-vc110-mt-1_52.lib;libboost_filesystem-vc110-mt-gd-1_52.lib;libboost_filesystem-vc110-mt-1_52.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;libboost_filesystem-vc110-mt-gd-1_52.lib;libboost_filesystem-vc110-mt-1_52.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\..\..\lib\win\static;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
     </Link>

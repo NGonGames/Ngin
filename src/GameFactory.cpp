@@ -22,6 +22,7 @@ Game* GameFactory::MakeGame() {
     Window *window = new Window;
     ResourceManager *resource = new ResourceManager();
     Graphics *graphics = new Graphics(resource, window);
-    Game *game = new Game(graphics, resource, window);
+    Input *input = new Input();
+    Game *game = new Game(graphics, resource, window, input);
     return game;
 }

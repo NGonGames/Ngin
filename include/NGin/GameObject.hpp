@@ -22,7 +22,7 @@ namespace NGin {
     private:
         NGin::Graphics* gfx;
         NGin::GameLevel* gl;
-
+        NGin::Input* in;
         float x, y, xspeed, yspeed;
     };
 };

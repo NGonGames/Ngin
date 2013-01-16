@@ -9,10 +9,11 @@
 
 using namespace NGin;
 
-Game::Game(Graphics *graphics, ResourceManager *resources, Window *window) {
+Game::Game(Graphics *graphics, ResourceManager *resources, Window *window, Input *input) {
     gfx = graphics;
     rmgr = resources;
     wind = window;
+    in = input;
 }
 
 Game::Game(const Game& orig) {
@@ -24,12 +25,14 @@ Game::~Game() {
 void Game::Init() {
     wind->setWindowTitle("NGin v0.1");
     rmgr->AddPath("resources/images");    
-    GameLevel *level0 = new GameLevel(gfx, rmgr->GetScene("test0"));
+    GameLevel *level0 = new GameLevel(gfx, in, rmgr->GetScene("test0"));
     AddLevel(level0);
 }
 
 void Game::Update() {
-    GetActiveLevel()->Update();    
+    //input update should happen before game update.
+    in->Update();
+    GetActiveLevel()->Update();
 }
 
 void Game::Render() {

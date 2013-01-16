@@ -11,37 +11,28 @@
 
 using namespace NGin;
 
+bool running;
+
 bool NGin::Init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
         return false;
     }
-    
+    running = true;
     return true;
 }
 
 void NGin::Quit() {
-    SDL_Quit();
+    running = false;
 }
 
 int NGin::Execute() {
-    bool quit = false;
-    SDL_Event event;
-    
     Game* game = GameFactory::MakeGame();
     game->Init();
-    while (!quit) {
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                quit = true;
-            } else {
-                break;
-            }
-        }
+    while (running) {
         game->Update();
-        game->Render();
-        
+        game->Render();        
     }
-    NGin::Quit();
+    SDL_Quit();
     return 0;
 }
 

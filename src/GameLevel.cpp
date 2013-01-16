@@ -10,8 +10,9 @@
 
 using namespace NGin;
 
-GameLevel::GameLevel(NGin::Graphics *graphics, NGin::Scene *scene) {
+GameLevel::GameLevel(NGin::Graphics *graphics, NGin::Input* input, NGin::Scene *scene) {
     gfx = graphics;
+    in = input;
     data = scene;
     
     this->Add(new GameObject(this));

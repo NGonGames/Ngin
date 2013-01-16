@@ -19,7 +19,8 @@ class NGin::Game {
 public:
     Game(NGin::Graphics *graphics,
          NGin::ResourceManager *resources,
-         NGin::Window *window);
+         NGin::Window *window,
+         NGin::Input *input);
     
     virtual ~Game();
     
@@ -37,7 +38,9 @@ protected:
     NGin::Graphics* gfx;
     NGin::Window* wind;
     NGin::ResourceManager* rmgr;
+    NGin::Input* in;
     
+
     std::vector<NGin::GameLevel*> mAllLevels;
     std::stack<NGin::GameLevel*> mLoadedLevels;
 };
