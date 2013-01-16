@@ -42,11 +42,14 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/GameFactory.o \
 	${OBJECTDIR}/_ext/1445274692/Game.o \
 	${OBJECTDIR}/_ext/1445274692/Graphics.o \
+	${OBJECTDIR}/_ext/1445274692/TiledTile.o \
 	${OBJECTDIR}/_ext/1445274692/Image.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
+	${OBJECTDIR}/_ext/1445274692/TiledMap.o \
 	${OBJECTDIR}/_ext/1445274692/Window.o \
 	${OBJECTDIR}/_ext/1445274692/Resource.o \
 	${OBJECTDIR}/_ext/1445274692/Scene.o \
+	${OBJECTDIR}/_ext/1445274692/Animation.o \
 	${OBJECTDIR}/_ext/1445274692/GameObject.o
 
 
@@ -80,7 +83,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: lib/linux/SDL/libSDL_tt
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
@@ -117,6 +120,11 @@ ${OBJECTDIR}/_ext/1445274692/Graphics.o: ../../src/Graphics.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Graphics.o ../../src/Graphics.cpp
 
+${OBJECTDIR}/_ext/1445274692/TiledTile.o: ../../src/TiledTile.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/TiledTile.o ../../src/TiledTile.cpp
+
 ${OBJECTDIR}/_ext/1445274692/Image.o: ../../src/Image.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -126,6 +134,11 @@ ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Texture.o ../../src/Texture.cpp
+
+${OBJECTDIR}/_ext/1445274692/TiledMap.o: ../../src/TiledMap.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/TiledMap.o ../../src/TiledMap.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Window.o: ../../src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
@@ -141,6 +154,11 @@ ${OBJECTDIR}/_ext/1445274692/Scene.o: ../../src/Scene.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
+
+${OBJECTDIR}/_ext/1445274692/Animation.o: ../../src/Animation.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Animation.o ../../src/Animation.cpp
 
 ${OBJECTDIR}/_ext/1445274692/GameObject.o: ../../src/GameObject.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

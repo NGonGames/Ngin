@@ -1,5 +1,5 @@
 /* 
- * File:   NGin.h
+ * File:   NGin.hpp
  * Author: Ben Cochrane
  *
  * Created on December 14, 2012, 11:36 AM
@@ -19,8 +19,11 @@ namespace NGin {
     class GameLevel;
     class GameObject;
     class Image;
+    class Animation;
     class Vector2;
-    class Input;
+    class TiledMap;
+    class TiledTile;
+	class Input;
     
     bool Init();
     int Execute();
@@ -31,11 +34,14 @@ namespace NGin {
 #include "NGin/Resource.hpp"
 #include "NGin/Texture.hpp"
 #include "NGin/Image.hpp"
+#include "NGin/Animation.hpp"
 #include "NGin/Scene.hpp"
 #include "NGin/Graphics.hpp"
 #include "NGin/ResourceManager.hpp"
 #include "NGin/Window.hpp"
 #include "NGin/GameObject.hpp"
+#include "NGin/TiledTile.hpp"
+#include "NGin/TiledMap.hpp"
 #include "NGin/GameLevel.hpp"
 #include "NGin/Game.hpp"
 #include "NGin/GameFactory.hpp"

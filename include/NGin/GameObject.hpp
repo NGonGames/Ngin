@@ -1,5 +1,5 @@
 /* 
- * File:   GameObject.h
+ * File:   GameObject.hpp
  * Author: Ben Cochrane
  *
  * Created on January 13, 2013, 3:05 PM
@@ -7,23 +7,25 @@
 
 #pragma once
 
-namespace NGin {
+#include "NGin/NGin.hpp"
+#include <vector>
 
-    class GameLevel;
+class NGin::GameObject {
+public:
+    GameObject(NGin::GameLevel* gameLevel);
+    virtual ~GameObject();
 
-    class GameObject {
-    public:
-        GameObject(NGin::GameLevel* gameLevel);
-        GameObject(const GameObject& orig);
-        virtual ~GameObject();
+    void Update();
+    void Render();
+private:
+    GameObject(const NGin::GameObject& orig);
+protected:
+    NGin::Graphics* gfx;
+    NGin::GameLevel* gl;
+	NGin::Input* in;
+    NGin::Vector2* mPos;
+    NGin::Vector2* mVel;
 
-        void Update();
-        void Render();
-    private:
-        NGin::Graphics* gfx;
-        NGin::GameLevel* gl;
-        NGin::Input* in;
-        float x, y, xspeed, yspeed;
-    };
+    std::vector<NGin::Animation*> mAnims;
 };
 

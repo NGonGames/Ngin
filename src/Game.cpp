@@ -24,8 +24,9 @@ Game::~Game() {
 
 void Game::Init() {
     wind->setWindowTitle("NGin v0.1");
-    rmgr->AddPath("resources/images");    
-    GameLevel *level0 = new GameLevel(gfx, in, rmgr->GetScene("test0"));
+    rmgr->AddPath("resources/images");
+    rmgr->AddPath("resources/scenes");
+    GameLevel *level0 = new GameLevel(gfx, in, rmgr, "test0");
     AddLevel(level0);
 }
 
@@ -36,7 +37,7 @@ void Game::Update() {
 }
 
 void Game::Render() {
-    gfx->Clear();
+    //gfx->Clear();
     GetActiveLevel()->Render();
     gfx->Finalize();
 }

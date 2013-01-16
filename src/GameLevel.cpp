@@ -10,13 +10,12 @@
 
 using namespace NGin;
 
-GameLevel::GameLevel(NGin::Graphics *graphics, NGin::Input* input, NGin::Scene *scene) {
+GameLevel::GameLevel(NGin::Graphics *graphics, NGin::Input* input,NGin::ResourceManager *resources, std::string level) {
     gfx = graphics;
-    in = input;
-    data = scene;
-    
-    this->Add(new GameObject(this));
-    this->Add(new GameObject(this));
+	in = input;
+    rmgr = resources;
+    data = rmgr->GetScene(level);
+    Add(new TiledMap(this));
 }
 
 GameLevel::GameLevel(const GameLevel& orig) {

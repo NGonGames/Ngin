@@ -13,7 +13,7 @@
 
 class NGin::GameLevel {
 public:
-    GameLevel(NGin::Graphics* graphics, NGin::Input* input, NGin::Scene *scene);
+    GameLevel(NGin::Graphics* graphics, NGin::Input* input, NGin::ResourceManager *resources, std::string level);
     GameLevel(const NGin::GameLevel& orig);
     virtual ~GameLevel();
     
@@ -24,8 +24,10 @@ private:
     NGin::Scene* data;
     NGin::Graphics* gfx;
     NGin::Input* in;
+	NGin::ResourceManager *rmgr;
     std::vector<NGin::GameObject*> gObjects;
     
     friend class NGin::GameObject;
+    friend class NGin::TiledMap;
 };
 

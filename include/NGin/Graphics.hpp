@@ -17,18 +17,19 @@
 class NGin::Graphics {
 public:
     
-    Graphics(NGin::ResourceManager *resources, NGin::Window *window);
+    Graphics(NGin::Window *window);
     virtual ~Graphics();
     
     void Clear();
     void Clear(int r, int g, int b);
-    void DrawImage(std::string, int x, int y);
+    void SetOffset(NGin::Vector2 &offset);
+    void DrawTexture(NGin::Texture *texture, NGin::Vector2 *pos);
+    void DrawTexture(NGin::Texture *texture, NGin::Vector2 *pos, NGin::Vector2 *clipPos, NGin::Vector2 *clipSize);
     void Finalize();
     
 private:
     Graphics(const NGin::Graphics& orig);
-    
-    NGin::ResourceManager* rmgr;
+    NGin::Vector2 *offset;
     NGin::Window* wind;
 };
 

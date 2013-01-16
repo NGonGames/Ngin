@@ -13,10 +13,6 @@ GameObject::GameObject(GameLevel *gameLevel) {
     gl = gameLevel;
     gfx = gl->gfx;
     in = gl->in;
-    x = rand() % 320;
-    y = rand() % 240;
-    xspeed = 0.1f;
-    yspeed = 0.1f;
 }
 
 GameObject::GameObject(const GameObject& orig) {
@@ -26,8 +22,13 @@ GameObject::~GameObject() {
 }
 
 void GameObject::Update() {
+    if (!mAnims.empty()) {
+        mAnims.at(0)->Update();
+    }
 }
 
 void GameObject::Render() {
-    gfx->DrawImage("bg1", x, y);
+    if (!mAnims.empty()) {
+        mAnims.at(0)->Render(gl->gfx, mPos);
+    }
 }
