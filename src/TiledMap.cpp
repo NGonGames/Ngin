@@ -31,7 +31,6 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
     string::iterator xmlst, xmlen;
     xmlst = gl->data->data().begin();
     xmlen = gl->data->data().end();
-    printf("%s\n", gl->data->data().c_str());
     vector<char> xml_copy(xmlst, xmlen);
     xml_copy.push_back('\0');
     doc.parse<parse_declaration_node>(&xml_copy[0]);
@@ -82,10 +81,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
                 ++i;
             } while (cur_node->next_sibling("layer") != 0);
         }
-    }
-    
-    
-    */
+    }*/
 }
 
 TiledMap::~TiledMap() {

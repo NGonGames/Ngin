@@ -23,7 +23,7 @@ namespace NGin {
     class Vector2;
     class TiledMap;
     class TiledTile;
-	class Input;
+    class Input;
     
     bool Init();
     int Execute();

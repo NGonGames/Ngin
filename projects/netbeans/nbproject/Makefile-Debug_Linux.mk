@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Game.o \
 	${OBJECTDIR}/_ext/1445274692/Graphics.o \
 	${OBJECTDIR}/_ext/1445274692/TiledTile.o \
+	${OBJECTDIR}/_ext/1445274692/Input.o \
 	${OBJECTDIR}/_ext/1445274692/Image.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
 	${OBJECTDIR}/_ext/1445274692/TiledMap.o \
@@ -83,7 +84,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: lib/linux/SDL/libSDL_tt
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
@@ -124,6 +125,11 @@ ${OBJECTDIR}/_ext/1445274692/TiledTile.o: ../../src/TiledTile.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/TiledTile.o ../../src/TiledTile.cpp
+
+${OBJECTDIR}/_ext/1445274692/Input.o: ../../src/Input.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -Iinclude -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Input.o ../../src/Input.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Image.o: ../../src/Image.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
