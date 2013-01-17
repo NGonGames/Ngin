@@ -21,13 +21,13 @@ GameObject::GameObject(const GameObject& orig) {
 GameObject::~GameObject() {
 }
 
-void GameObject::Update() {
+void GameObject::UpdateAnimation() {
     if (!mAnims.empty()) {
         mAnims.at(0)->Update();
     }
 }
 
-void GameObject::Render() {
+void GameObject::RenderAnimation() {
     if (!mAnims.empty()) {
         mAnims.at(0)->Render(gl->gfx, mPos);
     }

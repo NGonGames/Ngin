@@ -16,3 +16,11 @@ TiledTile::TiledTile(GameLevel *gl, Texture* tex, Vector2 *position, Vector2* cl
 
 TiledTile::~TiledTile() {
 }
+
+void TiledTile::Update() {
+    this->UpdateAnimation();
+}
+
+void TiledTile::Render() {
+    this->RenderAnimation();
+}

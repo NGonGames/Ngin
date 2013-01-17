@@ -21,6 +21,7 @@ struct Tileset {
     int begin;
     int w, h;
     int tw, th;
+    int gw, gh;
 
     int end() {
         return w * h / (tw * th) + begin;
@@ -29,6 +30,10 @@ struct Tileset {
     bool included(int n) {
         return (n >= begin && n <= end());
     };
+    
+    int id(int gid) {
+        return gid - begin;
+    }
     string name;
 };
 
@@ -62,11 +67,13 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
         istringstream(child->first_attribute("tilewidth")->value()) >> t[tsnum].tw;
         istringstream(child->first_attribute("tileheight")->value()) >> t[tsnum].th;
         t[tsnum].name = TrimFileName(child->first_node("image")->first_attribute("source")->value());
+        t[tsnum].gw = t[tsnum].w / t[tsnum].tw;
+        t[tsnum].gh = t[tsnum].h / t[tsnum].th;
     }
     
     for (xml_node<> *child = cur_node->first_node("layer"); child; ++lnum, child = child->next_sibling("layer")) {
         vector<TiledTile*> *mTiles = new vector<TiledTile*>();
-        for (xml_node<> *tile = child->first_node("tile"); tile; ++tnum, tile = tile->next_sibling("tile")) {
+        for (xml_node<> *tile = child->first_node("data")->first_node("tile"); tile; ++tnum, tile = tile->next_sibling("tile")) {
             int gid;
             istringstream(tile->first_attribute("gid")->value()) >> gid;
             for (int i = 0; i < tsnum; ++i) {
@@ -75,7 +82,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
                             new TiledTile(gameLevel,
                             gl->rmgr->GetTexture(t[i].name),
                             new Vector2(tnum % gridwidth * t[i].tw, floor(tnum / gridwidth) * t[i].th),
-                            new Vector2((gid - t[i].begin) % gridwidth, floor((gid - t[i].begin) / gridheight)),
+                            new Vector2(t[i].id(gid) % t[i].gw * t[i].tw, floor(t[i].id(gid) / t[i].gw) * t[i].th),
                             new Vector2(t[i].tw, t[i].th)));
                 }
             }
@@ -89,6 +96,10 @@ TiledMap::~TiledMap() {
 
 string TiledMap::TrimFileName(string path) {
     return path.substr(path.find_last_of('/') + 1, path.find_last_of('.') - path.find_last_of('/') - 1);
+}
+
+void TiledMap::Update() {
+    
 }
 
 void TiledMap::Render() {

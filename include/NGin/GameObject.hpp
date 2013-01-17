@@ -15,8 +15,11 @@ public:
     GameObject(NGin::GameLevel* gameLevel);
     virtual ~GameObject();
 
-    void Update();
-    void Render();
+    virtual void Update() = 0;
+    virtual void Render() = 0;
+    
+    void UpdateAnimation();
+    void RenderAnimation();
 private:
     GameObject(const NGin::GameObject& orig);
 protected:
