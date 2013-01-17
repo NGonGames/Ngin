@@ -9,9 +9,10 @@
 
 using namespace NGin;
 
-TiledTile::TiledTile(GameLevel *gl, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : GameObject(gl) {
+TiledTile::TiledTile(GameLevel *gl, Texture* tex, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : GameObject(gl) {
+    mPos = position;
+    mAnims.push_back(new Animation(new Image(tex, clipPos, clipSize)));
 }
 
 TiledTile::~TiledTile() {
 }
-

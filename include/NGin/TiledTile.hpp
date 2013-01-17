@@ -12,7 +12,7 @@
 
 class NGin::TiledTile : public NGin::GameObject {
 public:
-    TiledTile(NGin::GameLevel *gl,  NGin::Vector2 *position, NGin::Vector2* clipPos, NGin::Vector2* clipSize);
+    TiledTile(NGin::GameLevel *gl, NGin::Texture* tex, NGin::Vector2 *position, NGin::Vector2* clipPos, NGin::Vector2* clipSize);
     virtual ~TiledTile();
 private:
     TiledTile(const NGin::TiledTile& orig);

@@ -22,7 +22,7 @@ private:
 protected:
     NGin::Graphics* gfx;
     NGin::GameLevel* gl;
-	NGin::Input* in;
+    NGin::Input* in;
     NGin::Vector2* mPos;
     NGin::Vector2* mVel;
 

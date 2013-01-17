@@ -14,9 +14,10 @@ class NGin::TiledMap : public NGin::GameObject {
 public:
     TiledMap(NGin::GameLevel* gameLevel);
     virtual ~TiledMap();
+    void Render();
 private:
     TiledMap(const NGin::TiledMap& orig);
     std::string TrimFileName(std::string path);
-    std::vector<NGin::TiledTile*> mTiles;
+    std::vector<std::vector<NGin::TiledTile*>*> mLayers;
 };
 

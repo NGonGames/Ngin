@@ -30,12 +30,12 @@ void GameLevel::Add(GameObject *g) {
 
 void GameLevel::Update() {
     for (std::vector<GameObject*>::iterator i = gObjects.begin(), e = gObjects.end(); i != e; i++) {
-        dynamic_cast<GameObject*>(*i)->Update();
+        (*i)->Update();
     }
 }
 
 void GameLevel::Render() {
     for (std::vector<GameObject*>::iterator i = gObjects.begin(), e = gObjects.end(); i != e; i++) {
-        dynamic_cast<GameObject*>(*i)->Render();
+        (*i)->Render();
     }
 }

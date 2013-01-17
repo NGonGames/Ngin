@@ -54,7 +54,7 @@ bool ResourceManager::AddImage(std::string name, std::string path) {
     return true;
 }
 
-Texture* ResourceManager::GetImage(std::string spriteName) {
+Texture* ResourceManager::GetTexture(std::string spriteName) {
     for (std::vector<Texture*>::const_iterator iterator = mTextures.begin(), end = mTextures.end(); iterator != end; ++iterator) {
         if (dynamic_cast<Texture*>(*iterator)->name() == spriteName) {
             return dynamic_cast<Texture*>(*iterator);
@@ -75,6 +75,7 @@ bool ResourceManager::AddScene(std::string name, std::string path) {
     char* buf = new char[len + 1];
     fread(buf, 1, len, f);
     fclose(f);
+    
     Scene *scene = new Scene(name, std::string(buf));
     mScenes.push_back(scene);
     return true;

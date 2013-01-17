@@ -28,7 +28,7 @@ public:
     bool AddPath(std::string path);
     
     bool AddImage(std::string name, std::string path);
-    NGin::Texture* GetImage(std::string name);
+    NGin::Texture* GetTexture(std::string name);
     
     bool AddScene(std::string name, std::string path);
     NGin::Scene* GetScene(std::string name);
