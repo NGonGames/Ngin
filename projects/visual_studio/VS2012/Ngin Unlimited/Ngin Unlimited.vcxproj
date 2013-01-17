@@ -11,31 +11,41 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\Animation.cpp" />
     <ClCompile Include="..\..\..\..\src\Game.cpp" />
     <ClCompile Include="..\..\..\..\src\GameFactory.cpp" />
     <ClCompile Include="..\..\..\..\src\GameLevel.cpp" />
     <ClCompile Include="..\..\..\..\src\GameObject.cpp" />
     <ClCompile Include="..\..\..\..\src\Graphics.cpp" />
+    <ClCompile Include="..\..\..\..\src\Image.cpp" />
     <ClCompile Include="..\..\..\..\src\Input.cpp" />
     <ClCompile Include="..\..\..\..\src\main.cpp" />
     <ClCompile Include="..\..\..\..\src\Resource.cpp" />
     <ClCompile Include="..\..\..\..\src\ResourceManager.cpp" />
     <ClCompile Include="..\..\..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\..\..\src\Texture.cpp" />
+    <ClCompile Include="..\..\..\..\src\TiledMap.cpp" />
+    <ClCompile Include="..\..\..\..\src\TiledTile.cpp" />
+    <ClCompile Include="..\..\..\..\src\Vector2.cpp" />
     <ClCompile Include="..\..\..\..\src\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\NGin\Animation.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Game.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\GameFactory.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\GameLevel.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\GameObject.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Graphics.hpp" />
+    <ClInclude Include="..\..\..\..\include\NGin\Image.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Input.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\NGin.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Resource.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\ResourceManager.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Scene.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Texture.hpp" />
+    <ClInclude Include="..\..\..\..\include\NGin\TiledMap.hpp" />
+    <ClInclude Include="..\..\..\..\include\NGin\TiledTile.hpp" />
+    <ClInclude Include="..\..\..\..\include\NGin\Vector2.hpp" />
     <ClInclude Include="..\..\..\..\include\NGin\Window.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

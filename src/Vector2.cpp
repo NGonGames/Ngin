@@ -24,6 +24,10 @@ Vector2::Vector2(float xval, float yval) {
     y = yval;
 }
 
+Vector2::~Vector2() {
+
+}
+
 Vector2 Vector2::operator+ (const Vector2& param) const {
     Vector2 v2;
     v2.x = x + param.x;
