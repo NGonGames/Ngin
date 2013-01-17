@@ -17,7 +17,7 @@ namespace NGin {
     public:
         Scene(std::string nameID, std::string sceneData);
         virtual ~Scene();
-        std::string data() { return mData; };
+        std::string* data() { return &mData; };
     private:
         Scene(const Scene& orig);
 

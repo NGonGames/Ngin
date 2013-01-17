@@ -27,13 +27,13 @@ struct Tileset {
 };
 
 TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
-    /*xml_document<> doc;
+    xml_document<> doc;
     string::iterator xmlst, xmlen;
-    xmlst = gl->data->data().begin();
-    xmlen = gl->data->data().end();
+    xmlst = gl->data->data()->begin();
+    xmlen = gl->data->data()->end();
     vector<char> xml_copy(xmlst, xmlen);
     xml_copy.push_back('\0');
-    doc.parse<parse_declaration_node>(&xml_copy[0]);
+    doc.parse<0>(&xml_copy[0]);
     xml_node<>* map_node = doc.first_node("map");
     xml_node<>* cur_node = map_node;
     int gridwidth, gridheight;
@@ -81,7 +81,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
                 ++i;
             } while (cur_node->next_sibling("layer") != 0);
         }
-    }*/
+    }
 }
 
 TiledMap::~TiledMap() {
