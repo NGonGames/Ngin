@@ -73,6 +73,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
     
     for (xml_node<> *child = cur_node->first_node("layer"); child; ++lnum, child = child->next_sibling("layer")) {
         vector<TiledTile*> *mTiles = new vector<TiledTile*>();
+        tnum = 0;
         for (xml_node<> *tile = child->first_node("data")->first_node("tile"); tile; ++tnum, tile = tile->next_sibling("tile")) {
             int gid;
             istringstream(tile->first_attribute("gid")->value()) >> gid;
@@ -103,7 +104,7 @@ void TiledMap::Update() {
 }
 
 void TiledMap::Render() {
-    for (vector<vector<TiledTile*>*>::reverse_iterator lb = mLayers.rbegin(), le = mLayers.rend(); lb != le; ++lb) {
+    for (vector<vector<TiledTile*>*>::iterator lb = mLayers.begin(), le = mLayers.end(); lb != le; ++lb) {
         for (vector<TiledTile*>::iterator tb = (*lb)->begin(), te = (*lb)->end(); tb != te; ++tb) {
             (*tb)->Render();
         }

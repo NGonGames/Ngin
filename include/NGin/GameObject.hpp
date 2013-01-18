@@ -15,8 +15,8 @@ public:
     GameObject(NGin::GameLevel* gameLevel);
     virtual ~GameObject();
 
-    virtual void Update() = 0;
-    virtual void Render() = 0;
+    virtual void Update();
+    virtual void Render();
     
     void UpdateAnimation();
     void RenderAnimation();

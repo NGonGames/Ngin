@@ -21,6 +21,14 @@ GameObject::GameObject(const GameObject& orig) {
 GameObject::~GameObject() {
 }
 
+void GameObject::Update() {
+    
+}
+
+void GameObject::Render() {
+    
+}
+
 void GameObject::UpdateAnimation() {
     if (!mAnims.empty()) {
         mAnims.at(0)->Update();
