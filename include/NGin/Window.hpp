@@ -14,8 +14,8 @@ class NGin::Window {
 public:
     Window();
     virtual ~Window();
-    SDL_Surface* getScreen();
-    void setWindowTitle(std::string);
+    SDL_Surface* GetScreen();
+    void SetWindowTitle(std::string);
     
 private:
     Window(const NGin::Window& orig);

@@ -21,18 +21,18 @@ Graphics::~Graphics() {
 }
 
 void Graphics::Clear() {
-    SDL_FillRect(wind->getScreen(), &(wind->getScreen()->clip_rect), SDL_MapRGB(wind->getScreen()->format, 0x0, 0x0, 0x0));
+    SDL_FillRect(wind->GetScreen(), &(wind->GetScreen()->clip_rect), SDL_MapRGB(wind->GetScreen()->format, 0x0, 0x0, 0x0));
 }
 
 void Graphics::Clear(int r, int g, int b) {
-    SDL_FillRect(wind->getScreen(), &wind->getScreen()->clip_rect, SDL_MapRGB(wind->getScreen()->format, r, g, b));
+    SDL_FillRect(wind->GetScreen(), &wind->GetScreen()->clip_rect, SDL_MapRGB(wind->GetScreen()->format, r, g, b));
 }
 
 void Graphics::DrawTexture(Texture* texture, Vector2* pos) {
     SDL_Rect offset;
     offset.x = pos->x;
     offset.y = pos->y;
-    SDL_BlitSurface(texture->surface(), NULL, wind->getScreen(), &offset);
+    SDL_BlitSurface(texture->surface(), NULL, wind->GetScreen(), &offset);
 }
 
 void Graphics::DrawTexture(Texture* texture, Vector2* pos, Vector2* clipPos, Vector2* clipSize) {
@@ -43,9 +43,9 @@ void Graphics::DrawTexture(Texture* texture, Vector2* pos, Vector2* clipPos, Vec
     clip.y = clipPos->y;
     clip.w = clipSize->x;
     clip.h = clipSize->y;
-    SDL_BlitSurface(texture->surface(), &clip, wind->getScreen(), &offset);
+    SDL_BlitSurface(texture->surface(), &clip, wind->GetScreen(), &offset);
 }
 
 void Graphics::Finalize() {
-    SDL_Flip(wind->getScreen());
+    SDL_Flip(wind->GetScreen());
 }

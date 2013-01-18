@@ -23,7 +23,7 @@ Game::~Game() {
 }
 
 void Game::Init() {
-    wind->setWindowTitle("NGin v0.1");
+    wind->SetWindowTitle("NGin v0.1");
     rmgr->AddPath("resources/images");
     rmgr->AddPath("resources/scenes");
     GameLevel *level0 = new GameLevel(gfx, in, rmgr, "realtest");
