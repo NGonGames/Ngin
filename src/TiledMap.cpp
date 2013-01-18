@@ -77,7 +77,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
             int gid;
             istringstream(tile->first_attribute("gid")->value()) >> gid;
             for (int i = 0; i < tsnum; ++i) {
-                if (t[i].included(gid)) {
+                if (t[i].included(gid) && gid != 0) {
                     mTiles->push_back(
                             new TiledTile(gameLevel,
                             gl->rmgr->GetTexture(t[i].name),
@@ -103,7 +103,7 @@ void TiledMap::Update() {
 }
 
 void TiledMap::Render() {
-    for (vector<vector<TiledTile*>*>::iterator lb = mLayers.begin(), le = mLayers.end(); lb != le; ++lb) {
+    for (vector<vector<TiledTile*>*>::reverse_iterator lb = mLayers.rbegin(), le = mLayers.rend(); lb != le; ++lb) {
         for (vector<TiledTile*>::iterator tb = (*lb)->begin(), te = (*lb)->end(); tb != te; ++tb) {
             (*tb)->Render();
         }
