@@ -48,7 +48,7 @@ bool ResourceManager::AddImage(std::string name, std::string path) {
     if (img == NULL) {
         return false;
     }
-    img = SDL_DisplayFormat(img);
+    img = SDL_DisplayFormatAlpha(img);
     Texture* s = new Texture(name, img);
     mTextures.push_back(s);
     return true;
