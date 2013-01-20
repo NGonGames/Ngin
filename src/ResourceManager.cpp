@@ -10,11 +10,12 @@
 
 using namespace NGin;
 namespace fs = boost::filesystem;
+using namespace std;
 
 ResourceManager::ResourceManager() {
 }
 
-ResourceManager::ResourceManager(std::string path) {
+ResourceManager::ResourceManager(string path) {
 	AddPath(path);
 }
 
@@ -24,7 +25,7 @@ ResourceManager::ResourceManager(const ResourceManager& orig) {
 ResourceManager::~ResourceManager() {
 }
 
-bool ResourceManager::AddPath(std::string path) {
+bool ResourceManager::AddPath(string path) {
     if(!fs::is_directory(path)) {
         return false;
     }
@@ -41,7 +42,7 @@ bool ResourceManager::AddPath(std::string path) {
     return true;
 }
 
-bool ResourceManager::AddImage(std::string name, std::string path) {
+bool ResourceManager::AddImage(string name, string path) {
     SDL_Surface *img = NULL;
     img = IMG_Load(path.c_str());
     
@@ -54,16 +55,16 @@ bool ResourceManager::AddImage(std::string name, std::string path) {
     return true;
 }
 
-Texture* ResourceManager::GetTexture(std::string spriteName) {
-    for (std::vector<Texture*>::const_iterator iterator = mTextures.begin(), end = mTextures.end(); iterator != end; ++iterator) {
-        if (dynamic_cast<Texture*>(*iterator)->name() == spriteName) {
-            return dynamic_cast<Texture*>(*iterator);
+Texture* ResourceManager::GetTexture(string spriteName) {
+    for (auto tex : mTextures) {
+        if (tex->name() == spriteName) {
+            return (tex);
         }
     }
     return NULL;
 }
 
-bool ResourceManager::AddScene(std::string name, std::string path) {
+bool ResourceManager::AddScene(string name, string path) {
     FILE* f = fopen(path.c_str(), "rb");
     if (!f) {
             printf("Error: unable to open file %s\n", path.c_str());
@@ -76,15 +77,15 @@ bool ResourceManager::AddScene(std::string name, std::string path) {
     fread(buf, 1, len, f);
     fclose(f);
     
-    Scene *scene = new Scene(name, std::string(buf));
+    Scene *scene = new Scene(name, string(buf));
     mScenes.push_back(scene);
     return true;
 }
 
-Scene* ResourceManager::GetScene(std::string sceneName) {
-    for (std::vector<Scene*>::const_iterator iterator = mScenes.begin(), end = mScenes.end(); iterator != end; ++iterator) {
-        if (dynamic_cast<Scene*>(*iterator)->name() == sceneName) {
-            return dynamic_cast<Scene*>(*iterator);
+Scene* ResourceManager::GetScene(string sceneName) {
+    for (auto scene : mScenes) {
+        if (scene->name() == sceneName) {
+            return scene;
         }
     }
     return NULL;
