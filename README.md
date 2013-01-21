@@ -1,7 +1,8 @@
 
 ##Building
-If you wish to contribute you will find a Visual Studio 2012 Project and a Netbeans project in the projects/ directory that will let you build and add to the source.
+    If you wish to contribute you will find a Visual Studio 2012 Project and a Netbeans project in the projects/ directory that will let you build and add to the source.
 
+#Status by namespace
 ###NGin
     Application                         PARTIAL
     GameFactory                         PARTIAL
