@@ -24,7 +24,7 @@
 ###NGin::Game
     Object                              PARTIAL		// Implement use of Controller, Graphic, and Mask classes
     Controller                          MISSING		// Interface for controlling game objects
-    Graphic                             MISSING		// Base class for game object displays
+    Graphic                             COMPLETE	// Base class for game object displays
     Animation                           PARTIAL		// Must be re-implemented as a container for graphics, not images
     Image                               PARTIAL		// Should contain more metadata about textures, notify texture when deleted
     Mask                                MISSING		// Base class for collision detection objects
