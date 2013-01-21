@@ -7,13 +7,25 @@
 
 #pragma once
 
-class NGin::GameFactory {
-public:
-    static NGin::Application* CreateGame();
-    
-private:
-    GameFactory();
-    GameFactory(const NGin::GameFactory& orig);
-    virtual ~GameFactory();
-};
+namespace NGin {
 
+    class GameFactory {
+    public:
+        static Application* CreateGame();
+        static Game::Image* CreateImage();
+
+    private:
+        
+        static Application *mApp;
+        static AudioContext *mAudio;
+        static Input *mInput;
+        static Resource::Manager *mResource;
+        static RenderContext *mRender;
+        static Window *mWindow;
+        
+        GameFactory();
+        GameFactory(const GameFactory& orig);
+        virtual ~GameFactory();
+    };
+
+};

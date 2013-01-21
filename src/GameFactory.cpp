@@ -10,6 +10,13 @@
 using namespace NGin;
 using namespace NGin::Resource;
 
+Application *GameFactory::mApp = 0;
+AudioContext *GameFactory::mAudio = 0;
+Input *GameFactory::mInput = 0;
+Manager *GameFactory::mResource = 0;
+RenderContext *GameFactory::mRender = 0;
+Window *GameFactory::mWindow = 0;
+
 GameFactory::GameFactory() {
 }
 
@@ -20,10 +27,10 @@ GameFactory::~GameFactory() {
 }
 
 Application* GameFactory::CreateGame() {
-    Manager *resource = new Manager;
-    Window *window = new Window;
-    RenderContext *graphics = new RenderContext(window);
-    Input *input = new Input();
-    Application *game = new Application(graphics, resource, window, input);
-    return game;
+    mResource = new Manager;
+    mWindow = new Window;
+    mRender = new RenderContext(mWindow);
+    mInput = new Input();
+    mApp = new Application(mRender, mResource, mWindow, mInput);
+    return mApp;
 }
