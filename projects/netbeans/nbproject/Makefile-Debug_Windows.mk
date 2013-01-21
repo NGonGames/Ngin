@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Vector2.o \
 	${OBJECTDIR}/_ext/1445274692/ResourceManager.o \
+	${OBJECTDIR}/_ext/1445274692/AudioContext.o \
 	${OBJECTDIR}/_ext/1445274692/main.o \
 	${OBJECTDIR}/_ext/1445274692/GameLevel.o \
 	${OBJECTDIR}/_ext/1445274692/GameFactory.o \
@@ -45,6 +46,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/TiledTile.o \
 	${OBJECTDIR}/_ext/1445274692/Input.o \
 	${OBJECTDIR}/_ext/1445274692/Image.o \
+	${OBJECTDIR}/_ext/1445274692/Audio.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
 	${OBJECTDIR}/_ext/1445274692/TiledMap.o \
 	${OBJECTDIR}/_ext/1445274692/Window.o \
@@ -88,6 +90,11 @@ ${OBJECTDIR}/_ext/1445274692/ResourceManager.o: ../../src/ResourceManager.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/ResourceManager.o ../../src/ResourceManager.cpp
 
+${OBJECTDIR}/_ext/1445274692/AudioContext.o: ../../src/AudioContext.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/AudioContext.o ../../src/AudioContext.cpp
+
 ${OBJECTDIR}/_ext/1445274692/main.o: ../../src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -127,6 +134,11 @@ ${OBJECTDIR}/_ext/1445274692/Image.o: ../../src/Image.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Image.o ../../src/Image.cpp
+
+${OBJECTDIR}/_ext/1445274692/Audio.o: ../../src/Audio.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Audio.o ../../src/Audio.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
