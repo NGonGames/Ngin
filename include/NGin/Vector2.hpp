@@ -9,23 +9,31 @@
 
 #include "NGin/NGin.hpp"
 
-class NGin::Vector2 {
-public:
-    Vector2();
-    Vector2(const NGin::Vector2& orig);
-    Vector2(int xval, int yval);
-    Vector2(float xval, float yval);
-    ~Vector2();
-    NGin::Vector2 operator+(const NGin::Vector2& param) const;
-    NGin::Vector2 operator+=(const NGin::Vector2& param);
-    NGin::Vector2 operator*(const int param) const;
-    NGin::Vector2 operator*(const float param) const;
-    float operator*(const NGin::Vector2& param) const;
+namespace NGin {
+
+    namespace Math {
     
-    void normalize();
-    NGin::Vector2 normalized();
-    float magnitude();
-    
-    float x;
-    float y;
+        class Vector2 {
+        public:
+            Vector2();
+            Vector2(const Vector2& orig);
+            Vector2(int xval, int yval);
+            Vector2(float xval, float yval);
+            ~Vector2();
+            Vector2 operator+(const Vector2& param) const;
+            Vector2 operator+=(const Vector2& param);
+            Vector2 operator*(const int param) const;
+            Vector2 operator*(const float param) const;
+            float operator*(const Vector2& param) const;
+
+            void normalize();
+            Vector2 normalized();
+            float magnitude();
+
+            float x;
+            float y;
+        };
+
+    };
+
 };

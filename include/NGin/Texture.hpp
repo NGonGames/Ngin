@@ -21,7 +21,7 @@ namespace NGin {
             virtual ~Texture();
 
             SDL_Surface * surface() { return mSurf; };
-            Vector2 Size() { return Vector2(mSurf->w, mSurf->h); };
+            Math::Vector2 Size() { return Math::Vector2(mSurf->w, mSurf->h); };
 
         private:
             Texture(const Texture& orig);

@@ -15,6 +15,7 @@
 
 using namespace NGin;
 using namespace NGin::Game;
+using namespace NGin::Math;
 using namespace rapidxml;
 using namespace std;
 

@@ -14,7 +14,6 @@ namespace NGin {
     class AudioContext;
     class GameFactory;
     class Application;
-    class Vector2;
     class Input;
     
     namespace Game {
@@ -40,6 +39,17 @@ namespace NGin {
         class Texture;
         class Scene;
         class Audio;
+        
+    };
+    
+    namespace Math {
+        
+        class Vector2;
+        class Vector3;
+        class Vector4;
+        class Rectangle;
+        class Matrix3x3;
+        class Matrix4x4;
         
     };
     

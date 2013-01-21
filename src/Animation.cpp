@@ -9,6 +9,7 @@
 
 using namespace NGin;
 using namespace NGin::Game;
+using namespace NGin::Math;
 using namespace std;
 
 Animation::Animation() {

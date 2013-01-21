@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Graphics.o \
 	${OBJECTDIR}/_ext/1445274692/Graphic.o \
 	${OBJECTDIR}/_ext/1445274692/Input.o \
+	${OBJECTDIR}/_ext/1445274692/Vector3.o \
 	${OBJECTDIR}/_ext/1445274692/Object.o \
 	${OBJECTDIR}/_ext/1445274692/Image.o \
 	${OBJECTDIR}/_ext/1445274692/Mask.o \
@@ -124,6 +125,11 @@ ${OBJECTDIR}/_ext/1445274692/Input.o: ../../src/Input.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Input.o ../../src/Input.cpp
+
+${OBJECTDIR}/_ext/1445274692/Vector3.o: ../../src/Vector3.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector3.o ../../src/Vector3.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Object.o: ../../src/Object.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

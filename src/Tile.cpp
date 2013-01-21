@@ -10,6 +10,7 @@
 using namespace NGin;
 using namespace NGin::Game;
 using namespace NGin::Resource;
+using namespace NGin::Math;
 
 Tile::Tile(Level *gl, Texture* tex, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : Object(gl) {
     mPos = position;

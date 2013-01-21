@@ -30,8 +30,8 @@ namespace NGin {
             Graphics* gfx;
             Level* gl;
             Input* in;
-            Vector2* mPos;
-            Vector2* mVel;
+            Math::Vector2* mPos;
+            Math::Vector2* mVel;
 
             std::vector<Animation*> mAnims;
         };

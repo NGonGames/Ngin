@@ -24,14 +24,14 @@ namespace NGin {
 
         void Clear();
         void Clear(int r, int g, int b);
-        void SetOffset(Vector2 &offset);
-        void DrawTexture(Resource::Texture *texture, Vector2 *pos);
-        void DrawTexture(Resource::Texture *texture, Vector2 *pos, Vector2 *clipPos, Vector2 *clipSize);
+        void SetOffset(Math::Vector2 &offset);
+        void DrawTexture(Resource::Texture *texture, Math::Vector2 *pos);
+        void DrawTexture(Resource::Texture *texture, Math::Vector2 *pos, Math::Vector2 *clipPos, Math::Vector2 *clipSize);
         void Finalize();
 
     private:
         Graphics(const Graphics& orig);
-        Vector2 *offset;
+        Math::Vector2 *offset;
         Window* wind;
     };
 

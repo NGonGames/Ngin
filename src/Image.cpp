@@ -10,6 +10,7 @@
 using namespace NGin;
 using namespace NGin::Game;
 using namespace NGin::Resource;
+using namespace NGin::Math;
 
 Image::Image(Texture* texture) {
     mTex = texture;

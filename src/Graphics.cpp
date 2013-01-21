@@ -9,6 +9,7 @@
 
 using namespace NGin;
 using namespace NGin::Resource;
+using namespace NGin::Math;
 
 Graphics::Graphics(Window *window) {
     wind = window;

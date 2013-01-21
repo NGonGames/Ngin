@@ -16,14 +16,14 @@ namespace NGin {
         class Image {
         public:
             Image(Resource::Texture* texture);
-            Image(Resource::Texture* texture, Vector2 *origin, Vector2 *size);
+            Image(Resource::Texture* texture, Math::Vector2 *origin, Math::Vector2 *size);
             Image(const Image& orig);
             virtual ~Image();
-            void Render(Graphics *g, Vector2 *position);
+            void Render(Graphics *g, Math::Vector2 *position);
             std::string Name() { return mName; };
         private:
-            Vector2 *mClipPos;
-            Vector2 *mClipSize;
+            Math::Vector2 *mClipPos;
+            Math::Vector2 *mClipSize;
             Resource::Texture *mTex;
             std::string mName;
         };

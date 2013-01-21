@@ -16,7 +16,7 @@ namespace NGin {
 
         class Tile : public Object {
         public:
-            Tile(Level *gl, Resource::Texture* tex, Vector2 *position, Vector2* clipPos, Vector2* clipSize);
+            Tile(Level *gl, Resource::Texture* tex, Math::Vector2 *position, Math::Vector2* clipPos, Math::Vector2* clipSize);
             virtual ~Tile();
             virtual void Update();
             virtual void Render();
