@@ -53,6 +53,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
 	${OBJECTDIR}/_ext/1445274692/Vector4.o \
 	${OBJECTDIR}/_ext/1445274692/Controller.o \
+	${OBJECTDIR}/_ext/1445274692/Rectangle.o \
 	${OBJECTDIR}/_ext/1445274692/Level.o \
 	${OBJECTDIR}/_ext/1445274692/Manager.o \
 	${OBJECTDIR}/_ext/1445274692/Window.o \
@@ -176,6 +177,11 @@ ${OBJECTDIR}/_ext/1445274692/Controller.o: ../../src/Controller.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Controller.o ../../src/Controller.cpp
+
+${OBJECTDIR}/_ext/1445274692/Rectangle.o: ../../src/Rectangle.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Rectangle.o ../../src/Rectangle.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Level.o: ../../src/Level.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

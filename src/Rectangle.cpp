@@ -6,7 +6,6 @@
  */
 
 #include "NGin/NGin.hpp"
-#include "NGin/Rectangle.hpp"
 
 using namespace NGin::Math;
 

@@ -65,7 +65,7 @@ public:
         mouse_right = SDL_BUTTON_RIGHT + 323,
     };
 
-    void Update();
+    bool Update();
     bool Down(key k);
     bool Up(key k);
     bool Pressed(key k);

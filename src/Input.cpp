@@ -15,7 +15,7 @@ Input::~Input() {
     delete[] released_state;
 }
 
-void Input::Update() {
+bool Input::Update() {
     //reset the pressed/released state arrays
     std::fill(pressed_state, pressed_state + 500, false);
     std::fill(released_state, released_state + 500, false);
@@ -23,7 +23,7 @@ void Input::Update() {
     while (SDL_PollEvent(&event)) {
         switch(event.type) {
             case(SDL_QUIT):
-                Quit();
+                return false;
                 break;
             case(SDL_KEYDOWN):
                 pressed_state[event.key.keysym.sym] = true;
@@ -47,6 +47,8 @@ void Input::Update() {
                 break;
         }
     }
+    
+    return true;
 }
 
 bool Input::Down(key k) {

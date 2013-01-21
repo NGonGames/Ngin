@@ -23,9 +23,11 @@ namespace NGin {
 
         virtual ~Application();
 
+        int Execute();
         void Init();
         void Update();
         void Render();
+        void Quit();
 
         void AddLevel(Game::Level*);
     private:
@@ -34,11 +36,12 @@ namespace NGin {
     protected:
         Game::Level* GetActiveLevel();
 
-        RenderContext* gfx;
-        Window* wind;
-        Resource::Manager* rmgr;
-        Input* in;
-
+        RenderContext* mRender;
+        Window* mWindow;
+        Resource::Manager* mResource;
+        Input* mInput;
+        
+        bool running;
 
         std::vector<Game::Level*> mAllLevels;
         std::stack<Game::Level*> mLoadedLevels;

@@ -19,7 +19,7 @@ GameFactory::GameFactory(const GameFactory& orig) {
 GameFactory::~GameFactory() {
 }
 
-Application* GameFactory::MakeGame() {
+Application* GameFactory::CreateGame() {
     Manager *resource = new Manager;
     Window *window = new Window;
     RenderContext *graphics = new RenderContext(window);

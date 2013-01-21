@@ -27,6 +27,7 @@
           <itemPath>../../include/NGin/TileMap.hpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="Math" projectFiles="true">
+          <itemPath>../../include/NGin/Rectangle.hpp</itemPath>
           <itemPath>../../include/NGin/Vector2.hpp</itemPath>
           <itemPath>../../include/NGin/Vector3.hpp</itemPath>
           <itemPath>../../include/NGin/Vector4.hpp</itemPath>
@@ -64,6 +65,7 @@
         <itemPath>../../src/TileMap.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Math" projectFiles="true">
+        <itemPath>../../src/Rectangle.cpp</itemPath>
         <itemPath>../../src/Vector2.cpp</itemPath>
         <itemPath>../../src/Vector3.cpp</itemPath>
         <itemPath>../../src/Vector4.cpp</itemPath>
@@ -163,6 +165,8 @@
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Rectangle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/RenderContext.hpp"
             ex="false"
             tool="3"
@@ -235,6 +239,8 @@
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Rectangle.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/RenderContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -315,6 +321,8 @@
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Rectangle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/RenderContext.hpp"
             ex="false"
             tool="3"
@@ -387,6 +395,8 @@
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Rectangle.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/RenderContext.cpp" ex="false" tool="1" flavor2="0">
       </item>

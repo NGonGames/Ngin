@@ -52,15 +52,13 @@ namespace NGin {
         class Matrix4x4;
         
     };
-    
-    bool Init();
-    int Execute();
-    void Quit();
+
 }
 
 #include "NGin/Vector2.hpp"
 #include "NGin/Vector3.hpp"
 #include "NGin/Vector4.hpp"
+#include "NGin/Rectangle.hpp"
 #include "NGin/Resource.hpp"
 #include "NGin/Texture.hpp"
 #include "NGin/Graphic.hpp"

@@ -12,10 +12,12 @@ using namespace NGin::Game;
 using namespace NGin::Resource;
 
 Application::Application(RenderContext *graphics, Manager *resources, Window *window, Input *input) {
-    gfx = graphics;
-    rmgr = resources;
-    wind = window;
-    in = input;
+    mRender = graphics;
+    mResource = resources;
+    mWindow = window;
+    mInput = input;
+    
+    running = true;
 }
 
 Application::Application(const Application& orig) {
@@ -24,22 +26,43 @@ Application::Application(const Application& orig) {
 Application::~Application() {
 }
 
+int Application::Execute() {
+    Init();
+    while (running) {
+        Update();
+        Render();
+    }
+    Quit();
+}
+
 void Application::Init() {
-    wind->SetWindowTitle("NGin v0.2");
-    rmgr->AddPath("resources/images");
-    rmgr->AddPath("resources/scenes");
-    Level *level0 = new Level(gfx, in, rmgr, "realtest");
+    
+    if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
+        running = false;
+    }
+    
+    mWindow->SetWindowTitle("NGin v0.2");
+    mResource->AddPath("resources/images");
+    mResource->AddPath("resources/scenes");
+    Level *level0 = new Level(mRender, mInput, mResource, "realtest");
     AddLevel(level0);
+    
 }
 
 void Application::Update() {
-    in->Update();
+    if (!mInput->Update()) {
+        running = false;
+    }
     GetActiveLevel()->Update();
 }
 
 void Application::Render() {
     GetActiveLevel()->Render();
-    gfx->Finalize();
+    mRender->Finalize();
+}
+
+void Application::Quit() {
+    SDL_Quit();
 }
 
 void Application::AddLevel(Level *level) {

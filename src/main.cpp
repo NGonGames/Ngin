@@ -11,9 +11,9 @@
 
 using namespace NGin;
 
-bool running;
+//bool running;
 
-bool NGin::Init() {
+/*bool NGin::Init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
         return false;
     }
@@ -34,13 +34,9 @@ int NGin::Execute() {
     }
     SDL_Quit();
     return 0;
-}
+}*/
 
 int main(int argc, char** argv) {
-    if (!NGin::Init()) {
-        printf("Initialization failed\n");
-        return 1;
-    }
-    
-    return NGin::Execute();
+    Application *app = GameFactory::CreateGame();    
+    return app->Execute();
 }

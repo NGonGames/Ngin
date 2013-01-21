@@ -9,7 +9,7 @@
 
 class NGin::GameFactory {
 public:
-    static NGin::Application* MakeGame();
+    static NGin::Application* CreateGame();
     
 private:
     GameFactory();
