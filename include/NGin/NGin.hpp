@@ -12,6 +12,7 @@ namespace NGin {
     class ResourceManager;
     class Resource;
     class Graphics;
+    class AudioContext;
     class Texture;
     class Scene;
     class GameFactory;
@@ -37,6 +38,7 @@ namespace NGin {
 #include "NGin/Animation.hpp"
 #include "NGin/Scene.hpp"
 #include "NGin/Graphics.hpp"
+#include "NGin/AudioContext.hpp"
 #include "NGin/ResourceManager.hpp"
 #include "NGin/Window.hpp"
 #include "NGin/GameObject.hpp"

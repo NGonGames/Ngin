@@ -19,11 +19,7 @@
                     <type>1</type>
                 </confElem>
                 <confElem>
-                    <name>Release</name>
-                    <type>1</type>
-                </confElem>
-                <confElem>
-                    <name>Debug_Linux</name>
+                    <name>Release_Windows</name>
                     <type>1</type>
                 </confElem>
             </confList>

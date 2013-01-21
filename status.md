@@ -1,8 +1,7 @@
 
-##Building
-If you wish to contribute you will find a Visual Studio 2012 Project and a Netbeans project in the projects/ directory that will let you build and add to the source.
+    Class                               Status
 
-###NGin
+NGin : 
     Application                         PARTIAL
     GameFactory                         PARTIAL
     Input                               COMPLETE
@@ -10,7 +9,7 @@ If you wish to contribute you will find a Visual Studio 2012 Project and a Netbe
     AudioContext                        MISSING
     RenderContext                       PARTIAL
 
-###NGin::Resource
+NGin::Resource :
     Manager                             PARTIAL
     Resource                            PARTIAL
     Texture                             COMPLETE
@@ -18,7 +17,7 @@ If you wish to contribute you will find a Visual Studio 2012 Project and a Netbe
     Audio                               MISSING
     Scene                               COMPLETE
 
-###NGin::Game
+NGin::Game :
     Object                              PARTIAL
     Controller                          MISSING
     Graphic                             MISSING
@@ -31,7 +30,7 @@ If you wish to contribute you will find a Visual Studio 2012 Project and a Netbe
     Tile                                PARTIAL
     TileMapParser                       PARTIAL
 
-###NGin::Math
+NGin::Math :
     Vector2                             COMPLETE
     Vector3                             MISSING
     Vector4                             MISSING
