@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "NGin/Graphics.hpp"
+#include "NGin/RenderContext.hpp"
 #include "NGin/Object.hpp"
 #include <vector>
 
@@ -17,7 +17,7 @@ namespace NGin {
 
         class Level {
         public:
-            Level(Graphics* graphics, Input* input, Resource::Manager *resources, std::string level);
+            Level(RenderContext* graphics, Input* input, Resource::Manager *resources, std::string level);
             Level(const Level& orig);
             virtual ~Level();
 
@@ -26,7 +26,7 @@ namespace NGin {
             void Add(Object *g);
         private:
             Resource::Scene* data;
-            Graphics* gfx;
+            RenderContext* gfx;
             Input* in;
             Resource::Manager *rmgr;
             std::vector<Object*> gObjects;

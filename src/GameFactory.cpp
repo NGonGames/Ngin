@@ -22,7 +22,7 @@ GameFactory::~GameFactory() {
 Application* GameFactory::MakeGame() {
     Manager *resource = new Manager;
     Window *window = new Window;
-    Graphics *graphics = new Graphics(window);
+    RenderContext *graphics = new RenderContext(window);
     Input *input = new Input();
     Application *game = new Application(graphics, resource, window, input);
     return game;

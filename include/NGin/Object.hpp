@@ -27,7 +27,7 @@ namespace NGin {
         private:
             Object(const Object& orig);
         protected:
-            Graphics* gfx;
+            RenderContext* gfx;
             Level* gl;
             Input* in;
             Math::Vector2* mPos;

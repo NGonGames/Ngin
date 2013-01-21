@@ -13,7 +13,7 @@ using namespace NGin::Game;
 using namespace NGin::Resource;
 using namespace std;
 
-Level::Level(Graphics *graphics, Input* input, Manager *resources, string level) {
+Level::Level(RenderContext *graphics, Input* input, Manager *resources, string level) {
     gfx = graphics;
     in = input;
     rmgr = resources;

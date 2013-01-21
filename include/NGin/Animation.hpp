@@ -27,7 +27,7 @@ namespace NGin {
             Image* RemoveFrame(int n);
 
             void Update();
-            void Render(Graphics *g, Math::Vector2 *position);
+            void Render(RenderContext *g, Math::Vector2 *position);
 
             int Length();
             int Speed();

@@ -30,7 +30,7 @@ Image::Image(const Image& orig) {
 Image::~Image() {
 }
 
-void Image::Render(Graphics *g, Vector2 *position) {
+void Image::Render(RenderContext *g, Vector2 *position) {
     if (mClipSize->magnitude() < 1) {
         g->DrawTexture(mTex, position);
     } else {

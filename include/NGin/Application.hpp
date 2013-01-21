@@ -16,7 +16,7 @@ namespace NGin {
 
     class Application {
     public:
-        Application(Graphics *graphics,
+        Application(RenderContext *graphics,
                     Resource::Manager *resources,
                     Window *window,
                     Input *input);
@@ -34,7 +34,7 @@ namespace NGin {
     protected:
         Game::Level* GetActiveLevel();
 
-        Graphics* gfx;
+        RenderContext* gfx;
         Window* wind;
         Resource::Manager* rmgr;
         Input* in;

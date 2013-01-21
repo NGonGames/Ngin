@@ -11,33 +11,33 @@ using namespace NGin;
 using namespace NGin::Resource;
 using namespace NGin::Math;
 
-Graphics::Graphics(Window *window) {
+RenderContext::RenderContext(Window *window) {
     wind = window;
     offset = new Vector2(0, 0);
 }
 
-Graphics::Graphics(const Graphics& orig) {
+RenderContext::RenderContext(const RenderContext& orig) {
 }
 
-Graphics::~Graphics() {
+RenderContext::~RenderContext() {
 }
 
-void Graphics::Clear() {
+void RenderContext::Clear() {
     SDL_FillRect(wind->GetScreen(), &(wind->GetScreen()->clip_rect), SDL_MapRGB(wind->GetScreen()->format, 0x0, 0x0, 0x0));
 }
 
-void Graphics::Clear(int r, int g, int b) {
+void RenderContext::Clear(int r, int g, int b) {
     SDL_FillRect(wind->GetScreen(), &wind->GetScreen()->clip_rect, SDL_MapRGB(wind->GetScreen()->format, r, g, b));
 }
 
-void Graphics::DrawTexture(Texture* texture, Vector2* pos) {
+void RenderContext::DrawTexture(Texture* texture, Vector2* pos) {
     SDL_Rect offset;
     offset.x = pos->x;
     offset.y = pos->y;
     SDL_BlitSurface(texture->surface(), NULL, wind->GetScreen(), &offset);
 }
 
-void Graphics::DrawTexture(Texture* texture, Vector2* pos, Vector2* clipPos, Vector2* clipSize) {
+void RenderContext::DrawTexture(Texture* texture, Vector2* pos, Vector2* clipPos, Vector2* clipSize) {
     SDL_Rect offset, clip;
     offset.x = pos->x;
     offset.y = pos->y;
@@ -48,6 +48,6 @@ void Graphics::DrawTexture(Texture* texture, Vector2* pos, Vector2* clipPos, Vec
     SDL_BlitSurface(texture->surface(), &clip, wind->GetScreen(), &offset);
 }
 
-void Graphics::Finalize() {
+void RenderContext::Finalize() {
     SDL_Flip(wind->GetScreen());
 }

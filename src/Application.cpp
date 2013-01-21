@@ -11,7 +11,7 @@ using namespace NGin;
 using namespace NGin::Game;
 using namespace NGin::Resource;
 
-Application::Application(Graphics *graphics, Manager *resources, Window *window, Input *input) {
+Application::Application(RenderContext *graphics, Manager *resources, Window *window, Input *input) {
     gfx = graphics;
     rmgr = resources;
     wind = window;

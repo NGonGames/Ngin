@@ -40,9 +40,9 @@
         <itemPath>../../include/NGin/Application.hpp</itemPath>
         <itemPath>../../include/NGin/AudioContext.hpp</itemPath>
         <itemPath>../../include/NGin/GameFactory.hpp</itemPath>
-        <itemPath>../../include/NGin/Graphics.hpp</itemPath>
         <itemPath>../../include/NGin/Input.hpp</itemPath>
         <itemPath>../../include/NGin/NGin.hpp</itemPath>
+        <itemPath>../../include/NGin/RenderContext.hpp</itemPath>
         <itemPath>../../include/NGin/Window.hpp</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -76,8 +76,8 @@
       <itemPath>../../src/Application.cpp</itemPath>
       <itemPath>../../src/AudioContext.cpp</itemPath>
       <itemPath>../../src/GameFactory.cpp</itemPath>
-      <itemPath>../../src/Graphics.cpp</itemPath>
       <itemPath>../../src/Input.cpp</itemPath>
+      <itemPath>../../src/RenderContext.cpp</itemPath>
       <itemPath>../../src/Window.cpp</itemPath>
       <itemPath>../../src/main.cpp</itemPath>
     </logicalFolder>
@@ -145,8 +145,6 @@
       </item>
       <item path="../../include/NGin/Graphic.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/Graphics.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="../../include/NGin/Image.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
@@ -162,6 +160,11 @@
       <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/RenderContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -215,8 +218,6 @@
       </item>
       <item path="../../src/Graphic.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/Graphics.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="../../src/Image.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
@@ -230,6 +231,8 @@
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RenderContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -290,8 +293,6 @@
       </item>
       <item path="../../include/NGin/Graphic.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/Graphics.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="../../include/NGin/Image.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
@@ -307,6 +308,11 @@
       <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/RenderContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -360,8 +366,6 @@
       </item>
       <item path="../../src/Graphic.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/Graphics.cpp" ex="false" tool="1" flavor2="0">
-      </item>
       <item path="../../src/Image.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
@@ -375,6 +379,8 @@
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RenderContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
       </item>

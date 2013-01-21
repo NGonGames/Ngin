@@ -19,7 +19,7 @@ namespace NGin {
             Image(Resource::Texture* texture, Math::Vector2 *origin, Math::Vector2 *size);
             Image(const Image& orig);
             virtual ~Image();
-            void Render(Graphics *g, Math::Vector2 *position);
+            void Render(RenderContext *g, Math::Vector2 *position);
             std::string Name() { return mName; };
         private:
             Math::Vector2 *mClipPos;

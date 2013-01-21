@@ -9,12 +9,12 @@
 
 namespace NGin {
     
-    class Window;
-    class Graphics;
-    class AudioContext;
     class GameFactory;
     class Application;
+    class Window;
     class Input;
+    class AudioContext;
+    class RenderContext;
     
     namespace Game {
         
@@ -68,7 +68,7 @@ namespace NGin {
 #include "NGin/Image.hpp"
 #include "NGin/Animation.hpp"
 #include "NGin/Scene.hpp"
-#include "NGin/Graphics.hpp"
+#include "NGin/RenderContext.hpp"
 #include "NGin/Audio.hpp"
 #include "NGin/AudioContext.hpp"
 #include "NGin/Manager.hpp"

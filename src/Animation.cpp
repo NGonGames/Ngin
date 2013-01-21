@@ -74,6 +74,6 @@ void Animation::Update() {
     }
 }
 
-void Animation::Render(Graphics *g, Vector2 *position) {
+void Animation::Render(RenderContext *g, Vector2 *position) {
     mFrames.at(static_cast<int>(mCurFrame))->Render(g, position);
 }

@@ -16,11 +16,11 @@
 
 namespace NGin {
 
-    class Graphics {
+    class RenderContext {
     public:
 
-        Graphics(Window *window);
-        virtual ~Graphics();
+        RenderContext(Window *window);
+        virtual ~RenderContext();
 
         void Clear();
         void Clear(int r, int g, int b);
@@ -30,7 +30,7 @@ namespace NGin {
         void Finalize();
 
     private:
-        Graphics(const Graphics& orig);
+        RenderContext(const RenderContext& orig);
         Math::Vector2 *offset;
         Window* wind;
     };

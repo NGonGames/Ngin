@@ -35,12 +35,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/1445274692/RenderContext.o \
 	${OBJECTDIR}/_ext/1445274692/Vector2.o \
 	${OBJECTDIR}/_ext/1445274692/AudioContext.o \
 	${OBJECTDIR}/_ext/1445274692/Tile.o \
 	${OBJECTDIR}/_ext/1445274692/main.o \
 	${OBJECTDIR}/_ext/1445274692/GameFactory.o \
-	${OBJECTDIR}/_ext/1445274692/Graphics.o \
 	${OBJECTDIR}/_ext/1445274692/Graphic.o \
 	${OBJECTDIR}/_ext/1445274692/Input.o \
 	${OBJECTDIR}/_ext/1445274692/Vector3.o \
@@ -86,6 +86,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/_ext/1445274692/RenderContext.o: ../../src/RenderContext.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RenderContext.o ../../src/RenderContext.cpp
+
 ${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -110,11 +115,6 @@ ${OBJECTDIR}/_ext/1445274692/GameFactory.o: ../../src/GameFactory.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/GameFactory.o ../../src/GameFactory.cpp
-
-${OBJECTDIR}/_ext/1445274692/Graphics.o: ../../src/Graphics.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
-	${RM} $@.d
-	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Graphics.o ../../src/Graphics.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Graphic.o: ../../src/Graphic.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
