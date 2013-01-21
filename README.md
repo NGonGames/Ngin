@@ -34,6 +34,7 @@
     Tile                                PARTIAL		// need to add properties to tiles to make them more descriptive
     TileMapParser                       PARTIAL		// interface for parsing different level formats
     Effect                              MISSING*	// effectively a shader program. more design to be done before it can be implemented
+    Camera                              MISSING		// Moves the screen around!
 
 ###NGin::Math
     Vector2                             COMPLETE
