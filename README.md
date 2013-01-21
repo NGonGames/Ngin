@@ -1,7 +1,7 @@
 If you wish to contribute you will find a Visual Studio 2012 Project and a Netbeans project in the projects/ directory that will let you build and add to the source.
 
 
- ##   Class                               Status
+ ##Class                                Status
 
 ###NGin
     Application                         PARTIAL
