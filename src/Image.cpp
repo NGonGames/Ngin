@@ -8,6 +8,8 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Game;
+using namespace NGin::Resource;
 
 Image::Image(Texture* texture) {
     mTex = texture;

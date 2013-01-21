@@ -10,7 +10,8 @@
 #include "NGin/NGin.hpp"
 
 namespace NGin {
-    //namespace Resource {
+    
+    namespace Resource {
         
         class Audio : public Resource {
         public:
@@ -20,5 +21,7 @@ namespace NGin {
         private:
 
         };
-    //}
-}
+    
+    };
+
+};

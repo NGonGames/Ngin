@@ -7,29 +7,32 @@
 
 #pragma once
 
-#include "NGin/ResourceManager.hpp"
+#include "NGin/Manager.hpp"
 #include "NGin/Window.hpp"
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 #include <string>
 
-class NGin::Graphics {
-public:
-    
-    Graphics(NGin::Window *window);
-    virtual ~Graphics();
-    
-    void Clear();
-    void Clear(int r, int g, int b);
-    void SetOffset(NGin::Vector2 &offset);
-    void DrawTexture(NGin::Texture *texture, NGin::Vector2 *pos);
-    void DrawTexture(NGin::Texture *texture, NGin::Vector2 *pos, NGin::Vector2 *clipPos, NGin::Vector2 *clipSize);
-    void Finalize();
-    
-private:
-    Graphics(const NGin::Graphics& orig);
-    NGin::Vector2 *offset;
-    NGin::Window* wind;
-};
+namespace NGin {
 
+    class Graphics {
+    public:
+
+        Graphics(Window *window);
+        virtual ~Graphics();
+
+        void Clear();
+        void Clear(int r, int g, int b);
+        void SetOffset(Vector2 &offset);
+        void DrawTexture(Resource::Texture *texture, Vector2 *pos);
+        void DrawTexture(Resource::Texture *texture, Vector2 *pos, Vector2 *clipPos, Vector2 *clipSize);
+        void Finalize();
+
+    private:
+        Graphics(const Graphics& orig);
+        Vector2 *offset;
+        Window* wind;
+    };
+
+};

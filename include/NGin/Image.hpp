@@ -9,18 +9,25 @@
 
 #include "NGin/NGin.hpp"
 
-class NGin::Image {
-public:
-    Image(NGin::Texture* texture);
-    Image(NGin::Texture* texture, NGin::Vector2 *origin, NGin::Vector2 *size);
-    Image(const NGin::Image& orig);
-    virtual ~Image();
-    void Render(NGin::Graphics *g, NGin::Vector2 *position);
-    std::string Name() { return mName; };
-private:
-    NGin::Vector2 *mClipPos;
-    NGin::Vector2 *mClipSize;
-    NGin::Texture *mTex;
-    std::string mName;
-};
+namespace NGin {
 
+    namespace Game {
+    
+        class Image {
+        public:
+            Image(Resource::Texture* texture);
+            Image(Resource::Texture* texture, Vector2 *origin, Vector2 *size);
+            Image(const Image& orig);
+            virtual ~Image();
+            void Render(Graphics *g, Vector2 *position);
+            std::string Name() { return mName; };
+        private:
+            Vector2 *mClipPos;
+            Vector2 *mClipSize;
+            Resource::Texture *mTex;
+            std::string mName;
+        };
+
+    };
+
+};

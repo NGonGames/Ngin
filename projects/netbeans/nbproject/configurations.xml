@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="88">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <logicalFolder name="f1"
-                   displayName="Dependencies"
-                   projectFiles="true"
-                   kind="ROOT">
-      <logicalFolder name="f1" displayName="rapidxml" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="Dependencies" projectFiles="true">
+      <logicalFolder name="f1" displayName="rapidxml" projectFiles="true">
         <itemPath>../../include/rapidxml/rapidxml.hpp</itemPath>
         <itemPath>../../include/rapidxml/rapidxml_iterators.hpp</itemPath>
         <itemPath>../../include/rapidxml/rapidxml_print.hpp</itemPath>
@@ -18,24 +15,29 @@
       <logicalFolder name="Header/NGin" displayName="NGin" projectFiles="true">
         <logicalFolder name="f1" displayName="Game" projectFiles="true">
           <itemPath>../../include/NGin/Animation.hpp</itemPath>
-          <itemPath>../../include/NGin/GameLevel.hpp</itemPath>
-          <itemPath>../../include/NGin/GameObject.hpp</itemPath>
+          <itemPath>../../include/NGin/BitmapMask.hpp</itemPath>
+          <itemPath>../../include/NGin/Controller.hpp</itemPath>
+          <itemPath>../../include/NGin/Graphic.hpp</itemPath>
           <itemPath>../../include/NGin/Image.hpp</itemPath>
-          <itemPath>../../include/NGin/TiledMap.hpp</itemPath>
-          <itemPath>../../include/NGin/TiledTile.hpp</itemPath>
+          <itemPath>../../include/NGin/Level.hpp</itemPath>
+          <itemPath>../../include/NGin/Mask.hpp</itemPath>
+          <itemPath>../../include/NGin/Object.hpp</itemPath>
+          <itemPath>../../include/NGin/PolyMask.hpp</itemPath>
+          <itemPath>../../include/NGin/Tile.hpp</itemPath>
+          <itemPath>../../include/NGin/TileMap.hpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="Math" projectFiles="true">
           <itemPath>../../include/NGin/Vector2.hpp</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="Resource" projectFiles="true">
           <itemPath>../../include/NGin/Audio.hpp</itemPath>
+          <itemPath>../../include/NGin/Manager.hpp</itemPath>
           <itemPath>../../include/NGin/Resource.hpp</itemPath>
-          <itemPath>../../include/NGin/ResourceManager.hpp</itemPath>
           <itemPath>../../include/NGin/Scene.hpp</itemPath>
           <itemPath>../../include/NGin/Texture.hpp</itemPath>
         </logicalFolder>
+        <itemPath>../../include/NGin/Application.hpp</itemPath>
         <itemPath>../../include/NGin/AudioContext.hpp</itemPath>
-        <itemPath>../../include/NGin/Game.hpp</itemPath>
         <itemPath>../../include/NGin/GameFactory.hpp</itemPath>
         <itemPath>../../include/NGin/Graphics.hpp</itemPath>
         <itemPath>../../include/NGin/Input.hpp</itemPath>
@@ -48,24 +50,29 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Game" projectFiles="true">
         <itemPath>../../src/Animation.cpp</itemPath>
-        <itemPath>../../src/GameLevel.cpp</itemPath>
-        <itemPath>../../src/GameObject.cpp</itemPath>
+        <itemPath>../../src/BitmapMask.cpp</itemPath>
+        <itemPath>../../src/Controller.cpp</itemPath>
+        <itemPath>../../src/Graphic.cpp</itemPath>
         <itemPath>../../src/Image.cpp</itemPath>
-        <itemPath>../../src/TiledMap.cpp</itemPath>
-        <itemPath>../../src/TiledTile.cpp</itemPath>
+        <itemPath>../../src/Level.cpp</itemPath>
+        <itemPath>../../src/Mask.cpp</itemPath>
+        <itemPath>../../src/Object.cpp</itemPath>
+        <itemPath>../../src/PolyMask.cpp</itemPath>
+        <itemPath>../../src/Tile.cpp</itemPath>
+        <itemPath>../../src/TileMap.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Math" projectFiles="true">
         <itemPath>../../src/Vector2.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Resources" projectFiles="true">
         <itemPath>../../src/Audio.cpp</itemPath>
+        <itemPath>../../src/Manager.cpp</itemPath>
         <itemPath>../../src/Resource.cpp</itemPath>
-        <itemPath>../../src/ResourceManager.cpp</itemPath>
         <itemPath>../../src/Scene.cpp</itemPath>
         <itemPath>../../src/Texture.cpp</itemPath>
       </logicalFolder>
+      <itemPath>../../src/Application.cpp</itemPath>
       <itemPath>../../src/AudioContext.cpp</itemPath>
-      <itemPath>../../src/Game.cpp</itemPath>
       <itemPath>../../src/GameFactory.cpp</itemPath>
       <itemPath>../../src/Graphics.cpp</itemPath>
       <itemPath>../../src/Input.cpp</itemPath>
@@ -119,6 +126,8 @@
       </compileType>
       <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Application.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/Audio.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/AudioContext.hpp"
@@ -126,13 +135,13 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="../../include/NGin/Game.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/BitmapMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Controller.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/GameFactory.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/GameLevel.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../../include/NGin/GameObject.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/Graphic.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Graphics.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -140,22 +149,27 @@
       </item>
       <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Level.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Manager.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Mask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/NGin.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/ResourceManager.hpp"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Scene.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Texture.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/TiledMap.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/Tile.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/TiledTile.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/TileMap.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Vector2.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -183,17 +197,19 @@
       </item>
       <item path="../../src/Animation.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../../src/Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../src/Audio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/Game.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/BitmapMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Controller.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/GameLevel.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="../../src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Graphic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Graphics.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -201,17 +217,25 @@
       </item>
       <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Level.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Mask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Scene.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Texture.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/TiledMap.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Tile.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/TiledTile.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/TileMap.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Vector2.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -243,6 +267,8 @@
       </compileType>
       <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Application.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/Audio.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/AudioContext.hpp"
@@ -250,13 +276,13 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="../../include/NGin/Game.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/BitmapMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Controller.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/GameFactory.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/GameLevel.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="../../include/NGin/GameObject.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/Graphic.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Graphics.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -264,22 +290,27 @@
       </item>
       <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Level.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Manager.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Mask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/NGin.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/ResourceManager.hpp"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Scene.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Texture.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/TiledMap.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/Tile.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="../../include/NGin/TiledTile.hpp" ex="false" tool="3" flavor2="0">
+      <item path="../../include/NGin/TileMap.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Vector2.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -307,17 +338,19 @@
       </item>
       <item path="../../src/Animation.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../../src/Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../src/Audio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/Game.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/BitmapMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Controller.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/GameLevel.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="../../src/GameObject.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Graphic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Graphics.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -325,17 +358,25 @@
       </item>
       <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Level.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/ResourceManager.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Mask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Scene.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Texture.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/TiledMap.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/Tile.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="../../src/TiledTile.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../../src/TileMap.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Vector2.cpp" ex="false" tool="1" flavor2="0">
       </item>

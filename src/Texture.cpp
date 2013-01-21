@@ -8,8 +8,10 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Resource;
+using namespace std;
 
-Texture::Texture(std::string nameID, SDL_Surface* surface) {
+Texture::Texture(string nameID, SDL_Surface* surface) {
     mName = nameID;
     mSurf = surface;
 }

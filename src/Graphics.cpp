@@ -8,6 +8,7 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Resource;
 
 Graphics::Graphics(Window *window) {
     wind = window;

@@ -10,29 +10,36 @@
 #include "NGin/NGin.hpp"
 #include <vector>
 
-class NGin::Animation {
-public:
-    Animation();
-    Animation(NGin::Image* img);
-    Animation(std::vector<NGin::Image*> imgs);
-    Animation(const NGin::Animation& orig);
-    virtual ~Animation();
+namespace NGin {
     
-    void AddFrame(NGin::Image*);
-    NGin::Image* GetFrame();
-    NGin::Image* RemoveFrame(int n);
-    
-    void Update();
-    void Render(NGin::Graphics *g, NGin::Vector2 *position);
-    
-    int Length();
-    int Speed();
-    void Speed(float speed);
-    
-private:
-    std::vector<NGin::Image*> mFrames;
-    int mCurFrame;
-    int mAnimSpeed;
+    namespace Game {
+
+        class Animation {
+        public:
+            Animation();
+            Animation(Image* img);
+            Animation(std::vector<Image*> imgs);
+            Animation(const Animation& orig);
+            virtual ~Animation();
+
+            void AddFrame(Image*);
+            Image* GetFrame();
+            Image* RemoveFrame(int n);
+
+            void Update();
+            void Render(Graphics *g, Vector2 *position);
+
+            int Length();
+            int Speed();
+            void Speed(float speed);
+
+        private:
+            std::vector<Image*> mFrames;
+            int mCurFrame;
+            int mAnimSpeed;
+
+        };
+
+    };
 
 };
-

@@ -11,17 +11,24 @@
 #include "SDL/SDL.h"
 #include <string>
 
-class NGin::Texture : public NGin::Resource {
-public:
-    Texture(std::string nameID, SDL_Surface *surface);
-    virtual ~Texture();
+namespace NGin {
     
-    SDL_Surface * surface() { return mSurf; };
-    NGin::Vector2 Size() { return Vector2(mSurf->w, mSurf->h); };
-    
-private:
-    Texture(const NGin::Texture& orig);
-    
-    SDL_Surface *mSurf;
-};
+    namespace Resource {
 
+        class Texture : public Resource {
+        public:
+            Texture(std::string nameID, SDL_Surface *surface);
+            virtual ~Texture();
+
+            SDL_Surface * surface() { return mSurf; };
+            Vector2 Size() { return Vector2(mSurf->w, mSurf->h); };
+
+        private:
+            Texture(const Texture& orig);
+
+            SDL_Surface *mSurf;
+        };
+
+    };
+
+};

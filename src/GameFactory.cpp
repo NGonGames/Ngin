@@ -8,6 +8,7 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Resource;
 
 GameFactory::GameFactory() {
 }
@@ -18,11 +19,11 @@ GameFactory::GameFactory(const GameFactory& orig) {
 GameFactory::~GameFactory() {
 }
 
-Game* GameFactory::MakeGame() {
-    ResourceManager *resource = new ResourceManager;
+Application* GameFactory::MakeGame() {
+    Manager *resource = new Manager;
     Window *window = new Window;
     Graphics *graphics = new Graphics(window);
     Input *input = new Input();
-    Game *game = new Game(graphics, resource, window, input);
+    Application *game = new Application(graphics, resource, window, input);
     return game;
 }

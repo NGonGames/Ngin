@@ -8,6 +8,7 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Resource;
 
 Scene::Scene(std::string nameID, std::string sceneData) {
     mName = nameID;

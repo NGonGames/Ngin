@@ -9,23 +9,24 @@
 #include "rapidxml/rapidxml.hpp"
 
 using namespace NGin;
-namespace fs = boost::filesystem;
+using namespace NGin::Resource;
 using namespace std;
+namespace fs = boost::filesystem;
 
-ResourceManager::ResourceManager() {
+Manager::Manager() {
 }
 
-ResourceManager::ResourceManager(string path) {
+Manager::Manager(string path) {
 	AddPath(path);
 }
 
-ResourceManager::ResourceManager(const ResourceManager& orig) {
+Manager::Manager(const Manager& orig) {
 }
 
-ResourceManager::~ResourceManager() {
+Manager::~Manager() {
 }
 
-bool ResourceManager::AddPath(string path) {
+bool Manager::AddPath(string path) {
     if(!fs::is_directory(path)) {
         return false;
     }
@@ -42,7 +43,7 @@ bool ResourceManager::AddPath(string path) {
     return true;
 }
 
-bool ResourceManager::AddImage(string name, string path) {
+bool Manager::AddImage(string name, string path) {
     SDL_Surface *img = NULL;
     img = IMG_Load(path.c_str());
     
@@ -55,7 +56,7 @@ bool ResourceManager::AddImage(string name, string path) {
     return true;
 }
 
-Texture* ResourceManager::GetTexture(string spriteName) {
+Texture* Manager::GetTexture(string spriteName) {
     for (auto tex : mTextures) {
         if (tex->name() == spriteName) {
             return (tex);
@@ -64,7 +65,7 @@ Texture* ResourceManager::GetTexture(string spriteName) {
     return NULL;
 }
 
-bool ResourceManager::AddScene(string name, string path) {
+bool Manager::AddScene(string name, string path) {
     FILE* f = fopen(path.c_str(), "rb");
     if (!f) {
             printf("Error: unable to open file %s\n", path.c_str());
@@ -82,7 +83,7 @@ bool ResourceManager::AddScene(string name, string path) {
     return true;
 }
 
-Scene* ResourceManager::GetScene(string sceneName) {
+Scene* Manager::GetScene(string sceneName) {
     for (auto scene : mScenes) {
         if (scene->name() == sceneName) {
             return scene;

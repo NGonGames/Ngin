@@ -14,6 +14,7 @@
 #include <math.h>
 
 using namespace NGin;
+using namespace NGin::Game;
 using namespace rapidxml;
 using namespace std;
 
@@ -37,7 +38,7 @@ struct Tileset {
     string name;
 };
 
-TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
+TileMap::TileMap(Level* level) : Object(level) {
     xml_document<> doc;
     
     string *data = gl->data->data();
@@ -72,7 +73,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
     }
     
     for (xml_node<> *child = cur_node->first_node("layer"); child; ++lnum, child = child->next_sibling("layer")) {
-        vector<TiledTile*> *mTiles = new vector<TiledTile*>();
+        vector<Tile*> *mTiles = new vector<Tile*>();
         tnum = 0;
         for (xml_node<> *tile = child->first_node("data")->first_node("tile"); tile; ++tnum, tile = tile->next_sibling("tile")) {
             int gid;
@@ -80,7 +81,7 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
             for (int i = 0; i < tsnum; ++i) {
                 if (t[i].included(gid) && gid != 0) {
                     mTiles->push_back(
-                            new TiledTile(gameLevel,
+                            new Tile(level,
                             gl->rmgr->GetTexture(t[i].name),
                             new Vector2(tnum % gridwidth * t[i].tw, floor(tnum / gridwidth) * t[i].th),
                             new Vector2(t[i].id(gid) % t[i].gw * t[i].tw, floor(t[i].id(gid) / t[i].gw) * t[i].th),
@@ -92,21 +93,21 @@ TiledMap::TiledMap(GameLevel* gameLevel) : GameObject(gameLevel) {
     }
 }
 
-TiledMap::~TiledMap() {
+TileMap::~TileMap() {
 }
 
-string TiledMap::TrimFileName(string path) {
+string TileMap::TrimFileName(string path) {
     return path.substr(path.find_last_of('/') + 1, path.find_last_of('.') - path.find_last_of('/') - 1);
 }
 
-void TiledMap::Update() {
+void TileMap::Update() {
     
 }
 
-void TiledMap::Render() {
-    for (vector<vector<TiledTile*>*>::iterator lb = mLayers.begin(), le = mLayers.end(); lb != le; ++lb) {
-        for (vector<TiledTile*>::iterator tb = (*lb)->begin(), te = (*lb)->end(); tb != te; ++tb) {
-            (*tb)->Render();
+void TileMap::Render() {
+    for (auto layer : mLayers) {
+        for (auto tile : *layer) {
+            tile->Render();
         }
     }
 }

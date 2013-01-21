@@ -1,3 +1,10 @@
+/* 
+ * File:   Input.cpp
+ * Author: Scott Adams
+ * 
+ * Created on January 16
+ */
+
 #pragma once
 
 class NGin::Input {

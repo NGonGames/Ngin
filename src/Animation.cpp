@@ -8,6 +8,7 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Game;
 using namespace std;
 
 Animation::Animation() {
@@ -24,14 +25,12 @@ Animation::Animation(Image* img) {
 Animation::Animation(vector<Image*> imgs) {
     mCurFrame = 0;
     mAnimSpeed = 1;
-    for (vector<Image*>::iterator i = imgs.begin(), e = imgs.end(); i != e; ++i) {
-        if (dynamic_cast<Image*>(*i) != NULL) {
-            mFrames.push_back((*i));
-        }
+    for (auto img : imgs) {
+        mFrames.push_back(img);
     }
 }
 
-Animation::Animation(const NGin::Animation& orig) {
+Animation::Animation(const Animation& orig) {
     //@TODO: Add Copy Constructor for Image class
 }
 

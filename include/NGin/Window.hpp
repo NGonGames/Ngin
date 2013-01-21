@@ -10,15 +10,18 @@
 #include <SDL/SDL.h>
 #include "NGin/NGin.hpp"
 
-class NGin::Window {
-public:
-    Window();
-    virtual ~Window();
-    SDL_Surface* GetScreen();
-    void SetWindowTitle(std::string);
-    
-private:
-    Window(const NGin::Window& orig);
-    SDL_Surface *mScreen;
-};
+namespace NGin {
 
+    class Window {
+    public:
+        Window();
+        virtual ~Window();
+        SDL_Surface* GetScreen();
+        void SetWindowTitle(std::string);
+
+    private:
+        Window(const Window& orig);
+        SDL_Surface *mScreen;
+    };
+
+};

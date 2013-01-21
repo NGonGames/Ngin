@@ -12,16 +12,20 @@
 #include <string>
 
 namespace NGin {
+    
+    namespace Resource {
 
-    class Scene : public Resource {
-    public:
-        Scene(std::string nameID, std::string sceneData);
-        virtual ~Scene();
-        std::string* data() { return &mData; };
-    private:
-        Scene(const Scene& orig);
+        class Scene : public Resource {
+        public:
+            Scene(std::string nameID, std::string sceneData);
+            virtual ~Scene();
+            std::string* data() { return &mData; };
+        private:
+            Scene(const Scene& orig);
 
-        std::string mData;
+            std::string mData;
+        };
+    
     };
 
 };

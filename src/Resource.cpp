@@ -8,13 +8,14 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Resource;
 
-Resource::Resource() {
+Resource::Resource::Resource() {
 }
 
-Resource::Resource(const Resource& orig) {
+Resource::Resource::Resource(const Resource& orig) {
 }
 
-Resource::~Resource() {
+Resource::Resource::~Resource() {
 }
 

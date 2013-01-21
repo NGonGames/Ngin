@@ -8,34 +8,35 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Game;
 
-GameObject::GameObject(GameLevel *gameLevel) {
-    gl = gameLevel;
+Object::Object(Level *level) {
+    gl = level;
     gfx = gl->gfx;
     in = gl->in;
 }
 
-GameObject::GameObject(const GameObject& orig) {
+Object::Object(const Object& orig) {
 }
 
-GameObject::~GameObject() {
+Object::~Object() {
 }
 
-void GameObject::Update() {
+void Object::Update() {
     
 }
 
-void GameObject::Render() {
+void Object::Render() {
     
 }
 
-void GameObject::UpdateAnimation() {
+void Object::UpdateAnimation() {
     if (!mAnims.empty()) {
         mAnims.at(0)->Update();
     }
 }
 
-void GameObject::RenderAnimation() {
+void Object::RenderAnimation() {
     if (!mAnims.empty()) {
         mAnims.at(0)->Render(gl->gfx, mPos);
     }

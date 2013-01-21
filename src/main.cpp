@@ -26,7 +26,7 @@ void NGin::Quit() {
 }
 
 int NGin::Execute() {
-    Game* game = GameFactory::MakeGame();
+    Application* game = GameFactory::MakeGame();
     game->Init();
     while (running) {
         game->Update();

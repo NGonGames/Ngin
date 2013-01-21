@@ -8,19 +8,21 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Game;
+using namespace NGin::Resource;
 
-TiledTile::TiledTile(GameLevel *gl, Texture* tex, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : GameObject(gl) {
+Tile::Tile(Level *gl, Texture* tex, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : Object(gl) {
     mPos = position;
     mAnims.push_back(new Animation(new Image(tex, clipPos, clipSize)));
 }
 
-TiledTile::~TiledTile() {
+Tile::~Tile() {
 }
 
-void TiledTile::Update() {
+void Tile::Update() {
     this->UpdateAnimation();
 }
 
-void TiledTile::Render() {
+void Tile::Render() {
     this->RenderAnimation();
 }
