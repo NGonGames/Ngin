@@ -9,12 +9,13 @@ If you wish to contribute you will find a Visual Studio 2012 Project and a Netbe
     Window                              COMPLETE
     AudioContext                        MISSING
     RenderContext                       PARTIAL
+    DataModel                           MISSING
 
 ###NGin::Resource
     Manager                             PARTIAL
     Resource                            PARTIAL
     Texture                             COMPLETE
-    Shader                              MISSING
+    Shader                              MISSING*
     Audio                               MISSING
     Scene                               COMPLETE
 
@@ -30,12 +31,18 @@ If you wish to contribute you will find a Visual Studio 2012 Project and a Netbe
     TileMap                             PARTIAL
     Tile                                PARTIAL
     TileMapParser                       PARTIAL
+    Effect                              MISSING*
 
 ###NGin::Math
     Vector2                             COMPLETE
     Vector3                             MISSING
     Vector4                             MISSING
-    Point                               COMPLETE
+    Point                               COMPLETE**
     Rectangle                           MISSING
     Matrix3x3                           MISSING
     Matrix4x4                           MISSING
+
+
+*And it will probably stay this way for a long time.
+
+**A typedef'd Vector2
