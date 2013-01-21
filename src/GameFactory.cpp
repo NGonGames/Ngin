@@ -8,6 +8,8 @@
 #include "NGin/NGin.hpp"
 
 using namespace NGin;
+using namespace NGin::Game;
+using namespace NGin::Math;
 using namespace NGin::Resource;
 
 Application *GameFactory::mApp = 0;
@@ -33,4 +35,12 @@ Application* GameFactory::CreateGame() {
     mInput = new Input();
     mApp = new Application(mRender, mResource, mWindow, mInput);
     return mApp;
+}
+
+Image* GameFactory::CreateImage(const std::string &texID) {
+    return new Image(mRender, mResource->GetTexture(texID));
+}
+
+Image* GameFactory::CreateImage(const std::string &texID, const Vector2 &origin, const Vector2 &size) {
+    return new Image(mRender, mResource->GetTexture(texID), new Vector2(origin), new Vector2(size));
 }

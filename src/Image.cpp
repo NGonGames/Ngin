@@ -12,13 +12,15 @@ using namespace NGin::Game;
 using namespace NGin::Resource;
 using namespace NGin::Math;
 
-Image::Image(Texture* texture) {
+Image::Image(RenderContext *rc, Texture *texture) {
+    mRender = rc;
     mTex = texture;
     mClipPos = new Vector2(0.f, 0.f);
     mClipSize = new Vector2(0.f, 0.f);
 }
 
-Image::Image(Texture *texture, Vector2 *clipCoord, Vector2 *clipSize) {
+Image::Image(RenderContext *rc, Texture *texture, Vector2 *clipCoord, Vector2 *clipSize) {
+    mRender = rc;
     mTex = texture;
     mClipPos = clipCoord;
     mClipSize = clipSize;
@@ -30,10 +32,14 @@ Image::Image(const Image& orig) {
 Image::~Image() {
 }
 
-void Image::Render(RenderContext *g, Vector2 *position) {
+void Image::Update() {
+    
+}
+
+void Image::Render(const Vector2 &position) {
     if (mClipSize->magnitude() < 1) {
-        g->DrawTexture(mTex, position);
+        mRender->DrawTexture(*mTex, position);
     } else {
-        g->DrawTexture(mTex, position, mClipPos, mClipSize);
+        mRender->DrawTexture(*mTex, position, *mClipPos, *mClipSize);
     }
 }

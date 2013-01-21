@@ -12,18 +12,15 @@ using namespace NGin::Game;
 using namespace NGin::Resource;
 using namespace NGin::Math;
 
-Tile::Tile(Level *gl, Texture* tex, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : Object(gl) {
+Tile::Tile(Level *gl, std::string texID, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : Object(gl) {
     mPos = position;
-    mAnims.push_back(new Animation(new Image(tex, clipPos, clipSize)));
+    mGraphic = GameFactory::CreateImage(texID, *clipPos, *clipSize);
 }
 
-Tile::~Tile() {
-}
+Tile::~Tile() { }
 
-void Tile::Update() {
-    this->UpdateAnimation();
-}
+void Tile::Update() { }
 
 void Tile::Render() {
-    this->RenderAnimation();
+    mGraphic->Render(*mPos);
 }

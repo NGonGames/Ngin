@@ -83,7 +83,7 @@ TileMap::TileMap(Level* level) : Object(level) {
                 if (t[i].included(gid) && gid != 0) {
                     mTiles->push_back(
                             new Tile(level,
-                            gl->rmgr->GetTexture(t[i].name),
+                            t[i].name,
                             new Vector2(tnum % gridwidth * t[i].tw, floor(tnum / gridwidth) * t[i].th),
                             new Vector2(t[i].id(gid) % t[i].gw * t[i].tw, floor(t[i].id(gid) / t[i].gw) * t[i].th),
                             new Vector2(t[i].tw, t[i].th)));

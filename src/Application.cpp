@@ -33,6 +33,7 @@ int Application::Execute() {
         Render();
     }
     Quit();
+    return 0;
 }
 
 void Application::Init() {
@@ -44,7 +45,7 @@ void Application::Init() {
     mWindow->SetWindowTitle("NGin v0.2");
     mResource->AddPath("resources/images");
     mResource->AddPath("resources/scenes");
-    Level *level0 = new Level(mRender, mInput, mResource, "realtest");
+    Level *level0 = new Level(mRender, mInput, mResource, "scrolltest");
     AddLevel(level0);
     
 }

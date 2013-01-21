@@ -17,13 +17,13 @@ Animation::Animation() {
     mAnimSpeed = 1;
 }
 
-Animation::Animation(Image* img) {
+Animation::Animation(Graphic* img) {
     mFrames.push_back(img);
     mCurFrame = 0;
     mAnimSpeed = 1;
 }
 
-Animation::Animation(vector<Image*> imgs) {
+Animation::Animation(vector<Graphic*> imgs) {
     mCurFrame = 0;
     mAnimSpeed = 1;
     for (auto img : imgs) {
@@ -38,22 +38,22 @@ Animation::Animation(const Animation& orig) {
 Animation::~Animation() {
 }
 
-void Animation::AddFrame(Image* img) {
+void Animation::AddFrame(Graphic* img) {
     mFrames.push_back(img);
 }
 
-Image* Animation::GetFrame() {
+Graphic* Animation::GetFrame() {
     if (!mFrames.empty()) {
         return mFrames.at(static_cast<int>(mCurFrame));
     }
     return NULL;
 }
 
-Image* Animation::RemoveFrame(int n) {
+Graphic* Animation::RemoveFrame(int n) {
     int c = 0;
-    for (vector<Image*>::iterator i = mFrames.begin(), e = mFrames.end(); i != e; ++i) {
+    for (vector<Graphic*>::iterator i = mFrames.begin(), e = mFrames.end(); i != e; ++i) {
         if (c == n) {
-            Image* img = mFrames.at(c);
+            Graphic* img = mFrames.at(c);
             mFrames.erase(i);
             return img;
         }
@@ -74,6 +74,6 @@ void Animation::Update() {
     }
 }
 
-void Animation::Render(RenderContext *g, Vector2 *position) {
-    mFrames.at(static_cast<int>(mCurFrame))->Render(g, position);
+void Animation::Render(const Vector2 &position) {
+    mFrames.at(static_cast<int>(mCurFrame))->Render(position);
 }

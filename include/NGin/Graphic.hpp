@@ -18,8 +18,10 @@ namespace NGin {
             Graphic();
             Graphic(const Graphic& orig);
             virtual ~Graphic();
+            virtual void Update();
+            virtual void Render(const Math::Vector2 &position);
         private:
-
+            RenderContext *mRender;
         };
     
     };

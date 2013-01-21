@@ -12,7 +12,10 @@ namespace NGin {
     class GameFactory {
     public:
         static Application* CreateGame();
-        static Game::Image* CreateImage();
+        static Game::Image* CreateImage(const std::string &texID);
+        static Game::Image* CreateImage(const std::string &texID,
+                                        const Math::Vector2 &origin,
+                                        const Math::Vector2 &size);
 
     private:
         

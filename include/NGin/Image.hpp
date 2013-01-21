@@ -13,18 +13,28 @@ namespace NGin {
 
     namespace Game {
     
-        class Image {
+        class Image : public Graphic {
         public:
-            Image(Resource::Texture* texture);
-            Image(Resource::Texture* texture, Math::Vector2 *origin, Math::Vector2 *size);
+            Image(RenderContext *rc, Resource::Texture* texture);
+            Image(RenderContext *rc, Resource::Texture* texture,
+                  Math::Vector2 *origin, Math::Vector2 *size);
             Image(const Image& orig);
+            
             virtual ~Image();
-            void Render(RenderContext *g, Math::Vector2 *position);
+            
+            virtual void Update();
+            virtual void Render(const Math::Vector2 &position);
+            
+            void SetOrigin(const Math::Vector2 &origin);
+            void SetClip(const Math::Vector2 &origin);
+            void Render(Math::Vector2 *position);
             std::string Name() { return mName; };
+            
         private:
             Math::Vector2 *mClipPos;
             Math::Vector2 *mClipSize;
             Resource::Texture *mTex;
+            RenderContext* mRender;
             std::string mName;
         };
 

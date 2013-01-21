@@ -21,19 +21,19 @@ namespace NGin {
 
             virtual void Update();
             virtual void Render();
-
-            void UpdateAnimation();
-            void RenderAnimation();
         private:
             Object(const Object& orig);
         protected:
             RenderContext* gfx;
             Level* gl;
-            Input* in;
+            
+            Graphic *mGraphic;
+            Mask *mMask;
+            
             Math::Vector2* mPos;
             Math::Vector2* mVel;
 
-            std::vector<Animation*> mAnims;
+            
         };
 
     };

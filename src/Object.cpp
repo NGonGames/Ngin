@@ -13,7 +13,6 @@ using namespace NGin::Game;
 Object::Object(Level *level) {
     gl = level;
     gfx = gl->gfx;
-    in = gl->in;
 }
 
 Object::Object(const Object& orig) {
@@ -28,16 +27,4 @@ void Object::Update() {
 
 void Object::Render() {
     
-}
-
-void Object::UpdateAnimation() {
-    if (!mAnims.empty()) {
-        mAnims.at(0)->Update();
-    }
-}
-
-void Object::RenderAnimation() {
-    if (!mAnims.empty()) {
-        mAnims.at(0)->Render(gl->gfx, mPos);
-    }
 }

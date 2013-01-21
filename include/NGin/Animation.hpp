@@ -14,27 +14,27 @@ namespace NGin {
     
     namespace Game {
 
-        class Animation {
+        class Animation : public Graphic {
         public:
             Animation();
-            Animation(Image* img);
-            Animation(std::vector<Image*> imgs);
+            Animation(Graphic* img);
+            Animation(std::vector<Graphic*> imgs);
             Animation(const Animation& orig);
             virtual ~Animation();
 
-            void AddFrame(Image*);
-            Image* GetFrame();
-            Image* RemoveFrame(int n);
+            void AddFrame(Graphic*);
+            Graphic* GetFrame();
+            Graphic* RemoveFrame(int n);
 
-            void Update();
-            void Render(RenderContext *g, Math::Vector2 *position);
+            virtual void Update();
+            virtual void Render(const Math::Vector2 &position);
 
             int Length();
             int Speed();
             void Speed(float speed);
 
         private:
-            std::vector<Image*> mFrames;
+            std::vector<Graphic*> mFrames;
             int mCurFrame;
             int mAnimSpeed;
 
