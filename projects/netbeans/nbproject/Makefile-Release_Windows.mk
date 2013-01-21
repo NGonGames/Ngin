@@ -51,6 +51,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Audio.o \
 	${OBJECTDIR}/_ext/1445274692/BitmapMask.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
+	${OBJECTDIR}/_ext/1445274692/Vector4.o \
 	${OBJECTDIR}/_ext/1445274692/Controller.o \
 	${OBJECTDIR}/_ext/1445274692/Level.o \
 	${OBJECTDIR}/_ext/1445274692/Manager.o \
@@ -165,6 +166,11 @@ ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -static-libgcc -static-libc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Texture.o ../../src/Texture.cpp
+
+${OBJECTDIR}/_ext/1445274692/Vector4.o: ../../src/Vector4.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -static-libgcc -static-libc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector4.o ../../src/Vector4.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Controller.o: ../../src/Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

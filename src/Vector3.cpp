@@ -6,7 +6,6 @@
  */
 
 #include "NGin/NGin.hpp"
-#include "NGin/Vector3.hpp"
 
 using namespace NGin::Math;
 
