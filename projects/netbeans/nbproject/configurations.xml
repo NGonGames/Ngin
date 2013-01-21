@@ -217,6 +217,7 @@
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <stripSymbols>true</stripSymbols>
           <commandLine>-static-libgcc -static-libc++ -std=c++0x</commandLine>
         </ccTool>
         <fortranCompilerTool>
