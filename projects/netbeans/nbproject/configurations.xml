@@ -1,72 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="88">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
-      <logicalFolder name="Header/NGin" displayName="NGin" projectFiles="true">
-        <logicalFolder name="f1" displayName="Graphics" projectFiles="true">
-          <itemPath>../../include/NGin/Animation.hpp</itemPath>
-          <itemPath>../../include/NGin/Graphics.hpp</itemPath>
-          <itemPath>../../include/NGin/Image.hpp</itemPath>
-        </logicalFolder>
-        <logicalFolder name="f2" displayName="Resources" projectFiles="true">
-          <itemPath>../../include/NGin/Resource.hpp</itemPath>
-          <itemPath>../../include/NGin/ResourceManager.hpp</itemPath>
-          <itemPath>../../include/NGin/Scene.hpp</itemPath>
-          <itemPath>../../include/NGin/Texture.hpp</itemPath>
-        </logicalFolder>
-        <logicalFolder name="f3" displayName="Util" projectFiles="true">
-          <itemPath>../../include/NGin/GameFactory.hpp</itemPath>
-          <itemPath>../../include/NGin/NGin.hpp</itemPath>
-          <itemPath>../../include/NGin/Vector2.hpp</itemPath>
-        </logicalFolder>
-        <itemPath>../../include/NGin/Game.hpp</itemPath>
-        <itemPath>../../include/NGin/GameLevel.hpp</itemPath>
-        <itemPath>../../include/NGin/GameObject.hpp</itemPath>
-        <itemPath>../../include/NGin/Input.hpp</itemPath>
-        <itemPath>../../include/NGin/TiledMap.hpp</itemPath>
-        <itemPath>../../include/NGin/TiledTile.hpp</itemPath>
-        <itemPath>../../include/NGin/Window.hpp</itemPath>
-      </logicalFolder>
-      <logicalFolder name="Header/rapidxml"
-                     displayName="rapidxml"
-                     projectFiles="true">
+    <logicalFolder name="f1"
+                   displayName="Dependencies"
+                   projectFiles="true"
+                   kind="ROOT">
+      <logicalFolder name="f1" displayName="rapidxml" projectFiles="true" kind="ROOT">
         <itemPath>../../include/rapidxml/rapidxml.hpp</itemPath>
         <itemPath>../../include/rapidxml/rapidxml_iterators.hpp</itemPath>
         <itemPath>../../include/rapidxml/rapidxml_print.hpp</itemPath>
         <itemPath>../../include/rapidxml/rapidxml_utils.hpp</itemPath>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="ResourceFiles"
-                   displayName="Resource Files"
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="Header/NGin" displayName="NGin" projectFiles="true">
+        <logicalFolder name="f1" displayName="Game" projectFiles="true">
+          <itemPath>../../include/NGin/Animation.hpp</itemPath>
+          <itemPath>../../include/NGin/GameLevel.hpp</itemPath>
+          <itemPath>../../include/NGin/GameObject.hpp</itemPath>
+          <itemPath>../../include/NGin/Image.hpp</itemPath>
+          <itemPath>../../include/NGin/TiledMap.hpp</itemPath>
+          <itemPath>../../include/NGin/TiledTile.hpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="Math" projectFiles="true">
+          <itemPath>../../include/NGin/Vector2.hpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Resource" projectFiles="true">
+          <itemPath>../../include/NGin/Audio.hpp</itemPath>
+          <itemPath>../../include/NGin/Resource.hpp</itemPath>
+          <itemPath>../../include/NGin/ResourceManager.hpp</itemPath>
+          <itemPath>../../include/NGin/Scene.hpp</itemPath>
+          <itemPath>../../include/NGin/Texture.hpp</itemPath>
+        </logicalFolder>
+        <itemPath>../../include/NGin/AudioContext.hpp</itemPath>
+        <itemPath>../../include/NGin/Game.hpp</itemPath>
+        <itemPath>../../include/NGin/GameFactory.hpp</itemPath>
+        <itemPath>../../include/NGin/Graphics.hpp</itemPath>
+        <itemPath>../../include/NGin/Input.hpp</itemPath>
+        <itemPath>../../include/NGin/NGin.hpp</itemPath>
+        <itemPath>../../include/NGin/Window.hpp</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="Graphics" projectFiles="true">
+      <logicalFolder name="f1" displayName="Game" projectFiles="true">
         <itemPath>../../src/Animation.cpp</itemPath>
-        <itemPath>../../src/Graphics.cpp</itemPath>
+        <itemPath>../../src/GameLevel.cpp</itemPath>
+        <itemPath>../../src/GameObject.cpp</itemPath>
         <itemPath>../../src/Image.cpp</itemPath>
+        <itemPath>../../src/TiledMap.cpp</itemPath>
+        <itemPath>../../src/TiledTile.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="Math" projectFiles="true">
+        <itemPath>../../src/Vector2.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Resources" projectFiles="true">
+        <itemPath>../../src/Audio.cpp</itemPath>
         <itemPath>../../src/Resource.cpp</itemPath>
         <itemPath>../../src/ResourceManager.cpp</itemPath>
         <itemPath>../../src/Scene.cpp</itemPath>
         <itemPath>../../src/Texture.cpp</itemPath>
       </logicalFolder>
-      <logicalFolder name="f3" displayName="Utils" projectFiles="true">
-        <itemPath>../../src/GameFactory.cpp</itemPath>
-        <itemPath>../../src/Vector2.cpp</itemPath>
-        <itemPath>../../src/Window.cpp</itemPath>
-      </logicalFolder>
+      <itemPath>../../src/AudioContext.cpp</itemPath>
       <itemPath>../../src/Game.cpp</itemPath>
-      <itemPath>../../src/GameLevel.cpp</itemPath>
-      <itemPath>../../src/GameObject.cpp</itemPath>
+      <itemPath>../../src/GameFactory.cpp</itemPath>
+      <itemPath>../../src/Graphics.cpp</itemPath>
       <itemPath>../../src/Input.cpp</itemPath>
-      <itemPath>../../src/TiledMap.cpp</itemPath>
-      <itemPath>../../src/TiledTile.cpp</itemPath>
+      <itemPath>../../src/Window.cpp</itemPath>
       <itemPath>../../src/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -115,6 +118,13 @@
         </linkerTool>
       </compileType>
       <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Audio.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/AudioContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="../../include/NGin/Game.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -172,6 +182,10 @@
             flavor2="0">
       </item>
       <item path="../../src/Animation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Audio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Game.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -229,6 +243,13 @@
       </compileType>
       <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Audio.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/AudioContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../include/NGin/Game.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/GameFactory.hpp" ex="false" tool="3" flavor2="0">
@@ -285,6 +306,10 @@
             flavor2="0">
       </item>
       <item path="../../src/Animation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Audio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Game.cpp" ex="false" tool="1" flavor2="0">
       </item>
