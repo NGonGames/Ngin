@@ -45,8 +45,6 @@ namespace NGin {
 
         std::vector<Game::Level*> mAllLevels;
         std::stack<Game::Level*> mLoadedLevels;
-        
-        float x;
     };
 
 };

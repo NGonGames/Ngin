@@ -51,9 +51,6 @@ void Application::Init() {
 }
 
 void Application::Update() {
-    if (!mInput->Update()) {
-        running = false;
-    }
     GetActiveLevel()->Update();
 }
 

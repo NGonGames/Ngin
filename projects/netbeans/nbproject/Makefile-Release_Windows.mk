@@ -35,8 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/1445274692/Vector2.o \
 	${OBJECTDIR}/_ext/1445274692/RenderContext.o \
+	${OBJECTDIR}/_ext/1445274692/Vector2.o \
 	${OBJECTDIR}/_ext/1445274692/AudioContext.o \
 	${OBJECTDIR}/_ext/1445274692/Tile.o \
 	${OBJECTDIR}/_ext/1445274692/main.o \
@@ -47,8 +47,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Object.o \
 	${OBJECTDIR}/_ext/1445274692/Image.o \
 	${OBJECTDIR}/_ext/1445274692/Mask.o \
-	${OBJECTDIR}/_ext/1445274692/Audio.o \
 	${OBJECTDIR}/_ext/1445274692/TileMap.o \
+	${OBJECTDIR}/_ext/1445274692/Audio.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
 	${OBJECTDIR}/_ext/1445274692/BitmapMask.o \
 	${OBJECTDIR}/_ext/1445274692/Vector4.o \
@@ -59,9 +59,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Resource.o \
 	${OBJECTDIR}/_ext/1445274692/Manager.o \
 	${OBJECTDIR}/_ext/1445274692/Scene.o \
-	${OBJECTDIR}/_ext/1445274692/PolyMask.o \
 	${OBJECTDIR}/_ext/1445274692/Application.o \
-	${OBJECTDIR}/_ext/1445274692/Animation.o
+	${OBJECTDIR}/_ext/1445274692/Animation.o \
+	${OBJECTDIR}/_ext/1445274692/PolyMask.o
 
 
 # C Compiler Flags
@@ -88,15 +88,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector2.o ../../src/Vector2.cpp
-
 ${OBJECTDIR}/_ext/1445274692/RenderContext.o: ../../src/RenderContext.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RenderContext.o ../../src/RenderContext.cpp
+
+${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector2.o ../../src/Vector2.cpp
 
 ${OBJECTDIR}/_ext/1445274692/AudioContext.o: ../../src/AudioContext.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
@@ -148,15 +148,15 @@ ${OBJECTDIR}/_ext/1445274692/Mask.o: ../../src/Mask.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Mask.o ../../src/Mask.cpp
 
-${OBJECTDIR}/_ext/1445274692/Audio.o: ../../src/Audio.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Audio.o ../../src/Audio.cpp
-
 ${OBJECTDIR}/_ext/1445274692/TileMap.o: ../../src/TileMap.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/TileMap.o ../../src/TileMap.cpp
+
+${OBJECTDIR}/_ext/1445274692/Audio.o: ../../src/Audio.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Audio.o ../../src/Audio.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
@@ -208,11 +208,6 @@ ${OBJECTDIR}/_ext/1445274692/Scene.o: ../../src/Scene.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
 
-${OBJECTDIR}/_ext/1445274692/PolyMask.o: ../../src/PolyMask.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/PolyMask.o ../../src/PolyMask.cpp
-
 ${OBJECTDIR}/_ext/1445274692/Application.o: ../../src/Application.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -222,6 +217,11 @@ ${OBJECTDIR}/_ext/1445274692/Animation.o: ../../src/Animation.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Animation.o ../../src/Animation.cpp
+
+${OBJECTDIR}/_ext/1445274692/PolyMask.o: ../../src/PolyMask.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/PolyMask.o ../../src/PolyMask.cpp
 
 # Subprojects
 .build-subprojects:
