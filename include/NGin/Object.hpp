@@ -21,6 +21,8 @@ namespace NGin {
 
             virtual void Update();
             virtual void Render();
+            
+            virtual bool CollidesWith(const Mask &mask);
         private:
             Object(const Object& orig);
         protected:

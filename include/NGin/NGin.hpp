@@ -25,6 +25,7 @@ namespace NGin {
         class Image;
         class Controller;
         class Mask;
+        class RectMask;
         class PolyMask;
         class BitmapMask;
         class Tile;

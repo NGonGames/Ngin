@@ -23,6 +23,8 @@ namespace NGin {
             Rectangle(int x, int y, int w, int h);
             
             float Area();
+            bool IntersectsRectangle(const Rectangle &rect);
+            bool IntersectsPoint(const Vector2 &p);
             
             float x;
             float y;

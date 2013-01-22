@@ -42,3 +42,48 @@ Rectangle::Rectangle(int x, int y, int w, int h) {
 float Rectangle::Area() {
     return w * h;
 }
+
+bool Rectangle::IntersectsRectangle(const Rectangle &rect) {
+    
+    if (IntersectsPoint(Vector2(rect.x, rect.y)) ||
+        IntersectsPoint(Vector2(rect.x + rect.w, rect.y)) ||
+        IntersectsPoint(Vector2(rect.x, rect.y + rect.h)) ||
+        IntersectsPoint(Vector2(rect.x + rect.w, rect.y + rect.h))) {
+        return true;
+    }
+    
+    if (rect.x > x && x + w > rect.x) { // left side of rect *could be intersecting
+        if (rect.y > y && rect.y + rect.h > y + h) {
+            return true;
+        }
+    }
+    
+    if (rect.x + rect.w > x && rect.x + rect.w < x + w) { // check right side of rect
+        if (rect.y > y && rect.y + rect.h > y + h) {
+            return true;
+        }
+    }
+    
+    if (rect.y > y && y + h > rect.y) { // top side of rect
+        if (rect.x > x && rect.x + rect.w > x + w) {
+            return true;
+        }
+    }
+    
+    if (rect.y + rect.h > y && rect.y + rect.h < y + h) { // bottom side of rect
+        if (rect.x > x && rect.x + rect.w > x + w) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+bool Rectangle::IntersectsPoint(const Vector2& p) {
+    if (p.x >= x && p.x <= x + w) {
+        if (p.y >= y && p.y <= y + h) {
+            return true;
+        }
+    }
+    return false;
+}
