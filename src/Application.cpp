@@ -18,6 +18,7 @@ Application::Application(RenderContext *graphics, Manager *resources, Window *wi
     mInput = input;
     
     running = true;
+    x = 0.f;
 }
 
 Application::Application(const Application& orig) {
@@ -51,6 +52,9 @@ void Application::Init() {
 }
 
 void Application::Update() {
+    if (!mInput->Update()) {
+        running = false;
+    }
     GetActiveLevel()->Update();
 }
 
