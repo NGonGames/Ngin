@@ -277,7 +277,10 @@
         <ccTool>
           <developmentMode>5</developmentMode>
           <stripSymbols>true</stripSymbols>
-          <commandLine>-static-libgcc -static-libc++ -std=c++0x</commandLine>
+          <incDir>
+            <pElem>../../include</pElem>
+          </incDir>
+          <commandLine>-static-libgcc -static-libstdc++ -std=c++0x</commandLine>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -285,6 +288,20 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../lib/win/static</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mingw32</linkerLibLibItem>
+            <linkerLibLibItem>SDLmain</linkerLibLibItem>
+            <linkerLibLibItem>SDL.dll</linkerLibLibItem>
+            <linkerLibLibItem>SDL_image</linkerLibLibItem>
+            <linkerLibLibItem>SDL_ttf</linkerLibLibItem>
+            <linkerLibLibItem>boost_system-mgw46-1_52</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem-mgw46-1_52</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
       </item>
