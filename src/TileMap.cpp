@@ -112,3 +112,7 @@ void TileMap::Render() {
         }
     }
 }
+
+bool TileMap::CollidesWith(const Mask& mask) {
+    return false;
+}

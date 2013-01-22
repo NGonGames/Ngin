@@ -20,6 +20,8 @@ namespace NGin {
             virtual ~Tile();
             virtual void Update();
             virtual void Render();
+            
+            virtual bool CollidesWith(const Mask &mask);
         private:
             Tile(const Tile& orig);
 

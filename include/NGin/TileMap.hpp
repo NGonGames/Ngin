@@ -18,8 +18,11 @@ namespace NGin {
         public:
             TileMap(Level* gameLevel);
             virtual ~TileMap();
+            
             virtual void Update();
             virtual void Render();
+            
+            virtual bool CollidesWith(const Mask &mask);
         private:
             TileMap(const TileMap& orig);
             std::string TrimFileName(std::string path);

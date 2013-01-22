@@ -11,8 +11,9 @@ using namespace NGin;
 using namespace NGin::Game;
 using namespace NGin::Resource;
 using namespace NGin::Math;
+using namespace std;
 
-Tile::Tile(Level *gl, std::string texID, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : Object(gl) {
+Tile::Tile(Level *gl, string texID, Vector2 *position, Vector2* clipPos, Vector2* clipSize) : Object(gl) {
     mPos = position;
     mGraphic = GameFactory::CreateImage(texID, *clipPos, *clipSize);
 }
@@ -23,4 +24,8 @@ void Tile::Update() { }
 
 void Tile::Render() {
     mGraphic->Render(*mPos);
+}
+
+bool Tile::CollidesWith(const Mask& mask) {
+    
 }
