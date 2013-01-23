@@ -19,21 +19,21 @@ namespace NGin {
             Object(Level* level);
             virtual ~Object();
 
-            virtual void Update();
-            virtual void Render();
+            virtual void Update() = 0;
+            virtual void Render() = 0;
             
-            virtual bool CollidesWith(const Mask &mask) = 0;
+            virtual Mask* GetMask() = 0;
         private:
             Object(const Object& orig);
         protected:
-            RenderContext* gfx;
-            Level* gl;
+            RenderContext *gfx;
+            Level *gl;
             
             Graphic *mGraphic;
             Mask *mMask;
             
-            Math::Vector2* mPos;
-            Math::Vector2* mVel;
+            Math::Vector2 *mPos;
+            Math::Vector2 *mVel;
 
             
         };

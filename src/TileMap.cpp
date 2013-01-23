@@ -113,6 +113,6 @@ void TileMap::Render() {
     }
 }
 
-bool TileMap::CollidesWith(const Mask& mask) {
-    return false;
+Mask* TileMap::GetMask() {
+    return NULL;
 }

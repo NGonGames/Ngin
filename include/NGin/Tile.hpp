@@ -21,7 +21,7 @@ namespace NGin {
             virtual void Update();
             virtual void Render();
             
-            virtual bool CollidesWith(const Mask &mask);
+            virtual Mask* GetMask();
         private:
             Tile(const Tile& orig);
 

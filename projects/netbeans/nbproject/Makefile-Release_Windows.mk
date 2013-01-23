@@ -61,6 +61,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Scene.o \
 	${OBJECTDIR}/_ext/1445274692/Application.o \
 	${OBJECTDIR}/_ext/1445274692/Animation.o \
+	${OBJECTDIR}/_ext/1445274692/RectMask.o \
 	${OBJECTDIR}/_ext/1445274692/PolyMask.o
 
 
@@ -217,6 +218,11 @@ ${OBJECTDIR}/_ext/1445274692/Animation.o: ../../src/Animation.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Animation.o ../../src/Animation.cpp
+
+${OBJECTDIR}/_ext/1445274692/RectMask.o: ../../src/RectMask.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RectMask.o ../../src/RectMask.cpp
 
 ${OBJECTDIR}/_ext/1445274692/PolyMask.o: ../../src/PolyMask.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

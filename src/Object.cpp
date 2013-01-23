@@ -20,11 +20,3 @@ Object::Object(const Object& orig) {
 
 Object::~Object() {
 }
-
-void Object::Update() {
-    
-}
-
-void Object::Render() {
-    
-}

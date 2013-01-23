@@ -23,6 +23,7 @@
           <itemPath>../../include/NGin/Mask.hpp</itemPath>
           <itemPath>../../include/NGin/Object.hpp</itemPath>
           <itemPath>../../include/NGin/PolyMask.hpp</itemPath>
+          <itemPath>../../include/NGin/RectMask.hpp</itemPath>
           <itemPath>../../include/NGin/Tile.hpp</itemPath>
           <itemPath>../../include/NGin/TileMap.hpp</itemPath>
         </logicalFolder>
@@ -61,6 +62,7 @@
         <itemPath>../../src/Mask.cpp</itemPath>
         <itemPath>../../src/Object.cpp</itemPath>
         <itemPath>../../src/PolyMask.cpp</itemPath>
+        <itemPath>../../src/RectMask.cpp</itemPath>
         <itemPath>../../src/Tile.cpp</itemPath>
         <itemPath>../../src/TileMap.cpp</itemPath>
       </logicalFolder>
@@ -165,6 +167,8 @@
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/RectMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/Rectangle.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/RenderContext.hpp"
@@ -239,6 +243,8 @@
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RectMask.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Rectangle.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -338,6 +344,8 @@
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/RectMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/Rectangle.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/RenderContext.hpp"
@@ -412,6 +420,8 @@
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RectMask.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Rectangle.cpp" ex="false" tool="1" flavor2="0">
       </item>

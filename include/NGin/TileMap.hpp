@@ -22,7 +22,7 @@ namespace NGin {
             virtual void Update();
             virtual void Render();
             
-            virtual bool CollidesWith(const Mask &mask);
+            virtual Mask* GetMask();
         private:
             TileMap(const TileMap& orig);
             std::string TrimFileName(std::string path);

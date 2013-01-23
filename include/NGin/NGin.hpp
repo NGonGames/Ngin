@@ -66,6 +66,7 @@ namespace NGin {
 #include "NGin/Mask.hpp"
 #include "NGin/PolyMask.hpp"
 #include "NGin/BitmapMask.hpp"
+#include "NGin/RectMask.hpp"
 #include "NGin/Image.hpp"
 #include "NGin/Animation.hpp"
 #include "NGin/Scene.hpp"

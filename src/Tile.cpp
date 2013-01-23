@@ -26,6 +26,6 @@ void Tile::Render() {
     mGraphic->Render(*mPos);
 }
 
-bool Tile::CollidesWith(const Mask& mask) {
-    
+Mask* Tile::GetMask() {
+    return NULL;
 }
