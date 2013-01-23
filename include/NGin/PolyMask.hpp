@@ -15,15 +15,10 @@ namespace NGin {
 
         class PolyMask : public Mask {
         public:
-            PolyMask();
-            PolyMask(const PolyMask& orig);
+            PolyMask(Object *obj);
             virtual ~PolyMask();
-            
-            virtual bool Collides(const Mask &m) = 0;
         private:
-            virtual bool CollidesRectMask(const RectMask &m);
-            virtual bool CollidesBitmapMask(const BitmapMask &m);
-            virtual bool CollidesPolyMask(const PolyMask &m);
+            PolyMask(const PolyMask& orig);
         };
     
     };

@@ -15,15 +15,22 @@ namespace NGin {
         
         class Mask {
         public:
-            Mask();
+            Mask(Object *object);
             Mask(const Mask& orig);
             virtual ~Mask();
             
-            virtual bool Collides(const Mask &m) = 0;
+            bool Collides(const Mask &m);
         protected:
-            virtual bool CollidesRectMask(const RectMask &m) = 0;
-            virtual bool CollidesBitmapMask(const BitmapMask &m) = 0;
-            virtual bool CollidesPolyMask(const PolyMask &m) = 0;
+            bool RectVsRect(const RectMask &m);
+            bool RectVsBitmap(const BitmapMask &m);
+            bool RectVsPoly(const PolyMask &m);
+            
+            bool BitmapVsBitmap(const BitmapMask &m);
+            bool BitmapVsPoly(const PolyMask &m);
+            
+            bool PolyVsPoly(const PolyMask &m);
+            
+            Object *mObj;
         private:
 
         };

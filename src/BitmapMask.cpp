@@ -10,27 +10,8 @@
 using namespace NGin;
 using namespace NGin::Game;
 
-BitmapMask::BitmapMask() {
-}
-
-BitmapMask::BitmapMask(const BitmapMask& orig) {
+BitmapMask::BitmapMask(Object *object) : Mask(object) {
 }
 
 BitmapMask::~BitmapMask() {
-}
-
-bool BitmapMask::Collides(const Mask &m) {
-    return false;
-}
-
-bool BitmapMask::CollidesRectMask(const RectMask &m) {
-    return false;
-}
-
-bool BitmapMask::CollidesBitmapMask(const BitmapMask &m) {
-    return false;
-}
-
-bool BitmapMask::CollidesPolyMask(const PolyMask &m) {
-    return false;
 }

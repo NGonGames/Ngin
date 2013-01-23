@@ -9,7 +9,8 @@
 
 using namespace NGin::Game;
 
-Mask::Mask() {
+Mask::Mask(Object *object) {
+    mObj = object;
 }
 
 Mask::Mask(const Mask& orig) {
