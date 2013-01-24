@@ -295,9 +295,11 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans</output>
           <linkerAddLib>
             <pElem>../../lib/win/static</pElem>
           </linkerAddLib>
+          <stripSymbols>true</stripSymbols>
           <linkerLibItems>
             <linkerLibLibItem>mingw32</linkerLibLibItem>
             <linkerLibLibItem>SDLmain</linkerLibLibItem>
@@ -307,6 +309,7 @@
             <linkerLibLibItem>boost_system-mgw46-1_52</linkerLibLibItem>
             <linkerLibLibItem>boost_filesystem-mgw46-1_52</linkerLibLibItem>
           </linkerLibItems>
+          <commandLine>projectinfo.res</commandLine>
         </linkerTool>
       </compileType>
       <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">

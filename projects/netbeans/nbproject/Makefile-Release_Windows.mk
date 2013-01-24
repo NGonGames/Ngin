@@ -87,7 +87,7 @@ LDLIBSOPTIONS=-L../../lib/win/static -lmingw32 -lSDLmain -lSDL.dll -lSDL_image -
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans ${OBJECTFILES} ${LDLIBSOPTIONS} projectinfo.res -s
 
 ${OBJECTDIR}/_ext/1445274692/RenderContext.o: ../../src/RenderContext.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
