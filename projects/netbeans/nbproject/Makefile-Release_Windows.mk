@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/RenderContext.o \
 	${OBJECTDIR}/_ext/1445274692/Vector2.o \
+	${OBJECTDIR}/_ext/1445274692/Camera.o \
 	${OBJECTDIR}/_ext/1445274692/AudioContext.o \
 	${OBJECTDIR}/_ext/1445274692/Tile.o \
 	${OBJECTDIR}/_ext/1445274692/main.o \
@@ -56,9 +57,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Rectangle.o \
 	${OBJECTDIR}/_ext/1445274692/Level.o \
 	${OBJECTDIR}/_ext/1445274692/Window.o \
-	${OBJECTDIR}/_ext/1445274692/Resource.o \
 	${OBJECTDIR}/_ext/1445274692/Manager.o \
 	${OBJECTDIR}/_ext/1445274692/Scene.o \
+	${OBJECTDIR}/_ext/1445274692/Resource.o \
 	${OBJECTDIR}/_ext/1445274692/Application.o \
 	${OBJECTDIR}/_ext/1445274692/Animation.o \
 	${OBJECTDIR}/_ext/1445274692/RectMask.o \
@@ -98,6 +99,11 @@ ${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector2.o ../../src/Vector2.cpp
+
+${OBJECTDIR}/_ext/1445274692/Camera.o: ../../src/Camera.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Camera.o ../../src/Camera.cpp
 
 ${OBJECTDIR}/_ext/1445274692/AudioContext.o: ../../src/AudioContext.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
@@ -194,11 +200,6 @@ ${OBJECTDIR}/_ext/1445274692/Window.o: ../../src/Window.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Window.o ../../src/Window.cpp
 
-${OBJECTDIR}/_ext/1445274692/Resource.o: ../../src/Resource.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Resource.o ../../src/Resource.cpp
-
 ${OBJECTDIR}/_ext/1445274692/Manager.o: ../../src/Manager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -208,6 +209,11 @@ ${OBJECTDIR}/_ext/1445274692/Scene.o: ../../src/Scene.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
+
+${OBJECTDIR}/_ext/1445274692/Resource.o: ../../src/Resource.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Resource.o ../../src/Resource.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Application.o: ../../src/Application.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

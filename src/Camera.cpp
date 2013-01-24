@@ -10,12 +10,14 @@
 using namespace NGin;
 using namespace NGin::Game;
 
-Camera::Camera() {
+Camera::Camera(Level *level, Object *target) : Object(level) {
+    mTarget = target;
 }
 
-Camera::Camera(const Camera& orig) {
-}
+Camera::~Camera() {}
+void Camera::Render() {};
 
-Camera::~Camera() {
+void Camera::Update() {
+    mPos = mTarget->GetPosition();
+    gfx->SetOffset(*mPos);
 }
-

@@ -98,6 +98,8 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>../../src/Camera.cpp</itemPath>
+    <itemPath>../../include/NGin/Camera.hpp</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>../../include/NGin</Elem>
@@ -144,6 +146,8 @@
             flavor2="0">
       </item>
       <item path="../../include/NGin/BitmapMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Camera.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Controller.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -223,6 +227,8 @@
       <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/BitmapMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Camera.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Controller.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -325,6 +331,8 @@
       </item>
       <item path="../../include/NGin/BitmapMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/Camera.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="../../include/NGin/Controller.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/GameFactory.hpp" ex="false" tool="3" flavor2="0">
@@ -403,6 +411,8 @@
       <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/BitmapMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Camera.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Controller.cpp" ex="false" tool="1" flavor2="0">
       </item>

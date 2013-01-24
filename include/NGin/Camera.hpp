@@ -15,10 +15,13 @@ namespace NGin {
 
         class Camera : public Object {
         public:
-            Camera(Level *level);
+            Camera(Level *level, Object *target);
             virtual ~Camera();
+            virtual void Update();
+            virtual void Render();
         private:
             Camera(const Camera& orig);
+            Object *mTarget;
         };
 
     };

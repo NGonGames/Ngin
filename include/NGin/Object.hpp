@@ -23,6 +23,7 @@ namespace NGin {
             virtual void Render() = 0;
             
             virtual Mask* GetMask() = 0;
+            Math::Vector2* GetPosition();
         private:
             Object(const Object& orig);
         protected:
@@ -31,6 +32,7 @@ namespace NGin {
             
             Graphic *mGraphic;
             Mask *mMask;
+            Controller *mController;
             
             Math::Vector2 *mPos;
             Math::Vector2 *mVel;

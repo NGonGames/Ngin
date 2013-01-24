@@ -20,3 +20,7 @@ Object::Object(const Object& orig) {
 
 Object::~Object() {
 }
+
+Math::Vector2* Object::GetPosition() {
+    return mPos;
+}
