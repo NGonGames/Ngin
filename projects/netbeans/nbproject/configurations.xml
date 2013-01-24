@@ -286,7 +286,7 @@
           <incDir>
             <pElem>../../include</pElem>
           </incDir>
-          <commandLine>-static-libgcc -static-libstdc++ -std=c++0x</commandLine>
+          <commandLine>-static-libgcc -static-libstdc++ -std=c++0x -mwindows</commandLine>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>

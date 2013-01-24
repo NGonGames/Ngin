@@ -69,8 +69,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-static-libgcc -static-libstdc++ -std=c++0x
-CXXFLAGS=-static-libgcc -static-libstdc++ -std=c++0x
+CCFLAGS=-static-libgcc -static-libstdc++ -std=c++0x -mwindows
+CXXFLAGS=-static-libgcc -static-libstdc++ -std=c++0x -mwindows
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -92,142 +92,142 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans.exe: ${OBJECTFILES}
 ${OBJECTDIR}/_ext/1445274692/RenderContext.o: ../../src/RenderContext.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RenderContext.o ../../src/RenderContext.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RenderContext.o ../../src/RenderContext.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Vector2.o: ../../src/Vector2.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector2.o ../../src/Vector2.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector2.o ../../src/Vector2.cpp
 
 ${OBJECTDIR}/_ext/1445274692/AudioContext.o: ../../src/AudioContext.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/AudioContext.o ../../src/AudioContext.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/AudioContext.o ../../src/AudioContext.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Tile.o: ../../src/Tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Tile.o ../../src/Tile.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Tile.o ../../src/Tile.cpp
 
 ${OBJECTDIR}/_ext/1445274692/main.o: ../../src/main.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/main.o ../../src/main.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/main.o ../../src/main.cpp
 
 ${OBJECTDIR}/_ext/1445274692/GameFactory.o: ../../src/GameFactory.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/GameFactory.o ../../src/GameFactory.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/GameFactory.o ../../src/GameFactory.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Input.o: ../../src/Input.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Input.o ../../src/Input.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Input.o ../../src/Input.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Graphic.o: ../../src/Graphic.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Graphic.o ../../src/Graphic.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Graphic.o ../../src/Graphic.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Vector3.o: ../../src/Vector3.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector3.o ../../src/Vector3.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector3.o ../../src/Vector3.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Object.o: ../../src/Object.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Object.o ../../src/Object.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Object.o ../../src/Object.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Image.o: ../../src/Image.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Image.o ../../src/Image.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Image.o ../../src/Image.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Mask.o: ../../src/Mask.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Mask.o ../../src/Mask.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Mask.o ../../src/Mask.cpp
 
 ${OBJECTDIR}/_ext/1445274692/TileMap.o: ../../src/TileMap.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/TileMap.o ../../src/TileMap.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/TileMap.o ../../src/TileMap.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Audio.o: ../../src/Audio.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Audio.o ../../src/Audio.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Audio.o ../../src/Audio.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Texture.o: ../../src/Texture.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Texture.o ../../src/Texture.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Texture.o ../../src/Texture.cpp
 
 ${OBJECTDIR}/_ext/1445274692/BitmapMask.o: ../../src/BitmapMask.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/BitmapMask.o ../../src/BitmapMask.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/BitmapMask.o ../../src/BitmapMask.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Vector4.o: ../../src/Vector4.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector4.o ../../src/Vector4.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Vector4.o ../../src/Vector4.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Controller.o: ../../src/Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Controller.o ../../src/Controller.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Controller.o ../../src/Controller.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Rectangle.o: ../../src/Rectangle.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Rectangle.o ../../src/Rectangle.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Rectangle.o ../../src/Rectangle.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Level.o: ../../src/Level.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Level.o ../../src/Level.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Level.o ../../src/Level.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Window.o: ../../src/Window.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Window.o ../../src/Window.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Window.o ../../src/Window.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Resource.o: ../../src/Resource.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Resource.o ../../src/Resource.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Resource.o ../../src/Resource.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Manager.o: ../../src/Manager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Manager.o ../../src/Manager.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Manager.o ../../src/Manager.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Scene.o: ../../src/Scene.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Scene.o ../../src/Scene.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Application.o: ../../src/Application.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Application.o ../../src/Application.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Application.o ../../src/Application.cpp
 
 ${OBJECTDIR}/_ext/1445274692/Animation.o: ../../src/Animation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Animation.o ../../src/Animation.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Animation.o ../../src/Animation.cpp
 
 ${OBJECTDIR}/_ext/1445274692/RectMask.o: ../../src/RectMask.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RectMask.o ../../src/RectMask.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/RectMask.o ../../src/RectMask.cpp
 
 ${OBJECTDIR}/_ext/1445274692/PolyMask.o: ../../src/PolyMask.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/PolyMask.o ../../src/PolyMask.cpp
+	$(COMPILE.cc) -O2 -s -I../../include -static-libgcc -static-libstdc++ -std=c++0x -mwindows -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/PolyMask.o ../../src/PolyMask.cpp
 
 # Subprojects
 .build-subprojects:
