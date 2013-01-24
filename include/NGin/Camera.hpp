@@ -19,6 +19,7 @@ namespace NGin {
             virtual ~Camera();
             virtual void Update();
             virtual void Render();
+            virtual Mask* GetMask();
         private:
             Camera(const Camera& orig);
             Object *mTarget;

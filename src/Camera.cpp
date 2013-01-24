@@ -12,12 +12,20 @@ using namespace NGin::Game;
 
 Camera::Camera(Level *level, Object *target) : Object(level) {
     mTarget = target;
+    mPos = new Math::Vector2();
+    mVel = new Math::Vector2();
+    mController = NULL;
+    mMask = NULL;
+    mGraphic = NULL;
 }
 
 Camera::~Camera() {}
 void Camera::Render() {};
+Mask* Camera::GetMask() {};
 
 void Camera::Update() {
-    mPos = mTarget->GetPosition();
+    Math::Vector2* pos = mTarget->GetPosition();
+    mPos->x = pos->x - 320;
+    mPos->y = pos->y - 240;
     gfx->SetOffset(*mPos);
 }
