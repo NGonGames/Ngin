@@ -15,6 +15,12 @@ Object::Object(Level *level) {
     gfx = gl->gfx;
 }
 
+Object::Object(Level *level, Math::Vector2 *position) {
+    gl = level;
+    gfx = gl->gfx;
+    mPos = position;
+}
+
 Object::Object(const Object& orig) {
 }
 

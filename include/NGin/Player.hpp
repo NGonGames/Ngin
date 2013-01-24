@@ -13,8 +13,12 @@ namespace NGin {
 
         class Player : public Object {
         public:
-            Player(Level *level);
+            Player(Level *level, Math::Vector2 *position);
             virtual ~Player();
+            
+            virtual void Update();
+            virtual void Render();
+            virtual Mask* GetMask();
         private:
             Player(const Player& orig);
         };

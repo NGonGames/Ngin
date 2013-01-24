@@ -18,7 +18,7 @@ namespace NGin {
             RectMask(Object *obj);
             virtual ~RectMask();
             
-            Math::Vector2 mRect;
+            Math::Rectangle mRect;
         private:
             RectMask(const RectMask& orig);
         };

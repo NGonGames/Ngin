@@ -42,12 +42,14 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/1445274692/Tile.o \
 	${OBJECTDIR}/_ext/1445274692/main.o \
 	${OBJECTDIR}/_ext/1445274692/GameFactory.o \
+	${OBJECTDIR}/_ext/1445274692/Player.o \
 	${OBJECTDIR}/_ext/1445274692/Input.o \
 	${OBJECTDIR}/_ext/1445274692/Graphic.o \
 	${OBJECTDIR}/_ext/1445274692/Vector3.o \
 	${OBJECTDIR}/_ext/1445274692/Object.o \
 	${OBJECTDIR}/_ext/1445274692/Image.o \
 	${OBJECTDIR}/_ext/1445274692/Mask.o \
+	${OBJECTDIR}/_ext/1445274692/KeyboardController.o \
 	${OBJECTDIR}/_ext/1445274692/TileMap.o \
 	${OBJECTDIR}/_ext/1445274692/Audio.o \
 	${OBJECTDIR}/_ext/1445274692/Texture.o \
@@ -125,6 +127,11 @@ ${OBJECTDIR}/_ext/1445274692/GameFactory.o: ../../src/GameFactory.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/GameFactory.o ../../src/GameFactory.cpp
 
+${OBJECTDIR}/_ext/1445274692/Player.o: ../../src/Player.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Player.o ../../src/Player.cpp
+
 ${OBJECTDIR}/_ext/1445274692/Input.o: ../../src/Input.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
@@ -154,6 +161,11 @@ ${OBJECTDIR}/_ext/1445274692/Mask.o: ../../src/Mask.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
 	${RM} $@.d
 	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/Mask.o ../../src/Mask.cpp
+
+${OBJECTDIR}/_ext/1445274692/KeyboardController.o: ../../src/KeyboardController.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692
+	${RM} $@.d
+	$(COMPILE.cc) -g -I../../include -std=c++0x -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/1445274692/KeyboardController.o ../../src/KeyboardController.cpp
 
 ${OBJECTDIR}/_ext/1445274692/TileMap.o: ../../src/TileMap.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1445274692

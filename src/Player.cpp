@@ -9,13 +9,24 @@
 
 using namespace NGin;
 using namespace NGin::Game;
+using namespace NGin::Math;
 
-Player::Player() {
+Player::Player(Level *level, Vector2 *position) : Object(level, position) {
+    mVel = new Vector2();
+    mMask = GameFactory::CreateRectMask(*this, Vector2(32, 32));
+    mGraphic = GameFactory::CreateImage("player0");
 }
 
-Player::Player(const Player& orig) {
+Player::~Player() {}
+
+void Player::Update() {
+    
 }
 
-Player::~Player() {
+void Player::Render() {
+    mGraphic->Render(*mPos);
 }
 
+Mask* Player::GetMask() {
+    return mMask;
+}

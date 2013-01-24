@@ -19,6 +19,7 @@ Level::Level(RenderContext *graphics, Input* input, Manager *resources, string l
     rmgr = resources;
     data = rmgr->GetScene(level);
     Add(new TileMap(this));
+    Add(new Player(this, new Math::Vector2(128, 400)));
 }
 
 Level::Level(const Level& orig) {

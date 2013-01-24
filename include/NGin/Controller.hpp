@@ -11,7 +11,7 @@
 
 namespace NGin {
     
-    //namespace Game {
+    namespace Game {
         
         class Controller {
         public:
@@ -22,6 +22,6 @@ namespace NGin {
 
         };
         
-    //};
+    };
     
 };

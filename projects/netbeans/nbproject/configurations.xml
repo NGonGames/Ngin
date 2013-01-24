@@ -16,12 +16,15 @@
         <logicalFolder name="f1" displayName="Game" projectFiles="true">
           <itemPath>../../include/NGin/Animation.hpp</itemPath>
           <itemPath>../../include/NGin/BitmapMask.hpp</itemPath>
+          <itemPath>../../include/NGin/Camera.hpp</itemPath>
           <itemPath>../../include/NGin/Controller.hpp</itemPath>
           <itemPath>../../include/NGin/Graphic.hpp</itemPath>
           <itemPath>../../include/NGin/Image.hpp</itemPath>
+          <itemPath>../../include/NGin/KeyboardController.hpp</itemPath>
           <itemPath>../../include/NGin/Level.hpp</itemPath>
           <itemPath>../../include/NGin/Mask.hpp</itemPath>
           <itemPath>../../include/NGin/Object.hpp</itemPath>
+          <itemPath>../../include/NGin/Player.hpp</itemPath>
           <itemPath>../../include/NGin/PolyMask.hpp</itemPath>
           <itemPath>../../include/NGin/RectMask.hpp</itemPath>
           <itemPath>../../include/NGin/Tile.hpp</itemPath>
@@ -55,12 +58,15 @@
       <logicalFolder name="f1" displayName="Game" projectFiles="true">
         <itemPath>../../src/Animation.cpp</itemPath>
         <itemPath>../../src/BitmapMask.cpp</itemPath>
+        <itemPath>../../src/Camera.cpp</itemPath>
         <itemPath>../../src/Controller.cpp</itemPath>
         <itemPath>../../src/Graphic.cpp</itemPath>
         <itemPath>../../src/Image.cpp</itemPath>
+        <itemPath>../../src/KeyboardController.cpp</itemPath>
         <itemPath>../../src/Level.cpp</itemPath>
         <itemPath>../../src/Mask.cpp</itemPath>
         <itemPath>../../src/Object.cpp</itemPath>
+        <itemPath>../../src/Player.cpp</itemPath>
         <itemPath>../../src/PolyMask.cpp</itemPath>
         <itemPath>../../src/RectMask.cpp</itemPath>
         <itemPath>../../src/Tile.cpp</itemPath>
@@ -98,8 +104,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>../../src/Camera.cpp</itemPath>
-    <itemPath>../../include/NGin/Camera.hpp</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>../../include/NGin</Elem>
@@ -159,6 +163,11 @@
       </item>
       <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/KeyboardController.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../include/NGin/Level.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Manager.hpp" ex="false" tool="3" flavor2="0">
@@ -168,6 +177,8 @@
       <item path="../../include/NGin/NGin.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Player.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -240,6 +251,8 @@
       </item>
       <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../../src/KeyboardController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../src/Level.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Manager.cpp" ex="false" tool="1" flavor2="0">
@@ -247,6 +260,8 @@
       <item path="../../src/Mask.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -343,6 +358,11 @@
       </item>
       <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="../../include/NGin/KeyboardController.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="../../include/NGin/Level.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Manager.hpp" ex="false" tool="3" flavor2="0">
@@ -352,6 +372,8 @@
       <item path="../../include/NGin/NGin.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Player.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -424,6 +446,8 @@
       </item>
       <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="../../src/KeyboardController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="../../src/Level.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Manager.cpp" ex="false" tool="1" flavor2="0">
@@ -431,6 +455,8 @@
       <item path="../../src/Mask.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -16,7 +16,8 @@ namespace NGin {
         
         class Object {
         public:
-            Object(Level* level);
+            Object(Level *level);
+            Object(Level *level, Math::Vector2 *position);
             virtual ~Object();
 
             virtual void Update() = 0;
