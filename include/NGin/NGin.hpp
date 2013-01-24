@@ -18,19 +18,21 @@ namespace NGin {
     
     namespace Game {
         
+        class Level;
+        class TileMap;
+        class Tile;
         class Object;
         class Camera;
-        class Level;
+        class Player;
         class Graphic;
         class Animation;
         class Image;
         class Controller;
+        class KeyboardController;
         class Mask;
         class RectMask;
         class PolyMask;
         class BitmapMask;
-        class Tile;
-        class TileMap;
         
     };
     
@@ -78,6 +80,7 @@ namespace NGin {
 #include "NGin/Window.hpp"
 #include "NGin/Object.hpp"
 #include "NGin/Camera.hpp"
+#include "NGin/Player.hpp"
 #include "NGin/Tile.hpp"
 #include "NGin/TileMap.hpp"
 #include "NGin/Level.hpp"
@@ -85,3 +88,4 @@ namespace NGin {
 #include "NGin/GameFactory.hpp"
 #include "NGin/Input.hpp"
 #include "NGin/Controller.hpp"
+#include "NGin/KeyboardController.hpp"
