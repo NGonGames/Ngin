@@ -77,7 +77,10 @@ BitmapMask* GameFactory::CreateBitmapMask(Game::Object& obj, const std::string& 
 }
 
 RectMask* GameFactory::CreateRectMask(Game::Object& obj, const Math::Vector2& size) {
-    
+    RectMask *rm = new RectMask(&obj);
+    rm->mRect.x = size.x;
+    rm->mRect.y = size.y;
+    return rm;
 }
 
 RectMask* GameFactory::CreateRectMask(Game::Object& obj, const Math::Rectangle& rect) {

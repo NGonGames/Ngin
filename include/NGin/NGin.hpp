@@ -19,6 +19,7 @@ namespace NGin {
     namespace Game {
         
         class Object;
+        class Camera;
         class Level;
         class Graphic;
         class Animation;
@@ -76,6 +77,7 @@ namespace NGin {
 #include "NGin/Manager.hpp"
 #include "NGin/Window.hpp"
 #include "NGin/Object.hpp"
+#include "NGin/Camera.hpp"
 #include "NGin/Tile.hpp"
 #include "NGin/TileMap.hpp"
 #include "NGin/Level.hpp"
