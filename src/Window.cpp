@@ -5,7 +5,7 @@
  * Created on December 13, 2012, 2:12 PM
  */
 
-#include "NGin/NGin.h"
+#include "NGin/NGin.hpp"
 
 using namespace NGin;
 
@@ -19,10 +19,10 @@ Window::Window(const Window& orig) {
 Window::~Window() {
 }
 
-SDL_Surface* Window::getScreen() {
+SDL_Surface* Window::GetScreen() {
     return mScreen;
 }
 
-void Window::setWindowTitle(const std::string title) {
+void Window::SetWindowTitle(const std::string title) {
     SDL_WM_SetCaption(title.c_str(), NULL);
 }
