@@ -1,0 +1,27 @@
+
+id ICON "ngon.ico"
+
+1 VERSIONINFO
+FILEVERSION     0,0,2,0
+PRODUCTVERSION  0,0,2,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "N-Gon Games"
+      VALUE "FileDescription", "NGin Unlimited Demo Application"
+      VALUE "FileVersion", "0.2"
+      VALUE "InternalName", "nginunlimited"
+      VALUE "LegalCopyright", "Ben Cochrane"
+      VALUE "OriginalFilename", "nginunlimited.exe"
+      VALUE "ProductName", "NGin Unlimited"
+      VALUE "ProductVersion", "0.2"
+    END
+  END
+
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END

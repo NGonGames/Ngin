@@ -1,0 +1,1 @@
+windres projectinfo.rc -O coff -o projectinfo.res

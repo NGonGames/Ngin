@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="88">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="Dependencies" projectFiles="true">
+      <logicalFolder name="f1" displayName="rapidxml" projectFiles="true">
+        <itemPath>../../include/rapidxml/rapidxml.hpp</itemPath>
+        <itemPath>../../include/rapidxml/rapidxml_iterators.hpp</itemPath>
+        <itemPath>../../include/rapidxml/rapidxml_print.hpp</itemPath>
+        <itemPath>../../include/rapidxml/rapidxml_utils.hpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="Header/NGin" displayName="NGin" projectFiles="true">
+        <logicalFolder name="f1" displayName="Game" projectFiles="true">
+          <itemPath>../../include/NGin/Animation.hpp</itemPath>
+          <itemPath>../../include/NGin/BitmapMask.hpp</itemPath>
+          <itemPath>../../include/NGin/Camera.hpp</itemPath>
+          <itemPath>../../include/NGin/Controller.hpp</itemPath>
+          <itemPath>../../include/NGin/Graphic.hpp</itemPath>
+          <itemPath>../../include/NGin/Image.hpp</itemPath>
+          <itemPath>../../include/NGin/KeyboardController.hpp</itemPath>
+          <itemPath>../../include/NGin/Level.hpp</itemPath>
+          <itemPath>../../include/NGin/Mask.hpp</itemPath>
+          <itemPath>../../include/NGin/Object.hpp</itemPath>
+          <itemPath>../../include/NGin/Player.hpp</itemPath>
+          <itemPath>../../include/NGin/PolyMask.hpp</itemPath>
+          <itemPath>../../include/NGin/RectMask.hpp</itemPath>
+          <itemPath>../../include/NGin/Tile.hpp</itemPath>
+          <itemPath>../../include/NGin/TileMap.hpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f3" displayName="Math" projectFiles="true">
+          <itemPath>../../include/NGin/Rectangle.hpp</itemPath>
+          <itemPath>../../include/NGin/Vector2.hpp</itemPath>
+          <itemPath>../../include/NGin/Vector3.hpp</itemPath>
+          <itemPath>../../include/NGin/Vector4.hpp</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f2" displayName="Resource" projectFiles="true">
+          <itemPath>../../include/NGin/Audio.hpp</itemPath>
+          <itemPath>../../include/NGin/Manager.hpp</itemPath>
+          <itemPath>../../include/NGin/Resource.hpp</itemPath>
+          <itemPath>../../include/NGin/Scene.hpp</itemPath>
+          <itemPath>../../include/NGin/Texture.hpp</itemPath>
+        </logicalFolder>
+        <itemPath>../../include/NGin/Application.hpp</itemPath>
+        <itemPath>../../include/NGin/AudioContext.hpp</itemPath>
+        <itemPath>../../include/NGin/GameFactory.hpp</itemPath>
+        <itemPath>../../include/NGin/Input.hpp</itemPath>
+        <itemPath>../../include/NGin/NGin.hpp</itemPath>
+        <itemPath>../../include/NGin/RenderContext.hpp</itemPath>
+        <itemPath>../../include/NGin/Window.hpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="Game" projectFiles="true">
+        <itemPath>../../src/Animation.cpp</itemPath>
+        <itemPath>../../src/BitmapMask.cpp</itemPath>
+        <itemPath>../../src/Camera.cpp</itemPath>
+        <itemPath>../../src/Controller.cpp</itemPath>
+        <itemPath>../../src/Graphic.cpp</itemPath>
+        <itemPath>../../src/Image.cpp</itemPath>
+        <itemPath>../../src/KeyboardController.cpp</itemPath>
+        <itemPath>../../src/Level.cpp</itemPath>
+        <itemPath>../../src/Mask.cpp</itemPath>
+        <itemPath>../../src/Object.cpp</itemPath>
+        <itemPath>../../src/Player.cpp</itemPath>
+        <itemPath>../../src/PolyMask.cpp</itemPath>
+        <itemPath>../../src/RectMask.cpp</itemPath>
+        <itemPath>../../src/Tile.cpp</itemPath>
+        <itemPath>../../src/TileMap.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="Math" projectFiles="true">
+        <itemPath>../../src/Rectangle.cpp</itemPath>
+        <itemPath>../../src/Vector2.cpp</itemPath>
+        <itemPath>../../src/Vector3.cpp</itemPath>
+        <itemPath>../../src/Vector4.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Resources" projectFiles="true">
+        <itemPath>../../src/Audio.cpp</itemPath>
+        <itemPath>../../src/Manager.cpp</itemPath>
+        <itemPath>../../src/Resource.cpp</itemPath>
+        <itemPath>../../src/Scene.cpp</itemPath>
+        <itemPath>../../src/Texture.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>../../src/Application.cpp</itemPath>
+      <itemPath>../../src/AudioContext.cpp</itemPath>
+      <itemPath>../../src/GameFactory.cpp</itemPath>
+      <itemPath>../../src/Input.cpp</itemPath>
+      <itemPath>../../src/RenderContext.cpp</itemPath>
+      <itemPath>../../src/Window.cpp</itemPath>
+      <itemPath>../../src/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../../include/NGin</Elem>
+    <Elem>../../src</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug_Windows" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../../include</pElem>
+          </incDir>
+          <commandLine>-std=c++0x</commandLine>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../../lib/win/static</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>mingw32</linkerLibLibItem>
+            <linkerLibLibItem>SDLmain</linkerLibLibItem>
+            <linkerLibLibItem>SDL_image</linkerLibLibItem>
+            <linkerLibLibItem>SDL_ttf</linkerLibLibItem>
+            <linkerLibLibItem>SDL.dll</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem-mgw46-1_52</linkerLibLibItem>
+            <linkerLibLibItem>boost_system-mgw46-1_52</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Application.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Audio.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/AudioContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/NGin/BitmapMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Camera.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Controller.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/GameFactory.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Graphic.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Image.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/KeyboardController.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/NGin/Level.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Manager.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Mask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/NGin.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Player.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/RectMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Rectangle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/RenderContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Scene.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Texture.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Tile.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/TileMap.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Vector2.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Vector3.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Vector4.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Window.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml_iterators.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml_print.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml_utils.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../src/Animation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Audio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/BitmapMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Camera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Graphic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/KeyboardController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Level.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Mask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RectMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Rectangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RenderContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Scene.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Texture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Tile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/TileMap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Vector2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Vector3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Vector4.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Window.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release_Windows" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <stripSymbols>true</stripSymbols>
+          <incDir>
+            <pElem>../../include</pElem>
+          </incDir>
+          <commandLine>-static-libgcc -static-libstdc++ -std=c++0x -mwindows</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/netbeans</output>
+          <linkerAddLib>
+            <pElem>../../lib/win/static</pElem>
+          </linkerAddLib>
+          <stripSymbols>true</stripSymbols>
+          <linkerLibItems>
+            <linkerLibLibItem>mingw32</linkerLibLibItem>
+            <linkerLibLibItem>SDLmain</linkerLibLibItem>
+            <linkerLibLibItem>SDL.dll</linkerLibLibItem>
+            <linkerLibLibItem>SDL_image</linkerLibLibItem>
+            <linkerLibLibItem>SDL_ttf</linkerLibLibItem>
+            <linkerLibLibItem>boost_system-mgw46-1_52</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem-mgw46-1_52</linkerLibLibItem>
+          </linkerLibItems>
+          <commandLine>projectinfo.res</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="../../include/NGin/Animation.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Application.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Audio.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/AudioContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/NGin/BitmapMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Camera.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Controller.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/GameFactory.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Graphic.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Image.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Input.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/KeyboardController.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/NGin/Level.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Manager.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Mask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/NGin.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Object.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Player.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/PolyMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/RectMask.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Rectangle.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/RenderContext.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/NGin/Resource.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Scene.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Texture.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Tile.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/TileMap.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Vector2.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Vector3.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Vector4.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/NGin/Window.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml_iterators.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml_print.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../include/rapidxml/rapidxml_utils.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../../src/Animation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Application.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Audio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/AudioContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/BitmapMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Camera.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Controller.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/GameFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Graphic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Image.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Input.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/KeyboardController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Level.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Mask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Object.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/PolyMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RectMask.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Rectangle.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/RenderContext.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Resource.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Scene.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Texture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Tile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/TileMap.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Vector2.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Vector3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Vector4.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/Window.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../../src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
